@@ -19,23 +19,26 @@
             "MetadataVersionStatus" : "development"
            },
         "Contact":[
-          {
-           "ContactName"            :"Gideon Kruseman",
-           "ContactAffiliation"     :"International Maize and Wheat Improvement Center (CIMMYT)",
-           "ContactIdentifier": [
-              {
-               "IdentifierScheme":"ORCID"
-               "Identifier":"0000-0002-3392-4176"
-              }
-             ],
-           "ContactEmail": [
-              "g.kruseman@cgiar.org",
-              "gkruseman@gmail.com"
-             ]
+           {
+            "ContactName"            :"Gideon Kruseman",
+            "ContactAffiliation"     : {
+                "ContactAffiliationName"     :"International Maize and Wheat Improvement Center",
+                "ContactAffiliationAcronym"  :"CIMMYT"
+               },
+            "ContactIdentifier": [
+               {
+                "IdentifierScheme":"ORCID",
+                "Identifier":"0000-0002-3392-4176"
+               }
+              ],
+            "ContactEmail": [
+               "g.kruseman@cgiar.org",
+               "gkruseman@gmail.com"
+              ]
           }
          ]
        },
-    "Metadata_content" : [
+    "Metadata_Content" : [
        {
         "\\": [
             "<%GTREE 2 content section of the OIMS selfdescribing metadata schema%>",
@@ -50,7 +53,7 @@
         "Multiple":"FALSE"
        },
        {
-        "\\": "<%GTREE 2.0.2 OIMS_Header%>"
+        "\\": "<%GTREE 2.0.2 OIMS_Header%>",
         "AttributeName":"OIMS_Header",
         "AttributeDescription":"header section of an OIMS compatible metadata schema",
         "Datatype": "text",
@@ -59,7 +62,7 @@
         "Multiple":"FALSE"
        },
        {
-        "\\": "<%GTREE 2.0.3 OIMS_Content%>"
+        "\\": "<%GTREE 2.0.3 OIMS_Content%>",
         "AttributeName":"OIMS_Content",
         "AttributeDescription":"Description of the content of the metadata file",
         "Datatype":"compound",
@@ -253,7 +256,7 @@
         "Datatype":"Boolean",
         "Status":"required",
         "TypeClass":"primitive",
-        "Multiple":"FALSE"
+        "Multiple":"FALSE",
        },
        {
         "\\":"<%GTREE 2.8 attribute ControlledVocabulary %>",
@@ -587,6 +590,28 @@
         "\\":"<%GTREE 2.11.4.2 ContactAffiliation: Affiliation of a person or entity to contact about the metadata%>",
         "AttributeName":"ContactAffiliation",
         "AttributeDescription":"Affiliation of a person or entity to contact about the metadata",
+        "Datatype":"compound",
+        "Status":"required",
+        "TypeClass":"compound",
+        "Multiple":"TRUE",
+        "AttributeValueElements": [
+            "ContactAffiliationName",
+            "ContactAffiliationAconym",
+        ]
+       },
+       {
+        "\\":"<%GTREE 2.11.4.2.1 ContactAffiliationName: Affiliation of a person or entity to contact about the metadata%>",
+        "AttributeName":"ContactAffiliationName",
+        "AttributeDescription":"Affiliation of a person or entity to contact about the metadata",
+        "Datatype":"text",
+        "Status":"required",
+        "TypeClass":"primitive",
+        "Multiple":"FALSE"
+       },
+       {
+        "\\":"<%GTREE 2.11.4.2.1 ContactAffiliationAcronym: Acronym of the affiliation of a person or entity to contact about the metadata%>",
+        "AttributeName":"ContactAffiliationAcronym",
+        "AttributeDescription":"acronym of the affiliation of a person or entity to contact about the metadata",
         "Datatype":"text",
         "Status":"required",
         "TypeClass":"primitive",
@@ -599,7 +624,7 @@
         "Datatype":"compound",
         "Status":"recommended",
         "TypeClass":"compound",
-        "Multiple":"TRUE"
+        "Multiple":"TRUE",
         "AttributeValueElements": [
             "IdentifierScheme",
             "Identifier"
