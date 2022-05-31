@@ -24,7 +24,7 @@
             "ContactAffiliation"     : {
                 "ContactAffiliationName"     :"International Maize and Wheat Improvement Center",
                 "ContactAffiliationAcronym"  :"CIMMYT"
-               }
+               },
             "ContactIdentifier": [
                {
                 "IdentifierScheme":"ORCID",
@@ -53,7 +53,7 @@
         "Multiple":"FALSE"
        },
        {
-        "\\": "<%GTREE 2.0.2 OIMS_Header%>"
+        "\\": "<%GTREE 2.0.2 OIMS_Header%>",
         "AttributeName":"OIMS_Header",
         "AttributeDescription":"header section of an OIMS compatible metadata schema",
         "Datatype": "text",
@@ -62,7 +62,7 @@
         "Multiple":"FALSE"
        },
        {
-        "\\": "<%GTREE 2.0.3 OIMS_Content%>"
+        "\\": "<%GTREE 2.0.3 OIMS_Content%>",
         "AttributeName":"OIMS_Content",
         "AttributeDescription":"Description of the content of the metadata file",
         "Datatype":"compound",
@@ -256,7 +256,7 @@
         "Datatype":"Boolean",
         "Status":"required",
         "TypeClass":"primitive",
-        "Multiple":"FALSE"
+        "Multiple":"FALSE",
        },
        {
         "\\":"<%GTREE 2.8 attribute ControlledVocabulary %>",
@@ -624,7 +624,7 @@
         "Datatype":"compound",
         "Status":"recommended",
         "TypeClass":"compound",
-        "Multiple":"TRUE"
+        "Multiple":"TRUE",
         "AttributeValueElements": [
             "IdentifierScheme",
             "Identifier"
