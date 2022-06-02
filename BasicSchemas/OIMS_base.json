@@ -62,7 +62,7 @@
         "\\": "<%GTREE 2.0.2 OIMS_Header%>",
         "AttributeName":"OIMS_Header",
         "AttributeDescription":"header section of an OIMS compatible metadata schema",
-        "Datatype": "text",
+        "Datatype": "compound",
         "Status":"required",
         "TypeClass":"compound",
         "Multiple":"FALSE"
@@ -433,7 +433,7 @@
         "Datatype":"compound",
         "Status":"required",
         "TypeClass":"compound",
-        "Multiple":"FALSE",
+        "Multiple":"TRUE",
         "AttributeValueElements": [
             "SchemaName",
             "SchemaDescription",
