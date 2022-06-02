@@ -6,6 +6,9 @@
        "GTREE requires GAMS and for viewing purposes"
       ],
     "OIMS_Header" : {
+       "mapping_info": {
+            "Mapper_tool_Name": "Manual"
+           },
         "MetaDataSchema"   : {
             "SchemaName"            : "OIMS_base",
             "SchemaDescription"     : "OIMS selfdescribing metadata schema",
@@ -13,30 +16,33 @@
             "SchemaVersion"         : "2.0.0.0",
             "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/OIMS_base.json"
            },
-        "MetadataName"     :  "OIMS_base",
-        "MetadataVersion"  : {
-            "CurrentVersion"        : "2.0.0.0",
-            "MetadataVersionStatus" : "development"
-           },
-        "Contact":[
-           {
-            "ContactName"            :"Gideon Kruseman",
-            "ContactAffiliation"     : {
-                "ContactAffiliationName"     :"International Maize and Wheat Improvement Center",
-                "ContactAffiliationAcronym"  :"CIMMYT"
+        "FileDescriptors"   : {
+            "MetadataName"     :  "OIMS_base",
+            "MetaDataDescription" :"OIMS selfdescribing metadata schema"
+            "MetadataVersion"  : {
+                "CurrentVersion"        : "2.0.0.0",
+                "MetadataVersionStatus" : "development"
                },
-            "ContactIdentifier": [
+            "Contact":[
                {
-                "IdentifierScheme":"ORCID",
-                "Identifier":"0000-0002-3392-4176"
-               }
-              ],
-            "ContactEmail": [
-               "g.kruseman@cgiar.org",
-               "gkruseman@gmail.com"
-              ]
-          }
-         ]
+                "ContactName"            :"Gideon Kruseman",
+                "ContactAffiliation"     : {
+                    "ContactAffiliationName"     :"International Maize and Wheat Improvement Center",
+                    "ContactAffiliationAcronym"  :"CIMMYT"
+                   }
+                "ContactIdentifier": [
+                   {
+                    "IdentifierScheme":"ORCID",
+                    "Identifier":"0000-0002-3392-4176"
+                   }
+                  ],
+                "ContactEmail": [
+                   "g.kruseman@cgiar.org",
+                   "gkruseman@gmail.com"
+                  ]
+              }
+             ]
+           }
        },
     "Metadata_Content" : [
        {
@@ -453,7 +459,7 @@
         "Multiple":"FALSE"
        },
        {
-        "\\":"<%GTREE 2.11.1.3 metadata schema used %>",
+        "\\":"<%GTREE 2.11.1.3 metadata schema type used %>",
         "AttributeName":"SchemaType",
         "AttributeDescription":"metadata schema of this metadata schema",
         "Datatype":"controlled vocabulary",
@@ -624,7 +630,7 @@
         "Datatype":"compound",
         "Status":"recommended",
         "TypeClass":"compound",
-        "Multiple":"TRUE",
+        "Multiple":"TRUE"
         "AttributeValueElements": [
             "IdentifierScheme",
             "Identifier"
