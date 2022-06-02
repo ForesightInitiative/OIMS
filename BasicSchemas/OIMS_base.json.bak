@@ -18,7 +18,7 @@
            },
         "FileDescriptors"   : {
             "MetadataName"     :  "OIMS_base",
-            "MetaDataDescription" :"OIMS selfdescribing metadata schema"
+            "MetaDataDescription" :"OIMS selfdescribing metadata schema",
             "MetadataVersion"  : {
                 "CurrentVersion"        : "2.0.0.0",
                 "MetadataVersionStatus" : "development"
@@ -29,7 +29,7 @@
                 "ContactAffiliation"     : {
                     "ContactAffiliationName"     :"International Maize and Wheat Improvement Center",
                     "ContactAffiliationAcronym"  :"CIMMYT"
-                   }
+                   },
                 "ContactIdentifier": [
                    {
                     "IdentifierScheme":"ORCID",
@@ -44,7 +44,7 @@
              ]
            }
        },
-    "Metadata_Content" : [
+    "OIMS_Content" : [
        {
         "\\": [
             "<%GTREE 2 content section of the OIMS selfdescribing metadata schema%>",
@@ -384,16 +384,19 @@
               {
                   "//":"<%GTREE 2.10.6.1 Exact match%>",
                   "VocabularyElementName":"Exact match",
+                  "//":"skos:exactMatch see https://www.w3.org/TR/skos-reference/#mapping"
                   "VocabularyElementDescription":"the ontology terms matches the attribute exactly"
               },
               {
                   "//":"<%GTREE 2.10.6.2 Too general%>",
                   "VocabularyElementName":"too general",
+                  "//":"skos:BroadMatch see https://www.w3.org/TR/skos-reference/#mapping"
                   "VocabularyElementDescription":"the ontology term covers the attribute, but the attribute is more specific than the ontology term"
               },
               {
                   "//":"<%GTREE 2.10.6.3 too specific%>",
                   "VocabularyElementName":"too specific",
+                  "//":"skos:NarrowMatch see https://www.w3.org/TR/skos-reference/#mapping"
                   "VocabularyElementDescription":"the ontology term covers only part of the attribute, the attribute is broader than the ontology term"
               },
               {
