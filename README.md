@@ -19,5 +19,9 @@ For enhancing data interoperability wrking towards the standardization on metada
 
 Building on that paper, this GitHub repository provides the underlying metadata schemas that are used for the operationalization of OIMS.
 
+## Citation
+When publishing papers based on the schema we encourage the authors to provide the link to the [github directory](https://github.com/ForesightAndMetrics/OIMS) and use the following citation: \
+Kruseman G., LaPorte M.-A. 2022. A Flexible, Extensible, Machine-Readable, Human-Intelligible, and Ontology-Agnostic Metadata Schema (OIMS) version 2.0.0. https://github.com/ForesightAndMetrics/OIMS  
+
 ## Further reading / references
 Kruseman G. 2022.A Flexible, Extensible, Machine-Readable, Human-Intelligible, and Ontology-Agnostic Metadata Schema (OIMS). _Frontiers in Sustainable Food Systems_ vol. 6. DOI=10.3389/fsufs.2022.767863  
