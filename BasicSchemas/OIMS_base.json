@@ -45,6 +45,7 @@
            }
        },
     "OIMS_Content" : [
+      "MetadataMetadata":[
        {
         "\\": [
             "<%GTREE 2 content section of the OIMS selfdescribing metadata schema%>",
@@ -75,6 +76,17 @@
         "Status":"required",
         "TypeClass":"compound",
         "Multiple":"TRUE"
+       },
+       {
+       "\\": [
+            "<%GTREE 2.0.3.1 Metadata metadata section%>"
+           ],
+        "AttributeName":"MetadataMetadata",
+        "AttributeDescription":"Section describing metadata fields",
+        "Datatype":"compound",
+        "Status":"required if applicable",
+        "TypeClass":"compound",
+        "Multiple":"TRUE",
        },
        {
         "\\":"<%GTREE 2.1 attribute \\ [comment]%>",
@@ -420,10 +432,9 @@
         "TypeClass":"compound",
         "Multiple":"FALSE",
         "AttributeValueElements": [
+            "mapping_info",
             "MetaDataSchema",
-            "MetadataName",
-            "MetadataVersion",
-            "Contact"
+            "FileDescriptors"
         ]
        },
        {
@@ -513,7 +524,21 @@
         "Multiple":"FALSE"
        },
        {
-        "\\":"<%GTREE 2.11.2 MetadataName: short description or name of the metadata file%>",
+        "\\":"<%GTREE 2.11.2 File descriptors: descriptive metadata of the metadata file%>",
+        "AttributeName":"FileDescriptors",
+        "AttributeDescription":"descrptive metadata of the metadata file",
+        "Datatype":"compound",
+        "Status":"required",
+        "TypeClass":"compound",
+        "Multiple":"FALSE"
+        "AttributeValueElements": [
+            "MetadataName",
+            "MetadataDescription",
+            "MetadataVersion",
+            "Contact"
+       },
+       {
+        "\\":"<%GTREE 2.11.2.1 MetadataName: short description or name of the metadata file%>",
         "AttributeName":"MetadataName",
         "AttributeDescription":"short description or name of the metadata file",
         "Datatype":"text",
@@ -522,7 +547,7 @@
         "Multiple":"FALSE"
        },
        {
-        "\\":"<%GTREE 2.11.3 MetadataVersion: short description or name of the metadata file%>",
+        "\\":"<%GTREE 2.11.2.2 MetadataVersion: short description or name of the metadata file%>",
         "AttributeName":"MetadataVersion",
         "AttributeDescription":"short description or name of the metadata file",
         "Datatype":"compound",
@@ -535,7 +560,7 @@
         ]
        },
        {
-        "\\":"<%GTREE 2.11.3.1 CurrentVersion: current version of the metadata file%>",
+        "\\":"<%GTREE 2.11.2.2.1 CurrentVersion: current version of the metadata file%>",
         "AttributeName":"CurrentVersion",
         "AttributeDescription":"current version of the metadata file",
         "Datatype":"text",
@@ -544,7 +569,7 @@
         "Multiple":"FALSE"
        },
        {
-        "\\":"<%GTREE 2.11.3.2 MetadataVersionStatus: status of the metadata file%>",
+        "\\":"<%GTREE 2.11.2.2.2 MetadataVersionStatus: status of the metadata file%>",
         "AttributeName":"MetadataVersionStatus",
         "AttributeDescription":"short description or name of the metadata file",
         "Datatype":"controlled vocabulary",
@@ -572,7 +597,7 @@
 
        },
        {
-        "\\":"<%GTREE 2.11.4 Contact: contact details of the manager of the metadata%>",
+        "\\":"<%GTREE 2.11.2.3 Contact: contact details of the manager of the metadata%>",
         "AttributeName":"Contact",
         "AttributeDescription":"contact details of the manager of the metadata",
         "Datatype":"compound",
@@ -587,7 +612,7 @@
         ]
        },
        {
-        "\\":"<%GTREE 2.11.4.1 ContactName: Name of a person or entity to contact about the metadata%>",
+        "\\":"<%GTREE 2.11.2.3.1 ContactName: Name of a person or entity to contact about the metadata%>",
         "AttributeName":"ContactName",
         "AttributeDescription":"Name of a person or entity to contact about the metadata",
         "Datatype":"text",
@@ -596,7 +621,7 @@
         "Multiple":"FALSE"
        },
        {
-        "\\":"<%GTREE 2.11.4.2 ContactAffiliation: Affiliation of a person or entity to contact about the metadata%>",
+        "\\":"<%GTREE 2.11.2.3.2 ContactAffiliation: Affiliation of a person or entity to contact about the metadata%>",
         "AttributeName":"ContactAffiliation",
         "AttributeDescription":"Affiliation of a person or entity to contact about the metadata",
         "Datatype":"compound",
@@ -609,7 +634,7 @@
         ]
        },
        {
-        "\\":"<%GTREE 2.11.4.2.1 ContactAffiliationName: Affiliation of a person or entity to contact about the metadata%>",
+        "\\":"<%GTREE 2.11.2.3.2.1 ContactAffiliationName: Affiliation of a person or entity to contact about the metadata%>",
         "AttributeName":"ContactAffiliationName",
         "AttributeDescription":"Affiliation of a person or entity to contact about the metadata",
         "Datatype":"text",
@@ -618,7 +643,7 @@
         "Multiple":"FALSE"
        },
        {
-        "\\":"<%GTREE 2.11.4.2.1 ContactAffiliationAcronym: Acronym of the affiliation of a person or entity to contact about the metadata%>",
+        "\\":"<%GTREE 2.11.2.3.2.1 ContactAffiliationAcronym: Acronym of the affiliation of a person or entity to contact about the metadata%>",
         "AttributeName":"ContactAffiliationAcronym",
         "AttributeDescription":"acronym of the affiliation of a person or entity to contact about the metadata",
         "Datatype":"text",
@@ -627,7 +652,7 @@
         "Multiple":"FALSE"
        },
        {
-        "\\":"<%GTREE 2.11.4.3 ContactIdentifier: Persistent identifier of a person to contact about the metadata%>",
+        "\\":"<%GTREE 2.11.2.3.3 ContactIdentifier: Persistent identifier of a person to contact about the metadata%>",
         "AttributeName":"ContactIdentifier",
         "AttributeDescription":"Identifier of a person to contact about the metadata",
         "Datatype":"compound",
@@ -640,7 +665,7 @@
         ]
        },
        {
-        "\\":"<%GTREE 2.11.4.3.1 IdentifierScheme: scheme to identify a person%>",
+        "\\":"<%GTREE 2.11.2.3.3.1 IdentifierScheme: scheme to identify a person%>",
         "AttributeName":"IdentifierScheme",
         "AttributeDescription":"scheme to identify a person",
         "Datatype":"controlled vocabulary",
@@ -656,7 +681,7 @@
 
        },
        {
-        "\\":"<%GTREE 2.11.4.3.2 Identifier: identifier of person linked to the relevant identifier scheme%>",
+        "\\":"<%GTREE 2.11.2.3.3.2 Identifier: identifier of person linked to the relevant identifier scheme%>",
         "AttributeName":"Identifier",
         "AttributeDescription":"identifier of person linked to the relevant identifier scheme",
         "Datatype":"text",
@@ -665,15 +690,48 @@
         "Multiple":"FALSE"
        },
        {
-        "\\":"<%GTREE 2.11.4.4 Contactemail: email address of a person or entity to contact about the metadata%>",
+        "\\":"<%GTREE 2.11.2.3.4 Contactemail: email address of a person or entity to contact about the metadata%>",
         "AttributeName":"ContactEmail",
         "AttributeDescription":"email address of a person or entity to contact about the metadataa",
         "Datatype":"email",
         "Status":"required",
         "TypeClass":"primitive",
         "Multiple":"FALSE"
+       },
+       {
+        "\\":"<%GTREE 2.11.2.4 metadata description%>",
+        "AttributeName":"MetadataDescription",
+        "AttributeDescription":"short descroiption of the metadata file",
+        "Datatype":"text",
+        "Status":"required",
+        "TypeClass":"primitive",
+        "Multiple":"FALSE"
+       },
+       {
+        "\\":"<%GTREE 2.11.3 mapping info oir how the metadata was created%>",
+        "\\":"note that this is work in progress and not fully developed"
+        "AttributeName":"mapping_info",
+        "AttributeDescription":"information on how the metadata was created",
+        "Datatype":"compound",
+        "Status":"optional",
+        "TypeClass":"compound",
+        "Multiple":"TRUE",
+        "\\":"note that this is work in progress only Mapper_tool_Name identified as compound element"
+        "AttributeValueElements": [
+            "Mapper_tool_Name"
+        ]
+       },
+       {
+        "\\":"<%GTREE 2.11.3.1 mapping info oir how the metadata was created%>",
+        "\\":"note that this is work in progress and not fully developed"
+        "AttributeName":"Mapper_tool_Name",
+        "AttributeDescription":"name of the tool used to map could be manual",
+        "Datatype":"text",
+        "Status":"optional",
+        "TypeClass":"primitive",
+        "Multiple":"FALSE"
        }
      ]
-
+    ]
    }
 }
