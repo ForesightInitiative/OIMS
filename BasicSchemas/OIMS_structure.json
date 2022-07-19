@@ -1,0 +1,33 @@
+{"OIMS" : {
+    "\\":[
+       "optimized for viewing in GTREE",
+       "https://www.medictcare.nl/gamstools/",
+       "GTREE requires GAMS and for viewing purposes",
+       "<%GTREE 1 heading section of the OIMS metadata schema%>"
+      ],
+    "OIMS_Header" : {
+       "mapping_info":{},
+       "MetaDataSchema"   : {
+           "SchemaName"            : "",
+           "SchemaDescription"     : "basic structure of OIMS schemas",
+           "SchemaType"            : "",
+           "SchemaVersion"         : "2.0.0.0",
+           "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/OIMS_structure.json"
+          },
+       "FileDescriptors":{}
+      },
+    "\\":[
+       "<%GTREE 2 Content section of the OIMS metadata schema%>"
+      ],
+    "OIMS_Content": [
+        "Descriptive_Metadata_DataSet":{},
+        "Descriptive_Metadata_DataFile":{},
+        "Technical_Metadata_DataFile":{},
+        "Technical_Metadata_Dataset":{},
+        "Structural_Metadata_DataFile":{},
+        "DataEntity":{},
+        "MetadataMetadata":{},
+        "ETL_Metadata":{}
+      ]
+   }
+}
