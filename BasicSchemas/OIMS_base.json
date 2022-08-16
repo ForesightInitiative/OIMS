@@ -536,6 +536,7 @@
             "MetadataDescription",
             "MetadataVersion",
             "Contact"
+           ]
        },
        {
         "\\":"<%GTREE 2.11.2.1 MetadataName: short description or name of the metadata file%>",
