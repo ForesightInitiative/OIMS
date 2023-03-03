@@ -5,11 +5,11 @@ A Flexible, Extensible, Machine-Readable, Human-Intelligible, and Ontology-Agnos
 Author: \[ \
   { \
           Author name: Gideon Kruseman \
-          Author affiliation: CIMMYT-CGIAR \
+          Author affiliation: Alliance Bioversity International & CIAT- CGIAR \
           Author email: g.kruseman@cgiar.org \
   } \
 \] \
-Date: 6 April 2022 \
+Date: 3 March 2022 \
 OIMS Version: 2.0.0 \
 OIMS documentation version: 2.0.0.1 \
 Status: under development
