@@ -10,8 +10,8 @@ Author: \[ \
   } \
 \] \
 Date: 3 March 2022 \
-OIMS Version: 2.0.0 \
-OIMS documentation version: 2.0.0.1 \
+OIMS Version: 2.1.0.0 \
+OIMS documentation version: 2.1.0.1 \
 Status: under development
 
 ## Purpose
@@ -21,7 +21,7 @@ Building on that paper, this GitHub repository provides the underlying metadata 
 
 ## Citation
 When publishing papers based on the schema we encourage the authors to provide the link to the [github directory](https://github.com/ForesightAndMetrics/OIMS) and use the following citation: \
-Kruseman G., LaPorte M.-A. 2022. A Flexible, Extensible, Machine-Readable, Human-Intelligible, and Ontology-Agnostic Metadata Schema (OIMS) version 2.0.0. https://github.com/ForesightAndMetrics/OIMS  
+Kruseman G., LaPorte M.-A. 2023. A Flexible, Extensible, Machine-Readable, Human-Intelligible, and Ontology-Agnostic Metadata Schema (OIMS) version 2.0.1..0. https://github.com/ForesightAndMetrics/OIMS  
 
 ## Further reading / references
 Kruseman G. 2022.A Flexible, Extensible, Machine-Readable, Human-Intelligible, and Ontology-Agnostic Metadata Schema (OIMS). _Frontiers in Sustainable Food Systems_ vol. 6. DOI=10.3389/fsufs.2022.767863  
