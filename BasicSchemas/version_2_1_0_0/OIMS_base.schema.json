@@ -12,7 +12,7 @@
             "items": {
               "type": "string"
             },
-            "description": "Optional comment elements for GTREE."
+            "description": "Optional comment elements used especially for adding GTREE tags."
           },
           "OIMS_Header": {
             "type": "object",
