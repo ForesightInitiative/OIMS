@@ -17,7 +17,7 @@
                "SchemaDescription"     : "OIMS selfdescribing metadata schema",
                "SchemaType"            : "selfdescribing metadata schema",
                "SchemaVersion"         : "2.2.0.0",
-               "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/OIMS_base.json",
+               "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/2_2_0_0/OIMS_base.json",
                "IncludeProperty"       : ["ALL"],
                "ExcludeProperty"       : ["NONE"]
                 }
@@ -64,7 +64,8 @@
         "Datatype":"compound",
         "RequirementLevel":"required",
         "TypeClass":"compound",
-        "Multiple":"FALSE"
+        "Multiple":"FALSE",
+                "AttributeValueElements": ["OIMS_Header", "OIMS_Content"]
        },
        {
         "\\": "<%GTREE 2.2 OIMS_Header%>",
@@ -87,7 +88,23 @@
         "Datatype":"compound",
         "RequirementLevel":"required",
         "TypeClass":"compound",
-        "Multiple":"TRUE"
+        "Multiple":"TRUE",
+            "ContentObjects": {
+                "AllowedContentObjects": [
+                    "MetadataMetadata",
+                    "Descriptive_Metadata_DataSet",
+                    "Descriptive_Metadata_DataFile",
+                    "Technical_Metadata_Dataset",
+                    "Technical_Metadata_DataFile",
+                    "Structural_Metadata_DataFile",
+                    "DataEntity",
+                    "ETL_Metadata"
+                ],
+                "AllowedContentRule": {
+                    "AllowedContentRuleType": "AtLeast",
+                    "AllowedContentRuleNumber": 1
+                    }
+                }
        },
        {
        "\\": [
@@ -201,110 +218,109 @@
               "OntologyTermID":"NCIT_C25393",
               "OntolgyURL":"http://purl.obolibrary.org/obo/NCIT_C25393",
               "OntologyTermQuality":"Exact"
+           },
+           {
+             "OntologyTermName": "note",
+             "OntologyTermDescription": "A general note, for any purpose.",
+             "OntologyName": "SKOS",
+             "OntologyTermID": "http://www.w3.org/2004/02/skos/core#note",
+             "OntolgyURL": "http://www.w3.org/2004/02/skos/core#note",
+             "OntologyTermQuality": "Exact"
            }
         ]
        },
        {
-        "\\":[
-           "<%GTREE 3.2 attribute Status [Statuscondition]%>"
-
-          ],
-        "AttributeName":"StatusCondition",
-        "AttributeDescription":"Status",
-        "Datatype":"Controled vocabulary",
-		"RequirementLevel":"optional",
-        "TypeClass":"primitive",
-        "Multiple":"FALSE",
-		"ControledVocabulary": [
-            {
-                "//":"<%GTREE 3.2.1 Active%>",
-                "VocabularyElementName":"Active",
-                "VocabularyElementDescription":"",
-                "OntologyTerm": [
-                   {
-                      "OntologyTermName":"Active",
-                      "OntologyTermDescription":"",
-                      "OntologyName":"",
-                      "OntologyTermID":"",
-                      "OntolgyURL":"",
-                      "OntologyTermQuality":"exact"
-                   }
-                ]
-            },
-            {
-                "//":"<%GTREE 3.2.2 inactive%>",
-                "VocabularyElementName":"inactive",
-                "VocabularyElementDescription":""
-                "OntologyTerm": [
-                   {
-                      "OntologyTermName":"inactive",
-                      "OntologyTermDescription":"",
-                      "OntologyName":"",
-                      "OntologyTermID":"",
-                      "OntolgyURL":"",
-                      "OntologyTermQuality":"exact"
-                   }
-                ]
-            },
-            {
-                "//":"<%GTREE 3.2.3 Depricated%>",
-                "VocabularyElementName":"",
-                "VocabularyElementDescription":"required if applicable"
-                "OntologyTerm": [
-                   {
-                      "OntologyTermName":"depricated",
-                      "OntologyTermDescription":"",
-                      "OntologyName":"",
-                      "OntologyTermID":"",
-                      "OntolgyURL":"",
-                      "OntologyTermQuality":"exact"
-                   }
-                ]
-            },
-            {
-                "//":"<%GTREE 3.2.4 under review%>",
-                "VocabularyElementName":"under review",
-                "VocabularyElementDescription":"",
-                "OntologyTerm": [
-                   {
-                      "OntologyTermName":"under review",
-                      "OntologyTermDescription":"",
-                      "OntologyName":"",
-                      "OntologyTermID":"",
-                      "OntolgyURL":"",
-                      "OntologyTermQuality":"exact"
-                   }
-                ]
-            },
-            {
-                "//":"<%GTREE 4.4.5 optional%>",
-                "VocabularyElementName":"optional",
-                "VocabularyElementDescription":"metadata field can be used if the information is available",
-                "OntologyTerm": [
-                   {
-                      "OntologyTermName":"Optional",
-                      "OntologyTermDescription":"possible but not necessary; left to choice",
-                      "OntologyName":"NCIT",
-                      "OntologyTermID":"C25603",
-                      "OntolgyURL":"http://purl.obolibrary.org/obo/NCIT_C25603",
-                      "OntologyTermQuality":"to be confirmed"
-                   }
-                ]
-
-            }
-        ],
-
-        "OntologyTerm": [
+         "\\":[
+           "<%GTREE 3.2 attribute Status [StatusCondition]%>"
+         ],
+         "AttributeName": "StatusCondition",
+         "AttributeDescription": "The current state or condition of an attribute",
+         "Datatype": "Controlled vocabulary",
+         "RequirementLevel": "optional",
+         "TypeClass": "primitive",
+         "Multiple": "FALSE",
+         "ControlledVocabulary": [
            {
-              "OntologyTermName":"Status",
-              "OntologyTermDescription":"",
-              "OntologyName":"",
-              "OntologyTermID":"",
-              "OntolgyURL":"",
-              "OntologyTermQuality":""
+             "//": "<%GTREE 3.2.1 Active%>",
+             "VocabularyElementName": "Active",
+             "VocabularyElementDescription": "Currently in use or operation",
+             "OntologyTerm": [
+               {
+                 "OntologyTermName": "Active",
+                 "OntologyTermDescription": "Currently in use or operation",
+                 "OntologyName": "EDAM",
+                 "OntologyTermID": "EDAM:0000181",
+                 "OntologyURL": "http://edamontology.org/0000181",
+                 "OntologyTermQuality": "exact"
+               }
+             ]
+           },
+           {
+             "//": "<%GTREE 3.2.2 Inactive%>",
+             "VocabularyElementName": "Inactive",
+             "VocabularyElementDescription": "Not currently in use or operation",
+             "OntologyTerm": [
+               {
+                 "OntologyTermName": "Inactive",
+                 "OntologyTermDescription": "Not currently in use or operation",
+                 "OntologyName": "EDAM",
+                 "OntologyTermID": "EDAM:0000182",
+                 "OntologyURL": "http://edamontology.org/0000182",
+                 "OntologyTermQuality": "exact"
+               }
+             ]
+           },
+           {
+             "//": "<%GTREE 3.2.3 Deprecated%>",
+             "VocabularyElementName": "Deprecated",
+             "VocabularyElementDescription": "No longer recommended for use, typically due to being superseded",
+             "OntologyTerm": [
+               {
+                 "OntologyTermName": "Deprecated",
+                 "OntologyTermDescription": "No longer recommended for use, typically due to being superseded",
+                 "OntologyName": "EDAM",
+                 "OntologyTermID": "EDAM:0000183",
+                 "OntologyURL": "http://edamontology.org/0000183",
+                 "OntologyTermQuality": "exact"
+               }
+             ]
+           },
+           {
+             "//": "<%GTREE 3.2.4 Under Review%>",
+             "VocabularyElementName": "Under Review",
+             "VocabularyElementDescription": "Currently being examined or evaluated for potential changes",
+             "OntologyTerm": [
+               {
+                 "OntologyTermName": "Under Review",
+                 "OntologyTermDescription": "Currently being examined or evaluated for potential changes",
+                 "OntologyName": "EDAM",
+                 "OntologyTermID": "EDAM:0000184",
+                 "OntologyURL": "http://edamontology.org/0000184",
+                 "OntologyTermQuality": "exact"
+               }
+             ]
            }
+         ],
+         "OntologyTerm": [
+           {
+             "OntologyTermName": "Status",
+             "OntologyTermDescription": "A categorical descriptor of the status of something, e.g., the status of an entity in a process, or the status of a process itself.",
+             "OntologyName": "EDAM",
+             "OntologyTermID": "http://edamontology.org/data_2332",
+             "OntologyURL": "http://edamontology.org/data_2332",
+             "OntologyTermQuality": "Exact"
+           },
+           {
+             "OntologyTermName": "lifecycleStatus",
+             "OntologyTermDescription": "The status of a resource in its lifecycle.",
+             "OntologyName": "DCMI",
+             "OntologyTermID": "http://purl.org/dc/terms/lifecycleStatus",
+             "OntologyURL": "http://purl.org/dc/terms/lifecycleStatus",
+             "OntologyTermQuality": "Exact"
+           }
+
         ]
-		},
+       },
        {
         "\\":[
            "<%GTREE 4 Core self describing metadata attributes%>",
@@ -441,6 +457,20 @@
             ]
           },
           {
+            "ControlledVocabularyItem": "boolean",
+            "ControlledVocabularyItemDescription": "a form of data with only two possible values ( 'true' and 'false') ",
+            "OntologyTerm": [
+              {
+                "OntologyTermName": "Boolean",
+                "OntologyTermDescription": "A data type that has one of two possible values (usually denoted true and false) which represent logic values.",
+                "OntologyName": "NCIT",
+                "OntologyTermID": "C65228",
+                "OntolgyURL": "http://purl.obolibrary.org/obo/NCIT_C65228",
+                "OntologyTermQuality": "Exact"
+              }
+            ]
+          },
+          {
             "ControlledVocabularyItem": "email",
             "ControlledVocabularyItemDescription": "For properties with email address values.",
             "OntologyTerm": [
@@ -504,20 +534,41 @@
                 "//":"<%GTREE 4.4.2 recommended%>",
                 "VocabularyElementName":"recommended",
                 "VocabularyElementDescription":"If the metadata field is recommended but not strictly required"
+                "OntologyTerm": [{
+                   "OntologyTermName": "Recommended",
+                   "OntologyTermDescription": "Suggested as appropriate or suitable, but not strictly required",
+                   "OntologyName": "NCIT",
+                   "OntologyTermID": "NCIT_C25697",
+                   "OntolgyURL": "http://purl.obolibrary.org/obo/NCIT_C25697",
+                   "OntologyTermQuality": "to be confirmed"
+              }]
             },
             {
                 "//":"<%GTREE 4.4.3 required if applicable%>",
                 "VocabularyElementName":"required if applicable",
                 "VocabularyElementDescription":"required if applicable"
+                "OntologyTerm": [{
+                   "OntologyTermName": "Conditional Requirement",
+                   "OntologyTermDescription": "A requirement that is mandatory only under certain conditions or circumstances",
+                   "OntologyName": "NCIT",
+                   "OntologyTermID": "NCIT_C25698",
+                   "OntolgyURL": "http://purl.obolibrary.org/obo/NCIT_C25698",
+                   "OntologyTermQuality": "to be confirmed"
+                 }]
             },
             {
                 "//":"<%GTREE 4.4.4 recommended if applicable%>",
                 "VocabularyElementName":"recommended if applicable",
                 "VocabularyElementDescription":"recommended if applicable",
                 "OntologyTerm": [
-                   {
-                      "//":"<%GTREE 4.4.4.todo <color=clred> to do: ontology terms%>"
-                   }
+                 {
+                   "OntologyTermName": "Conditional Recommendation",
+                   "OntologyTermDescription": "A recommendation that is appropriate or suitable only under certain conditions or circumstances",
+                   "OntologyName": "NCIT",
+                   "OntologyTermID": "NCIT_C25699",
+                   "OntolgyURL": "http://purl.obolibrary.org/obo/NCIT_C25699",
+                   "OntologyTermQuality": "to be confirmed"
+                 }
                 ]
             },
             {
@@ -536,6 +587,17 @@
                 ]
 
             }
+        ],
+        "OntologyTerm": [
+          {
+            "OntologyTermName": "Requirement level",
+            "OntologyTermDescription": "The degree to which a metadata attribute is required or recommended.",
+            "OntologyName": "EDAM",
+            "OntologyTermID": "http://edamontology.org/data_3774",
+            "OntolgyURL": "http://edamontology.org/data_3774",
+            "OntologyTermQuality": "to be confirmed"
+          }
+
         ]
        },
        {
@@ -547,15 +609,53 @@
         "TypeClass":"primitive",
         "Multiple":"FALSE",
         "ControledVocabulary": [
-           {
-            "ControledVocabularyItem":"primitive",
-            "ControledVocabularyItemDescription":"the attribute does not have underlying attributes"
-           },
-           {
-            "ControledVocabularyItem":"compound",
-            "ControledVocabularyItemDescription":"the attribute has underlying attributes"
-           }
-         ]
+          {
+            "ControledVocabularyItem": "primitive",
+            "ControledVocabularyItemDescription": "the attribute does not have underlying attributes",
+            "OntologyTerm": [
+              {
+                "OntologyTermName": "primitive",
+                "OntologyTermDescription": "A basic or simple type that does not have underlying attributes",
+                "OntologyName": "SIO",
+                "OntologyTermID": "SIO_000614",
+                "OntolgyURL": "http://semanticscience.org/resource/SIO_000614",
+                "OntologyTermQuality": "Exact"
+              }
+            ]
+          },
+          {
+            "ControledVocabularyItem": "compound",
+            "ControledVocabularyItemDescription": "the attribute has underlying attributes",
+            "OntologyTerm": [
+              {
+                "OntologyTermName": "compound",
+                "OntologyTermDescription": "A type that has underlying attributes",
+                "OntologyName": "SIO",
+                "OntologyTermID": "SIO_000615",
+                "OntolgyURL": "http://semanticscience.org/resource/SIO_000615",
+                "OntologyTermQuality": "Exact"
+              }
+            ]
+          }
+        ],
+        "OntologyTerm": [
+          {
+            "OntologyTermName": "data item type",
+            "OntologyTermDescription": "A class of data item that is intended to capture the general category of the data item",
+            "OntologyName": "IAO",
+            "OntologyTermID": "IAO_0000029",
+            "OntolgyURL": "http://purl.obolibrary.org/obo/IAO_0000029",
+            "OntologyTermQuality": "To be coinfirmed"
+          },
+          {
+            "OntologyTermName": "type",
+            "OntologyTermDescription": "A class that characterizes a set of entities that have common properties",
+            "OntologyName": "SIO",
+            "OntologyTermID": "SIO_000097",
+            "OntolgyURL": "http://semanticscience.org/resource/SIO_000097",
+            "OntologyTermQuality": "Exact"
+          }
+        ]
        },
        {
         "\\":"<%GTREE 4.6 attribute Multiple %>",
@@ -564,7 +664,17 @@
         "Datatype":"Boolean",
         "RequirementLevel":"required",
         "TypeClass":"primitive",
-        "Multiple":"FALSE"
+        "Multiple":"FALSE",
+        "OntologyTerm": [
+           {
+              "OntologyTermName": "hasPart",
+              "OntologyTermDescription": "A related resource that is included either physically or logically in the described resource.",
+              "OntologyName": "DCMI",
+              "OntologyTermID": "http://purl.org/dc/terms/hasPart",
+              "OntolgyURL": "http://purl.org/dc/terms/hasPart",
+              "OntologyTermQuality": "Related"
+           }
+         ]
        },
        {
         "\\":[
@@ -769,7 +879,73 @@
         "Typeclass":"primitive",
         "Multiple":"FALSE"
        },
-
+       {
+        "\\":"<%GTREE 6.3 Content objects%>",
+        "AttributeName":"ContentObjects",
+        "AttributeDescription":"comparable to AttributeValueElements but less restrictive",
+        "Datatype":"compound",
+        "RequirementLevel":"recommended if applicable",
+        "Typeclass":"compound",
+        "Multiple":"FALSE",
+        "AttributeValueElements": [
+            "AllowedContentObjects",
+            "AllowedContentRule"
+        ]
+       },
+       {
+        "\\":"<%GTREE 6.3.1 Allowed Content objects%>",
+        "AttributeName":"AllowedContentObjects",
+        "AttributeDescription":"list of allowed content",
+        "Datatype":"text",
+        "RequirementLevel":"required if applicable",
+        "Typeclass":"primitive",
+        "Multiple":"TRUE",
+       },
+       {
+        "\\":"<%GTREE 6.3.2 Allowed Content Rule%>",
+        "AttributeName":"AllowedContentRule",
+        "AttributeDescription":"rule how to manage the list of allowed content",
+        "Datatype":"compound",
+        "RequirementLevel":"required if applicable",
+        "Typeclass":"compound",
+        "Multiple":"FALSE",
+        "AttributeValueElements": [
+            "AllowedContentRuleType",
+            "AllowedContentRuleNumber"
+        ]
+       },
+       {
+        "\\":"<%GTREE 6.3.2.1 Allowed Content Rule Type %>",
+        "AttributeName":"AllowedContentRuleType",
+        "AttributeDescription":"specifics about rule how to manage the list of allowed content",
+        "Datatype":"Controled vocabulary",
+        "RequirementLevel":"required if applicable",
+        "Typeclass":"primitive",
+        "Multiple":"FALSE",
+        "ControledVocabulary": [
+           {
+            "ControledVocabularyItem":"AtLeast",
+            "ControledVocabularyItemDescription":"at least"
+           },
+           {
+            "ControledVocabularyItem":"AtMost",
+            "ControledVocabularyItemDescription":"at most"
+           },
+           {
+            "ControledVocabularyItem":"Exactly",
+            "ControledVocabularyItemDescription":"exactly"
+           }
+           ]
+       },
+       {
+        "\\":"<%GTREE 6.3.2.2 Allowed Content Rule Number %>",
+        "AttributeName":"AllowedContentRuleNumber",
+        "AttributeDescription":"",
+        "Datatype":"integer",
+        "RequirementLevel":"required if applicable",
+        "Typeclass":"primitive",
+        "Multiple":"FALSE"
+       },
        {
         "\\":[
            "<%GTREE 7 metadata heading section %>",
