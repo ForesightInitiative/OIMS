@@ -345,22 +345,14 @@
           }
                      ],
         "OntologyTerm": [
-           {
-              "OntologyTermName":"DataType",
-              "OntologyTermDescription":"An indication of the form that a value will have.",
-              "OntologyName":"NCIT",
-              "OntologyTermID":"C42645",
-              "OntolgyURL":"http://purl.obolibrary.org/obo/NCIT_C42645 ",
-              "OntologyTermQuality":"to be confirmed"
-           },
-           {
-              "OntologyTermName": "DataType",
-              "OntologyTermDescription": "A category of information, indicating the nature or characteristics of the content of a resource.",
-              "OntologyName": "DCMI",
-              "OntologyTermID": "dcterms:type",
-              "OntolgyURL": "http://purl.org/dc/terms/type",
-              "OntologyTermQuality": "Exact"
-           }
+         {
+            "OntologyTermName": "DataType",
+            "OntologyTermDescription": "A category of information, indicating the nature or characteristics of the content of a resource.",
+            "OntologyName": "DCMI",
+            "OntologyTermID": "dcterms:type",
+            "OntolgyURL": "http://purl.org/dc/terms/type",
+            "OntologyTermQuality": "Exact"
+          }
                   ]
        },
        {
