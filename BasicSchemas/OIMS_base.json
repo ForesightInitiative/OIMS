@@ -9,26 +9,34 @@
        "mapping_info": {
             "Mapper_tool_Name": "Manual"
            },
-        "MetaDataSchema"   : {
-            "SchemaName"            : "OIMS_base",
-            "SchemaDescription"     : "OIMS selfdescribing metadata schema",
-            "SchemaType"            : "selfdescribing metadata schema",
-            "SchemaVersion"         : "2.0.0.0",
-            "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/OIMS_base.json"
-           },
+        "MetaDataSchema"   : [{
+            "OIMS_Content_Object":"MetadataMetadata",
+            "SchemaProperties":[
+                {
+               "SchemaName"            : "OIMS_base",
+               "SchemaDescription"     : "OIMS selfdescribing metadata schema",
+               "SchemaType"            : "selfdescribing metadata schema",
+               "SchemaVersion"         : "2.1.0.0",
+               "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/OIMS_base.json",
+               "IncludeProperty"       : ["ALL"],
+               "ExcludeProperty"       : ["NONE"]
+                }
+            ]
+           }],
         "FileDescriptors"   : {
             "MetadataName"     :  "OIMS_base",
             "MetaDataDescription" :"OIMS selfdescribing metadata schema",
             "MetadataVersion"  : {
-                "CurrentVersion"        : "2.0.0.0",
-                "MetadataVersionStatus" : "development"
+                "CurrentVersion"        : "2.1.0.0",
+                "MetadataVersionStatus" : "development",
+                "VersionDate"           : "March 21, 2023"
                },
             "Contact":[
                {
                 "ContactName"            :"Gideon Kruseman",
                 "ContactAffiliation"     : {
-                    "ContactAffiliationName"     :"International Maize and Wheat Improvement Center",
-                    "ContactAffiliationAcronym"  :"CIMMYT"
+                    "ContactAffiliationName"     :"Alliance of Bioversity International & CIAT",
+                    "ContactAffiliationAcronym"  :"Alliance"
                    },
                 "ContactIdentifier": [
                    {
@@ -44,7 +52,7 @@
              ]
            }
        },
-    "OIMS_Content" : [
+    "OIMS_Content" : [{
       "MetadataMetadata":[
        {
         "\\": [
@@ -86,7 +94,85 @@
         "Datatype":"compound",
         "Status":"required if applicable",
         "TypeClass":"compound",
-        "Multiple":"TRUE",
+        "Multiple":"TRUE"
+       },
+       {
+        "\\": [
+            "<%GTREE 2.0.3.2 Descriptive Metadata of Dataset%>"
+           ],
+        "AttributeName":"Descriptive_Metadata_DataSet",
+        "AttributeDescription":"Section with descriptive metadata at Dataset level",
+        "Datatype":"compound",
+        "Status":"optional",
+        "TypeClass":"compound",
+        "Multiple":"TRUE"
+       },
+       {
+        "\\": [
+            "<%GTREE 2.0.3.3 Descriptive Metadata of Data file%>"
+           ],
+
+        "AttributeName":"Descriptive_Metadata_DataFile",
+        "AttributeDescription":"Section with descriptive metadata at Data file level",
+        "Datatype":"compound",
+        "Status":"optional",
+        "TypeClass":"compound",
+        "Multiple":"TRUE"
+       },
+       {
+        "\\": [
+            "<%GTREE 2.0.3.4 Technical Metadata of Dataset%>"
+           ],
+        "AttributeName":"Technical_Metadata_Dataset",
+        "AttributeDescription":"Section with technical metadata at dataset level",
+        "Datatype":"compound",
+        "Status":"optional",
+        "TypeClass":"compound",
+        "Multiple":"TRUE"
+       },
+       {
+        "\\": [
+            "<%GTREE 2.0.3.5 Technical Metadata of Data file%>"
+           ],
+        "AttributeName":"Technical_Metadata_DataFile",
+        "AttributeDescription":"Section with technical metadata at file level default is an OIMS compatible JSON data file ",
+        "Datatype":"compound",
+        "Status":"optional",
+        "TypeClass":"compound",
+        "Multiple":"TRUE"
+       },
+       {
+        "\\": [
+            "<%GTREE 2.0.3.6 Structural Metadata of Data file%>"
+           ],
+        "AttributeName":"Structural_Metadata_DataFile",
+        "AttributeDescription":"Section with descriptive metadata at Data file level",
+        "Datatype":"compound",
+        "Status":"optional",
+        "TypeClass":"compound",
+        "Multiple":"TRUE"
+       },
+       {
+       "\\": [
+            "<%GTREE 2.0.3.7 Data entity information%>"
+           ],
+        "AttributeName":"DataEntity",
+        "AttributeDescription":"Section describing data entity relationships",
+        "Datatype":"compound",
+        "Status":"optional",
+        "TypeClass":"compound",
+        "Multiple":"TRUE"
+       },
+       {
+       "\\": [
+            "<%GTREE 2.0.3.8 ETL metadata information%>"
+           ],
+        "AttributeName":"ETL_Metadata",
+        "AttributeDescription":"Section describing metadata of ETL procedure or model or tool",
+        "Datatype":"compound",
+        "Status":"optional",
+        "TypeClass":"compound",
+        "Multiple":"TRUE"
        },
        {
         "\\":"<%GTREE 2.1 attribute \\ [comment]%>",
@@ -149,31 +235,115 @@
           ]
        },
        {
-        "\\":"<%GTREE 2.4 attribute DataType %>",
+        "\\":["<%GTREE 2.4 attribute DataType and values%>",
+             "<%GTREE 2.4.1 attribute DataType %>"
+           ],
         "AttributeName":"Datatype",
         "AttributeDescription":"datatypes used in the data dictionary metadata fields",
-        "Datatype":"controlled vocabulary",
+        "Datatype":"Controled Vocabulary",
         "Status":"required",
         "TypeClass":"primitive",
         "Multiple":"FALSE",
-        "Controlledvocabulary": [
-           {
-            "ControlledVocabularyItem":"simple character string",
-            "ControlledVocabularyItemDescription":"simple character string"
+        "ControledVocabulary": [
+          {
+            "ControledVocabularyItem": "string",
+            "ControledVocabularyItemDescription": "For general textual data, including simple character strings.",
+            "OntologyTerm": [
+              {
+                "OntologyTermName": "Literal",
+                "OntologyTermDescription": "A string of characters.",
+                "OntologyName": "RDF",
+                "OntologyTermID": "rdf:Literal",
+                "OntolgyURL": "https://www.w3.org/TR/rdf11-concepts/#dfn-literal",
+                "OntologyTermQuality": "Exact"
+              }
+            ]
            },
            {
-            "ControlledVocabularyItem":"string",
-            "ControlledVocabularyItemDescription":"string"
+            "ControledVocabularyItem": "text",
+            "ControledVocabularyItemDescription": "For more substantial amounts of alphanumeric characters or longer text.",
+            "OntologyTerm": [
+              {
+                "OntologyTermName": "Text",
+                "OntologyTermDescription": "Data that primarily includes sequences of characters.",
+                "OntologyName": "Schema.org",
+                "OntologyTermID": "schema:Text",
+                "OntolgyURL": "https://schema.org/Text",
+                "OntologyTermQuality": "Exact"
+              }
+            ]
            },
            {
-            "ControlledVocabularyItem":"controlled vocabulary",
-            "ControlledVocabularyItemDescription":"controlled vocabulary"
+            "ControledVocabularyItem": "compound",
+            "ControledVocabularyItemDescription": "For properties with an array of properties as values.",
+            "OntologyTerm": [
+              {
+                "OntologyTermName": "CompoundObject",
+                "OntologyTermDescription": "An object composed of multiple other objects.",
+                "OntologyName": "CIDOC-CRM",
+                "OntologyTermID": "E90_Substance",
+                "OntolgyURL": "http://www.cidoc-crm.org/Entity/E90_Substance/Version-6.2.1",
+                "OntologyTermQuality": "Related"
+              }
+            ]
            },
            {
-            "ControlledVocabularyItem":"text",
-            "ControlledVocabularyItemDescription":"substantial amount of alphanumeric characters"
-           },
-          ],
+            "ControledVocabularyItem": "date",
+            "ControledVocabularyItemDescription": "For date values used in properties like version date.",
+            "OntologyTerm": [
+              {
+                "OntologyTermName": "Date",
+                "OntologyTermDescription": "A particular day, month, or year.",
+                "OntologyName": "Schema.org",
+                "OntologyTermID": "schema:Date",
+                "OntolgyURL": "https://schema.org/Date",
+                "OntologyTermQuality": "Exact"
+              }
+            ]
+          },
+          {
+            "ControledVocabularyItem":"URI",
+            "ControledVocabularyItemDescription":"For properties with URL or URI values.",
+            "OntologyTerm": [
+              {
+                "OntologyTermName":"xsd:anyURI",
+                "OntologyTermDescription":"A Uniform Resource Identifier reference data type.",
+                "OntologyName":"XML Schema",
+                "OntologyTermID":"",
+                "OntolgyURL":"https://www.w3.org/TR/xmlschema11-2/#anyURI",
+                "OntologyTermQuality":"Exact"
+              }
+            ]
+          },
+          {
+            "ControlledVocabularyItem": "Controlled Vocabulary",
+            "ControlledVocabularyItemDescription": "For properties with values that are items in a controlled vocabulary, enumeration, or list.",
+            "OntologyTerm": [
+              {
+                "OntologyTermName": "ControlledVocabulary",
+                "OntologyTermDescription": "A collection of standardized terms and their meanings that are used to provide consistent labeling and descriptions of concepts within a domain.",
+                "OntologyName": "SKOS",
+                "OntologyTermID": "skos:ConceptScheme",
+                "OntolgyURL": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+                "OntologyTermQuality": "Exact"
+              }
+            ]
+          },
+          {
+            "ControlledVocabularyItem": "email",
+            "ControlledVocabularyItemDescription": "For properties with email address values.",
+            "OntologyTerm": [
+              {
+                "OntologyTermName": "EmailAddress",
+                "OntologyTermDescription": "A string that represents the email address of a person or organization.",
+                "OntologyName": "Schema.org",
+                "OntologyTermID": "schema:email",
+                "OntolgyURL": "https://schema.org/email",
+                "OntologyTermQuality": "Exact"
+              }
+            ]
+          }
+                     ],
         "OntologyTerm": [
            {
               "OntologyTermName":"DataType",
@@ -182,18 +352,77 @@
               "OntologyTermID":"C42645",
               "OntolgyURL":"http://purl.obolibrary.org/obo/NCIT_C42645 ",
               "OntologyTermQuality":"to be confirmed"
+           },
+           {
+              "OntologyTermName": "DataType",
+              "OntologyTermDescription": "A category of information, indicating the nature or characteristics of the content of a resource.",
+              "OntologyName": "DCMI",
+              "OntologyTermID": "dcterms:type",
+              "OntolgyURL": "http://purl.org/dc/terms/type",
+              "OntologyTermQuality": "Exact"
            }
+                  ]
+       },
+       {
+        "\\":"<%GTREE 2.4.2 Default value %>",
+        "AttributeName":"DefaultValue",
+        "AttributeDescription":"default value of the attribute if not set in the metadata",
+        "Datatype":"text",
+        "Status":"recommended if applicable",
+        "Typeclass":"primitive",
+        "Multiple":"TRUE",
+        "OntologyTerm": [
+         {
+           "OntologyTermName": "Default Value",
+           "OntologyTermDescription": "The value of a parameter that is used when no other value is specified.",
+           "OntologyName": "QUDT",
+           "OntologyTermID": "QUDT_DefaultValue",
+           "OntolgyURL": "http://www.qudt.org/qudt/owl/1.0.0/datatype.owl#DefaultValue",
+           "OntologyTermQuality": "Exact"
+         }
+       ]
+       },
+       {
+        "\\":"<%GTREE 2.4.3 Value Reserved Words%>",
+        "AttributeName":"ValueReservedWords",
+        "AttributeDescription":"reserved words that have a special meaning in the contexr of the attribute and are not covered by Controled Vocabulary",
+        "Datatype":"compound",
+        "Status":"recommended if applicable",
+        "Typeclass":"compound",
+        "Multiple":"TRUE",
+        "AttributeValueElements": [
+            "ReservedWordName",
+            "ReservedWordDescription"
         ]
        },
+       {
+        "\\":"<%GTREE 2.4.3.1 Reserved Words name%>",
+        "AttributeName":"ReservedWordName",
+        "AttributeDescription":"reserved words that have a special meaning in the context of the attribute and are not covered by Controled Vocabulary",
+        "Datatype":"text",
+        "Status":"required if applicable",
+        "Typeclass":"primitive",
+        "Multiple":"FALSE"
+       },
+       {
+        "\\":"<%GTREE 2.4.3.2 Reserved Words description%>",
+        "AttributeName":"ReservedWordDescription",
+        "AttributeDescription":"definition of reserved words that have a special meaning in the contexr of the attribute and are not covered by Controled Vocabulary",
+        "Datatype":"text",
+        "Status":"recommended if applicable",
+        "Typeclass":"primitive",
+        "Multiple":"FALSE"
+       },
+
        {
         "\\":"<%GTREE 2.5 attribute Status %>",
         "AttributeName":"Status",
         "AttributeDescription":"see OIMS self describing metadata schema",
-        "Datatype":"controlled vocabulary",
+        "Datatype":"Controled Vocabulary",
         "Status":"required",
         "TypeClass":"primitive",
         "Multiple":"FALSE",
-        "ControlledVocabulary": [
+        "ControledVocabulary": [
             {
                 "//":"<%GTREE 2.5.1 required%>",
                 "VocabularyElementName":"required",
@@ -213,12 +442,12 @@
             {
                 "//":"<%GTREE 2.5.2 recommended%>",
                 "VocabularyElementName":"recommended",
-                "VocabularyElementDescription":"If the metadata field is recommended but not strictly required",
+                "VocabularyElementDescription":"If the metadata field is recommended but not strictly required"
             },
             {
                 "//":"<%GTREE 2.5.3 required if applicable%>",
                 "VocabularyElementName":"required if applicable",
-                "VocabularyElementDescription":"required if applicable",
+                "VocabularyElementDescription":"required if applicable"
             },
             {
                 "//":"<%GTREE 2.5.4 recommended if applicable%>",
@@ -252,18 +481,18 @@
         "\\":"<%GTREE 2.6 attribute TypeClass %>",
         "AttributeName":"TypeClass",
         "AttributeDescription":"if the attribute is compound or primitive",
-        "Datatype":"controlled vocabulary",
+        "Datatype":"Controled Vocabulary",
         "Status":"required",
         "TypeClass":"primitive",
         "Multiple":"FALSE",
-        "Controlledvocabulary": [
+        "ControledVocabulary": [
            {
-            "ControlledVocabularyItem":"primitive",
-            "ControlledVocabularyItemDescription":"the attribute does not have underlying attributes"
+            "ControledVocabularyItem":"primitive",
+            "ControledVocabularyItemDescription":"the attribute does not have underlying attributes"
            },
            {
-            "ControlledVocabularyItem":"compound",
-            "ControlledVocabularyItemDescription":"the attribute has underlying attributes"
+            "ControledVocabularyItem":"compound",
+            "ControledVocabularyItemDescription":"the attribute has underlying attributes"
            }
          ]
        },
@@ -274,19 +503,19 @@
         "Datatype":"Boolean",
         "Status":"required",
         "TypeClass":"primitive",
-        "Multiple":"FALSE",
+        "Multiple":"FALSE"
        },
        {
-        "\\":"<%GTREE 2.8 attribute ControlledVocabulary %>",
-        "AttributeName":"ControlledVocabulary",
-        "AttributeDescription":"controlled vocabulary definition if data type is controlled vocabulary also known as an enumeration in STATA or a factor in R",
+        "\\":"<%GTREE 2.8 attribute ControledVocabulary %>",
+        "AttributeName":"ControledVocabulary",
+        "AttributeDescription":"Controled Vocabulary definition if data type is Controled Vocabulary also known as an enumeration in STATA or a factor in R",
         "Datatype":"compound",
         "Status":"required if applicable",
         "TypeClass":"compound",
         "Multiple":"TRUE",
         "OntologyTerm": [
            {
-              "OntologyTermName":"Controlled Vocabulary",
+              "OntologyTermName":"Controled Vocabulary",
               "OntologyTermDescription":"A set of terms that are selected and defined based on the requirements set out by the user group, usually a set of vocabulary is chosen to promote consistency across data collection projects.",
               "OntologyName":"NCIT",
               "OntologyTermID":"C25704",
@@ -297,8 +526,8 @@
        },
        {
         "\\":"<%GTREE 2.8.1  Vocabulary element name%>",
-        "AttributeName":"ControlledVocabulary",
-        "AttributeDescription":"the element identifier in a controlled vocabulary",
+        "AttributeName":"ControledVocabulary",
+        "AttributeDescription":"the element identifier in a Controled Vocabulary",
         "Datatype":"simple character string",
         "Status":"required",
         "TypeClass":"primitive",
@@ -307,7 +536,7 @@
        {
         "\\":"<%GTREE 2.8.2  Vocabulary element description%>",
         "AttributeName":"VocabularyElementName",
-        "AttributeDescription":"the description of an element in a controlled vocabulary in human-intelligible terms",
+        "AttributeDescription":"the description of an element in a Controled Vocabulary in human-intelligible terms",
         "Datatype":"text",
         "Status":"required",
         "TypeClass":"primitive",
@@ -319,7 +548,7 @@
         "AttributeDescription":"description of the field compound used to identify the fields in a compound",
         "Datatype":"compound",
         "Status":"required if applicable",
-        "TypeClass":"compound",
+        "TypeClass":"primitive",
         "Multiple":"TRUE"
        },
        {
@@ -382,7 +611,7 @@
           "Status":"required if applicable",
           "TypeClass":"primitive",
           "Multiple": false,
-          "DataType":"URL",
+          "DataType":"URL"
        },
        {
           "//":"<%GTREE 2.10.6 OntologyTermQuality%>",
@@ -392,23 +621,23 @@
           "TypeClass":"primitive",
           "Multiple": false,
           "DataType":"enumeration",
-          "ControlledVocabulary": [
+          "ControledVocabulary": [
               {
                   "//":"<%GTREE 2.10.6.1 Exact match%>",
                   "VocabularyElementName":"Exact match",
-                  "//":"skos:exactMatch see https://www.w3.org/TR/skos-reference/#mapping"
+                  "//":"skos:exactMatch see https://www.w3.org/TR/skos-reference/#mapping",
                   "VocabularyElementDescription":"the ontology terms matches the attribute exactly"
               },
               {
                   "//":"<%GTREE 2.10.6.2 Too general%>",
                   "VocabularyElementName":"too general",
-                  "//":"skos:BroadMatch see https://www.w3.org/TR/skos-reference/#mapping"
+                  "//":"skos:BroadMatch see https://www.w3.org/TR/skos-reference/#mapping",
                   "VocabularyElementDescription":"the ontology term covers the attribute, but the attribute is more specific than the ontology term"
               },
               {
                   "//":"<%GTREE 2.10.6.3 too specific%>",
                   "VocabularyElementName":"too specific",
-                  "//":"skos:NarrowMatch see https://www.w3.org/TR/skos-reference/#mapping"
+                  "//":"skos:NarrowMatch see https://www.w3.org/TR/skos-reference/#mapping",
                   "VocabularyElementDescription":"the ontology term covers only part of the attribute, the attribute is broader than the ontology term"
               },
               {
@@ -420,7 +649,7 @@
                   "//":"<%GTREE 2.10.6.5 Unknown%>",
                   "VocabularyElementName":"unknown",
                   "VocabularyElementDescription":"unknown if it is an exact match, too general or too specific"
-              },
+              }
           ]
        },
        {
@@ -440,6 +669,38 @@
        {
         "\\":"<%GTREE 2.11.1 MetaDataSchema: metadata schema used %>",
         "AttributeName":"MetaDataSchema",
+        "AttributeDescription":"metadata schema(s) of this metadata schema",
+        "Datatype":"compound",
+        "Status":"required",
+        "TypeClass":"compound",
+        "Multiple":"TRUE",
+        "AttributeValueElements": [
+            "OIMS_Content_object",
+            "SchemaProperties"
+        ]
+       },
+       {
+        "\\":"<%GTREE 2.11.1.1 MetaDataSchema: OIMS_Content_object %>",
+        "AttributeName":"OIMS_Content_object",
+        "AttributeDescription":"OIMS content object for which the metadata schemas are valid",
+        "Datatype":"Controled Vocabulary",
+        "Status":"required",
+        "TypeClass":"primitive",
+        "Multiple":"FALSE",
+        "ControledVocabulary": [
+            "Descriptive_Metadata_DataSet",
+            "Descriptive_Metadata_DataFile",
+            "Technical_Metadata_DataFile",
+            "Technical_Metadata_Dataset",
+            "Structural_Metadata_DataFile",
+            "DataEntity",
+            "MetadataMetadata",
+            "ETL_Metadata"
+        ]
+       },
+       {
+        "\\":"<%GTREE 2.11.1.2 MetaDataSchema: metadata schema used %>",
+        "AttributeName":"SchemaProperties",
         "AttributeDescription":"metadata schema of this metadata schema",
         "Datatype":"compound",
         "Status":"required",
@@ -451,11 +712,13 @@
             "SchemaType",
             "SchemaVersion",
             "SchemaURL",
-            "SchemaDocumentationURL"
+            "SchemaDocumentationURL",
+            "IncludeProperty",
+            "ExcludeProperty"
         ]
        },
        {
-        "\\":"<%GTREE 2.11.1.1 SchemaName: name of underlying metadata schema used %>",
+        "\\":"<%GTREE 2.11.1.2.1 SchemaName: name of underlying metadata schema used %>",
         "AttributeName":"SchemaName",
         "AttributeDescription":"name of underlying metadata schema used",
         "Datatype":"text",
@@ -464,7 +727,7 @@
         "Multiple":"FALSE"
        },
        {
-        "\\":"<%GTREE 2.11.1.2 SchemaDescription: description of metadata schema used %>",
+        "\\":"<%GTREE 2.11.1.2.2 SchemaDescription: description of metadata schema used %>",
         "AttributeName":"SchemaDescription",
         "AttributeDescription":"description of metadata schema used",
         "Datatype":"text",
@@ -473,31 +736,31 @@
         "Multiple":"FALSE"
        },
        {
-        "\\":"<%GTREE 2.11.1.3 metadata schema type used %>",
+        "\\":"<%GTREE 2.11.1.2.3 metadata schema type used %>",
         "AttributeName":"SchemaType",
         "AttributeDescription":"metadata schema of this metadata schema",
-        "Datatype":"controlled vocabulary",
+        "Datatype":"Controled Vocabulary",
         "Status":"required",
         "TypeClass":"primitive",
         "Multiple":"FALSE",
-        "Controlledvocabulary": [
+        "ControledVocabulary": [
            {
-            "ControlledVocabularyItem":"selfdescribing metadata schema",
-            "ControlledVocabularyItemDescription":"basis of OIMS is a self-describing metadata schema"
+            "ControledVocabularyItem":"selfdescribing metadata schema",
+            "ControledVocabularyItemDescription":"basis of OIMS is a self-describing metadata schema"
            },
            {
-            "ControlledVocabularyItem":"Data dictionary metadata",
-            "ControlledVocabularyItemDescription":"apex metadata schema description"
+            "ControledVocabularyItem":"Data dictionary metadata",
+            "ControledVocabularyItemDescription":"apex metadata schema description"
            },
            {
-            "ControlledVocabularyItem":"intermediate metadata metadata",
-            "ControlledVocabularyItemDescription":"intermediate description between the apex metadata schema description and the self-describing metadata schema of OIMS"
+            "ControledVocabularyItem":"intermediate metadata metadata",
+            "ControledVocabularyItemDescription":"intermediate description between the apex metadata schema description and the self-describing metadata schema of OIMS"
            }
          ]
 
        },
        {
-        "\\":"<%GTREE 2.11.1.4 Schemaversion: version number of the metadata schema used %>",
+        "\\":"<%GTREE 2.11.1.2.4 Schemaversion: version number of the metadata schema used %>",
         "AttributeName":"SchemaVersion",
         "AttributeDescription":"version number of the metadata schema used",
         "Datatype":"text",
@@ -506,8 +769,9 @@
         "Multiple":"FALSE"
        },
        {
-        "\\":"<%GTREE 2.11.1.5 SchemaURL: URL where the metadata schema used can be found%>",
+        "\\":"<%GTREE 2.11.1.2.5 SchemaURL: URL where the metadata schema used can be found%>",
         "AttributeName":"SchemaURL",
+        "JSONSchemaproperty":"$ref",
         "AttributeDescription":"URL where the metadata schema used can be found",
         "Datatype":"URL",
         "Status":"required",
@@ -515,7 +779,7 @@
         "Multiple":"FALSE"
        },
        {
-        "\\":"<%GTREE 2.11.1.6 SchemSchemaDocumentationURLaURL: URL where the metadata schema used can be found%>",
+        "\\":"<%GTREE 2.11.1.2.6 SchemSchemaDocumentationURL: URL where the metadata schema used can be found%>",
         "AttributeName":"SchemaDocumentationURL",
         "AttributeDescription":"URL where the documentation of metadata schema used can be found",
         "Datatype":"URL",
@@ -524,13 +788,53 @@
         "Multiple":"FALSE"
        },
        {
+        "\\":"<%GTREE 2.11.1.2.7 Include property%>",
+        "AttributeName":"IncludeProperty",
+        "AttributeDescription":"which attributes in the metadata schema should be used, relevant if multiple schemas as used default value if not chosen is ALL",
+        "Datatype":"text",
+        "DefaultValue":"ALL",
+        "ValueReservedWords": [
+             {
+              "ReservedWordName":"ALL",
+              "ReservedWordDescription":"all attributes in the OIMS_content part of the schema"
+             },
+             {
+              "ReservedWordName":"NONE",
+              "ReservedWordDescription":"none of attributes in the OIMS_content part of the schema"
+             }
+            ],
+        "Status":"required if applicable",
+        "TypeClass":"primitive",
+        "Multiple":"TRUE"
+       },
+       {
+        "\\":"<%GTREE 2.11.1.2.8 exclude property%>",
+        "AttributeName":"ExcludeProperty",
+        "AttributeDescription":"which attributes in the metadata schema should be not used, relevant if multiple schemas as used default value if not chosen is NONE",
+        "Datatype":"text",
+        "DefaultValue":"NONE",
+        "ValueReservedWords": [
+            {
+             "ReservedWordName":"ALL",
+             "ReservedWordDescription":"all attributes in the OIMS_content part of the schema"
+            },
+            {
+             "ReservedWordName":"NONE",
+             "ReservedWordDescription":"none of attributes in the OIMS_content part of the schema"
+            }
+           ],
+        "Status":"required if applicable",
+        "TypeClass":"primitive",
+        "Multiple":"TRUE"
+       },
+       {
         "\\":"<%GTREE 2.11.2 File descriptors: descriptive metadata of the metadata file%>",
         "AttributeName":"FileDescriptors",
         "AttributeDescription":"descrptive metadata of the metadata file",
         "Datatype":"compound",
         "Status":"required",
         "TypeClass":"compound",
-        "Multiple":"FALSE"
+        "Multiple":"FALSE",
         "AttributeValueElements": [
             "MetadataName",
             "MetadataDescription",
@@ -573,32 +877,40 @@
         "\\":"<%GTREE 2.11.2.2.2 MetadataVersionStatus: status of the metadata file%>",
         "AttributeName":"MetadataVersionStatus",
         "AttributeDescription":"short description or name of the metadata file",
-        "Datatype":"controlled vocabulary",
+        "Datatype":"Controled Vocabulary",
         "Status":"required",
         "TypeClass":"primitive",
         "Multiple":"FALSE",
-        "Controlledvocabulary": [
+        "ControledVocabulary": [
            {
-            "ControlledVocabularyItem":"development",
-            "ControlledVocabularyItemDescription":"The metadata file is not complete and cannot yet be used"
+            "ControledVocabularyItem":"development",
+            "ControledVocabularyItemDescription":"The metadata file is not complete and cannot yet be used"
            },
            {
-            "ControlledVocabularyItem":"testing",
-            "ControlledVocabularyItemDescription":"meta data file is being tested for consistency"
+            "ControledVocabularyItem":"testing",
+            "ControledVocabularyItemDescription":"meta data file is being tested for consistency"
            },
            {
-            "ControlledVocabularyItem":"provisional publication",
-            "ControlledVocabularyItemDescription":"the metadata has been tested and the file is OIMS compatible but still needs revisions"
+            "ControledVocabularyItem":"provisional publication",
+            "ControledVocabularyItemDescription":"the metadata has been tested and the file is OIMS compatible but still needs revisions"
            },
            {
-            "ControlledVocabularyItem":"publication",
-            "ControlledVocabularyItemDescription":"published metadata"
+            "ControledVocabularyItem":"publication",
+            "ControledVocabularyItemDescription":"published metadata"
            }
          ]
-
        },
        {
-        "\\":"<%GTREE 2.11.2.3 Contact: contact details of the manager of the metadata%>",
+        "\\":"<%GTREE 2.11.2.2.3 MetadataVersionStatus: status of the metadata file%>",
+        "AttributeName":"VersionDate",
+        "AttributeDescription":"Date of this version of the metadata",
+        "Datatype":"date",
+        "Status":"recommended",
+        "TypeClass":"primitive",
+        "Multiple":"FALSE"
+       },
+       {
+        "\\":"<%GTREE 2.11.2.2.3 Contact: contact details of the manager of the metadata%>",
         "AttributeName":"Contact",
         "AttributeDescription":"contact details of the manager of the metadata",
         "Datatype":"compound",
@@ -631,7 +943,7 @@
         "Multiple":"TRUE",
         "AttributeValueElements": [
             "ContactAffiliationName",
-            "ContactAffiliationAconym",
+            "ContactAffiliationAconym"
         ]
        },
        {
@@ -659,7 +971,7 @@
         "Datatype":"compound",
         "Status":"recommended",
         "TypeClass":"compound",
-        "Multiple":"TRUE"
+        "Multiple":"TRUE",
         "AttributeValueElements": [
             "IdentifierScheme",
             "Identifier"
@@ -669,14 +981,14 @@
         "\\":"<%GTREE 2.11.2.3.3.1 IdentifierScheme: scheme to identify a person%>",
         "AttributeName":"IdentifierScheme",
         "AttributeDescription":"scheme to identify a person",
-        "Datatype":"controlled vocabulary",
+        "Datatype":"Controled Vocabulary",
         "Status":"required",
         "TypeClass":"primitive",
         "Multiple":"FALSE",
-        "Controlledvocabulary": [
+        "ControledVocabulary": [
            {
-            "ControlledVocabularyItem":"ORCID",
-            "ControlledVocabularyItemDescription":"ORCID: https://orcid.org/"
+            "ControledVocabularyItem":"ORCID",
+            "ControledVocabularyItemDescription":"ORCID: https://orcid.org/"
            }
          ]
 
@@ -709,30 +1021,70 @@
         "Multiple":"FALSE"
        },
        {
-        "\\":"<%GTREE 2.11.3 mapping info oir how the metadata was created%>",
-        "\\":"note that this is work in progress and not fully developed"
+        "\\":["<%GTREE 2.11.3 mapping info on how the metadata was created%>",
+              "note that this is work in progress only Mapper_tool_Name identified as compound element"],
         "AttributeName":"mapping_info",
         "AttributeDescription":"information on how the metadata was created",
         "Datatype":"compound",
         "Status":"optional",
         "TypeClass":"compound",
         "Multiple":"TRUE",
-        "\\":"note that this is work in progress only Mapper_tool_Name identified as compound element"
         "AttributeValueElements": [
-            "Mapper_tool_Name"
+            "Mapper_tool_Name",
+            "Mapper_tool_version",
+            "Mapper_tool_URL"
         ]
        },
        {
-        "\\":"<%GTREE 2.11.3.1 mapping info oir how the metadata was created%>",
-        "\\":"note that this is work in progress and not fully developed"
+        "\\":["<%GTREE 2.11.3.1 mapping info on how the metadata was created%>",
+              "note that this is work in progress and not fully developed"],
         "AttributeName":"Mapper_tool_Name",
         "AttributeDescription":"name of the tool used to map could be manual",
         "Datatype":"text",
         "Status":"optional",
         "TypeClass":"primitive",
         "Multiple":"FALSE"
+       },
+       {
+        "\\":["<%GTREE 2.11.3.2 mapping info on how the metadata was created%>",
+              "note that this is work in progress and not fully developed"],
+        "AttributeName":"Mapper_tool_version",
+        "AttributeDescription":"version of the tool used if not manual",
+        "Datatype":"text",
+        "Status":"required if applicable",
+        "TypeClass":"primitive",
+        "Multiple":"FALSE"
+       },
+       {
+        "\\":["<%GTREE 2.11.3.3 mapping info on how the metadata was created%>",
+              "note that this is work in progress and not fully developed"],
+        "AttributeName":"Mapper_tool_URL",
+        "AttributeDescription":"name of the tool used to map could be manual",
+        "JSONSchemaproperty":"$ref",
+        "Datatype":"URL",
+        "Status":"optional",
+        "TypeClass":"primitive",
+        "Multiple":"FALSE"
+       },
+       {
+        "\\":["<%GTREE 2.12 JSON schema support%>",
+              "<%GTREE 2.12.1 JSONSchemaProperty%>"
+        ],
+        "AttributeName":"JSONSchemaProperty",
+        "AttributeDescription":"specific property that is a reserved word in JSON Schema",
+        "DataType":"controled vocabulary",
+        "Status":"optional",
+        "TypeClass":"primitive",
+        "Multiple":"FALSE",
+        "ControledVocabulary": [
+            {
+             "ControledVocabularyItem":"$ref",
+             "ControledVocabularyItemDescription":"In a JSON schema, a $ref keyword is a JSON Pointer to a schema, or a type or property in a schema. A JSON pointer takes the form of A # B in which: A is the relative path from the current schema to a target schema. If A is empty, the reference is to a type or property in the same schema, an in-schema reference."
+            }
+          ]
+
        }
      ]
-    ]
+   }]
    }
 }
