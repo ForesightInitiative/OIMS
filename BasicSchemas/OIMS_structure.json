@@ -7,7 +7,7 @@
       ],
     "OIMS_Header" : {
        "mapping_info":{},
-       "MetaDataSchema"   :[{
+       "MetadataSchema"   :[{
          "OIMS_Content_Object":"[required] <one from list under OIMS_Content below>",
          "SchemaProperties":[
              {
@@ -16,16 +16,16 @@
                "SchemaType"            : "<sub type of OIMS_Content_Object>",
                "SchemaVersion"         : "<version of schema used>",
                "SchemaURL"             : "[required] <e.g. schema on Foresight GitHub repository>",
-               "OIMS_Content_Object"   : "<in most cases this will be 'MetadataMetadata'>"
+               "OIMS_Content_Object"   : "[required] <section of OIMS_Content containing relevant metadata: in most cases this will be 'MetadataMetadata'>"
              }
          ]
       }],  
        "FileDescriptors":{
-         "MetadataName"                : "<template for OIMS compatible metadata schema>",
+         "MetadataName"                : "<template for OIMS compatible metadata>",
          "MetaDataDescription"         : "<basic structure of OIMS compatible metadata schemas>",
          "MetadataVersion"  : {
              "CurrentVersion"          : "2.2.0.0",
-             "MetadataVersionStatus"   : "development"
+             "MetadataVersionStatus"   : "under review"
             },
          "Contact":[
             {
@@ -58,7 +58,9 @@
         "Structural_Metadata_DataFile":{},
         "DataEntity":{},
         "MetadataMetadata":{},
-        "ETL_Metadata":{}
-      }]
+        "ETL_Metadata":{},
+        "Rules":{}
+      }
+    ]
    }
 }
