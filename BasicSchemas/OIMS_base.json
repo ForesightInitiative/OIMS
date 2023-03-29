@@ -17,7 +17,7 @@
                "SchemaDescription"     : "OIMS selfdescribing metadata schema",
                "SchemaType"            : "selfdescribing metadata schema",
                "SchemaVersion"         : "2.2.0.0",
-               "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/2_2_0_0/OIMS_base.json",
+               "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/OIMS_base.json",
                "OIMS_Content_Object"   : "MetadataMetadata",
                "IncludeProperty"       : ["ALL"]
                 }]
@@ -30,7 +30,7 @@
                "SchemaDescription"     : "OIMS selfdescribing metadata schema",
                "SchemaType"            : "selfdescribing metadata schema",
                "SchemaVersion"         : "2.2.0.0",
-               "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/2_2_0_0/OIMS_base.json",
+               "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/OIMS_base.json",
                "OIMS_Content_Object"   : "MetadataMetadata"
                 },
                 {
@@ -38,7 +38,7 @@
                "SchemaDescription"     : "OIMS selfdescribing metadata schema",
                "SchemaType"            : "selfdescribing metadata schema",
                "SchemaVersion"         : "2.2.0.0",
-               "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/2_2_0_0/OIMS_base.json",
+               "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/OIMS_base.json",
                "OIMS_Content_Object"   : "OIMS_Structure_Metadata",
                "IncludeProperty"       : ["ALL"]
                 }
@@ -52,7 +52,7 @@
                "SchemaDescription"     : "OIMS selfdescribing metadata schema",
                "SchemaType"            : "selfdescribing metadata schema",
                "SchemaVersion"         : "2.2.0.0",
-               "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/2_2_0_0/OIMS_base.json",
+               "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/OIMS_base.json",
                "OIMS_Content_Object"   : "MetadataMetadata"
                 },
                 {
@@ -60,7 +60,7 @@
                "SchemaDescription"     : "OIMS selfdescribing metadata schema",
                "SchemaType"            : "selfdescribing metadata schema",
                "SchemaVersion"         : "2.2.0.0",
-               "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/2_2_0_0/OIMS_base.json",
+               "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/OIMS_base.json",
                "OIMS_Content_Object"   : "OIMS_Header_Metadata",
                "IncludeProperty"       : ["ALL"]
                 }
