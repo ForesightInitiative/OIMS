@@ -106,7 +106,7 @@
         "AttributeDescription":"First element in any OIMS file that indicates that it is an OIMS file",
         "Datatype":"compound",
         "RequirementLevel":"required",
-        "TypeClass":"compound",
+        "DataTypeClass":"compound",
         "Multiple": false,
                 "AttributeValueElements": ["OIMS_Header", "OIMS_Content"]
        },
@@ -116,7 +116,7 @@
         "AttributeDescription":"header section of an OIMS compatible metadata schema",
         "Datatype":"compound",
         "RequirementLevel":"required",
-        "TypeClass":"compound",
+        "DataTypeClass":"compound",
         "Multiple": false,
         "AttributeValueElements": [
             "mapping_info",
@@ -130,7 +130,7 @@
         "AttributeDescription":"Description of the content of the metadata file",
         "Datatype":"compound",
         "RequirementLevel":"required",
-        "TypeClass":"compound",
+        "DataTypeClass":"compound",
         "Multiple": true,
             "ContentObjects": {
                 "AllowedContentObjects": [
@@ -160,7 +160,7 @@
         "AttributeDescription":"Section describing metadata fields",
         "Datatype":"compound",
         "RequirementLevel":"required if applicable",
-        "TypeClass":"compound",
+        "DataTypeClass":"compound",
         "Multiple": true
        },
        {
@@ -171,7 +171,7 @@
         "AttributeDescription":"Section with descriptive metadata at Dataset level",
         "Datatype":"compound",
         "RequirementLevel":"optional",
-        "TypeClass":"compound",
+        "DataTypeClass":"compound",
         "Multiple": true
        },
        {
@@ -183,7 +183,7 @@
         "AttributeDescription":"Section with descriptive metadata at Data file level",
         "Datatype":"compound",
         "RequirementLevel":"optional",
-        "TypeClass":"compound",
+        "DataTypeClass":"compound",
         "Multiple": true
        },
        {
@@ -194,7 +194,7 @@
         "AttributeDescription":"Section with technical metadata at dataset level",
         "Datatype":"compound",
         "RequirementLevel":"optional",
-        "TypeClass":"compound",
+        "DataTypeClass":"compound",
         "Multiple": true
        },
        {
@@ -205,7 +205,7 @@
         "AttributeDescription":"Section with technical metadata at file level default is an OIMS compatible JSON data file ",
         "Datatype":"compound",
         "RequirementLevel":"optional",
-        "TypeClass":"compound",
+        "DataTypeClass":"compound",
         "Multiple": true
        },
        {
@@ -216,7 +216,7 @@
         "AttributeDescription":"Section with descriptive metadata at Data file level",
         "Datatype":"compound",
         "RequirementLevel":"optional",
-        "TypeClass":"compound",
+        "DataTypeClass":"compound",
         "Multiple": true
        },
        {
@@ -227,7 +227,7 @@
         "AttributeDescription":"Section describing data entity relationships",
         "Datatype":"compound",
         "RequirementLevel":"optional",
-        "TypeClass":"compound",
+        "DataTypeClass":"compound",
         "Multiple": true
        },
        {
@@ -238,7 +238,7 @@
         "AttributeDescription":"Section describing metadata of ETL procedure or model or tool",
         "Datatype":"compound",
         "RequirementLevel":"optional",
-        "TypeClass":"compound",
+        "DataTypeClass":"compound",
         "Multiple": true
        }
       ]
@@ -258,7 +258,7 @@
              "HTML"
         ],
         "RequirementLevel":"optional",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": true,
         "OntologyTerm": [
            {
@@ -287,7 +287,7 @@
          "AttributeDescription": "The current state or condition of an attribute",
          "Datatype": "Controlled vocabulary",
          "RequirementLevel": "optional",
-         "TypeClass": "primitive",
+         "DataTypeClass": "primitive",
          "Multiple": false,
          "ControlledVocabulary": [
            {
@@ -380,7 +380,7 @@
         "AttributeDescription":"name of the data dictionary metadata field",
         "Datatype":"string",
         "RequirementLevel":"required",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false,
         "OntologyTerm": [
            {
@@ -399,7 +399,7 @@
         "AttributeDescription":"description of the data dictionary metadata field",
         "Datatype":"text",
         "RequirementLevel":"required",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false,
           "OntologyTerm": [
              {
@@ -419,7 +419,7 @@
         "AttributeDescription":"datatypes used in the data dictionary metadata fields",
         "Datatype":"Controlled Vocabulary",
         "RequirementLevel":"required",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false,
         "ControlledVocabulary": [
           {
@@ -561,7 +561,7 @@
         "AttributeDescription":"see OIMS self describing metadata schema",
         "Datatype":"Controlled Vocabulary",
         "RequirementLevel":"required",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false,
         "ControlledVocabulary": [
             {
@@ -652,11 +652,11 @@
        },
        {
         "\\":"<%GTREE 4.5 attribute TypeClass %>",
-        "AttributeName":"TypeClass",
+        "AttributeName":"DataTypeClass",
         "AttributeDescription":"if the attribute is compound or primitive",
         "Datatype":"Controlled Vocabulary",
         "RequirementLevel":"required",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false,
         "ControlledVocabulary": [
           {
@@ -713,7 +713,7 @@
         "AttributeDescription":"can the attribute have multiple values",
         "Datatype":"Boolean",
         "RequirementLevel":"required",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false,
         "OntologyTerm": [
            {
@@ -735,7 +735,7 @@
         "AttributeDescription":"Controlled Vocabulary definition if data type is Controlled Vocabulary also known as an enumeration in STATA or a factor in R",
         "Datatype":"compound",
         "RequirementLevel":"required if applicable",
-        "TypeClass":"compound",
+        "DataTypeClass":"compound",
         "Multiple": true,
         "AttributeValueElements":[
               "ControlledVocabularyItem",
@@ -758,7 +758,7 @@
         "AttributeDescription":"the element identifier in a Controlled Vocabulary",
         "Datatype":"simple character string",
         "RequirementLevel":"required",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false,
         "OntologyTerm": [
           {
@@ -777,7 +777,7 @@
         "AttributeDescription":"the description of an element in a Controlled Vocabulary in human-intelligible terms",
         "Datatype":"text",
         "RequirementLevel":"required",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false,
         "OntologyTerm": [
           {
@@ -796,7 +796,7 @@
         "AttributeDescription":"details of the DataType compound used to identify the required attributes in an attribute array",
         "Datatype":"text",
         "RequirementLevel":"required if applicable",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": true,
         "OntologyTerm": [
           {
@@ -815,7 +815,7 @@
         "AttributeDescription":"Tagging atributes with ontology terms",
         "Datatype":"compound",
         "RequirementLevel":"required if applicable",
-        "TypeClass":"compound",
+        "DataTypeClass":"compound",
         "Multiple": true,
         "AttributeValueElements": [
             "OntologyTermName",
@@ -841,7 +841,7 @@
           "AttributeName":"OntologyTermName",
           "AttributeDescription": "Term in an ontology that describes the relevant attribute value",
           "RequirementLevel":"recommended if applicable",
-          "TypeClass":"primitive",
+          "DataTypeClass":"primitive",
           "Multiple": false,
           "DataType":"string",
           "OntologyTerm": [
@@ -860,7 +860,7 @@
           "AttributeName":"OntologyTermDescription",
           "AttributeDescription":"Description of the ontology term",
           "RequirementLevel":"recommended if applicable",
-          "TypeClass":"primitive",
+          "DataTypeClass":"primitive",
           "Multiple": false,
           "DataType":"string"
        },
@@ -869,7 +869,7 @@
           "AttributeName":"OntologyName",
           "AttributeDescription":"The name of the ontology from which we take the ontology term",
           "RequirementLevel":"required if applicable",
-          "TypeClass":"primitive",
+          "DataTypeClass":"primitive",
           "Multiple": false,
           "DataType":"string",
           "OntologyTerm": [
@@ -888,7 +888,7 @@
           "AttributeName":"OntologyTermID",
           "AttributeDescription":"the identifier for the ontology term in the specified ontology",
           "RequirementLevel":"required if applicable",
-          "TypeClass":"primitive",
+          "DataTypeClass":"primitive",
           "Multiple": false,
           "DataType":"string"
        },
@@ -897,7 +897,7 @@
           "AttributeName":"OntologyURL",
           "AttributeDescription":"persistent URL where the ontology term can be found",
           "RequirementLevel":"required if applicable",
-          "TypeClass":"primitive",
+          "DataTypeClass":"primitive",
           "Multiple": false,
           "DataType":"URI"
        },
@@ -906,7 +906,7 @@
           "AttributeName":"OntologyTermQuality",
           "AttributeDescription":"identifies to what degree the ontology term matches the attribute value",
           "RequirementLevel":"recommended if applicable",
-          "TypeClass":"primitive",
+          "DataTypeClass":"primitive",
           "Multiple": false,
           "DataType":"Controlled vocabulary",
           "OntologyTerm": [
@@ -1026,7 +1026,7 @@
         "AttributeDescription":"default value of the attribute if not set in the metadata",
         "Datatype": ["string", "text", "boolean", "integer", "URI", "email"] ,
         "RequirementLevel":"recommended if applicable",
-        "Typeclass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": true,
         "OntologyTerm": [
          {
@@ -1045,7 +1045,7 @@
         "AttributeDescription":"reserved words that have a special meaning in the contexr of the attribute and are not covered by Controlled Vocabulary",
         "Datatype":"compound",
         "RequirementLevel":"recommended if applicable",
-        "Typeclass":"compound",
+        "DataTypeClass":"compound",
         "Multiple": true,
         "AttributeValueElements": [
             "ReservedWordName",
@@ -1058,7 +1058,7 @@
         "AttributeDescription":"reserved words that have a special meaning in the context of the attribute and are not covered by Controlled Vocabulary",
         "Datatype":"text",
         "RequirementLevel":"required if applicable",
-        "Typeclass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false
        },
        {
@@ -1067,7 +1067,7 @@
         "AttributeDescription":"definition of reserved words that have a special meaning in the contexr of the attribute and are not covered by Controlled Vocabulary",
         "Datatype":"text",
         "RequirementLevel":"recommended if applicable",
-        "Typeclass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false
        },
        {
@@ -1076,7 +1076,7 @@
         "AttributeDescription":"comparable to AttributeValueElements but less restrictive",
         "Datatype":"compound",
         "RequirementLevel":"recommended if applicable",
-        "Typeclass":"compound",
+        "DataTypeClass":"compound",
         "Multiple": false,
         "AttributeValueElements": [
             "AllowedContentObjects",
@@ -1089,7 +1089,7 @@
         "AttributeDescription":"list of allowed content",
         "Datatype":"text",
         "RequirementLevel":"required if applicable",
-        "Typeclass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": true
        },
        {
@@ -1098,7 +1098,7 @@
         "AttributeDescription":"rule how to manage the list of allowed content",
         "Datatype":"compound",
         "RequirementLevel":"required if applicable",
-        "Typeclass":"compound",
+        "DataTypeClass":"compound",
         "Multiple": false,
         "AttributeValueElements": [
             "AllowedContentRuleType",
@@ -1111,7 +1111,7 @@
         "AttributeDescription":"specifics about rule how to manage the list of allowed content",
         "Datatype":"Controlled vocabulary",
         "RequirementLevel":"required if applicable",
-        "Typeclass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false,
         "ControlledVocabulary": [
            {
@@ -1134,7 +1134,7 @@
         "AttributeDescription":"",
         "Datatype":"integer",
         "RequirementLevel":"required if applicable",
-        "Typeclass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false
        }
       ]
@@ -1150,7 +1150,7 @@
         "AttributeDescription":"metadata schema(s) of this metadata schema",
         "Datatype":"compound",
         "RequirementLevel":"required",
-        "TypeClass":"compound",
+        "DataTypeClass":"compound",
         "Multiple": true,
         "AttributeValueElements": [
             "OIMS_Content_object",
@@ -1163,7 +1163,7 @@
         "AttributeDescription":"OIMS content object for which the metadata schemas are valid or OIMS content object to use as metadata schema",
         "Datatype":"Controlled Vocabulary",
         "RequirementLevel":"required",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false,
         "ControlledVocabulary": [
             "Descriptive_Metadata_DataSet",
@@ -1185,7 +1185,7 @@
         "AttributeDescription":"metadata schema of this metadata schema",
         "Datatype":"compound",
         "RequirementLevel":"required",
-        "TypeClass":"compound",
+        "DataTypeClass":"compound",
         "Multiple": true,
         "AttributeValueElements": [
             "SchemaName",
@@ -1205,7 +1205,7 @@
         "AttributeDescription":"name of underlying metadata schema used",
         "Datatype":"text",
         "RequirementLevel":"required",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false
        },
        {
@@ -1214,7 +1214,7 @@
         "AttributeDescription":"description of metadata schema used",
         "Datatype":"text",
         "RequirementLevel":"required",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false
        },
        {
@@ -1223,7 +1223,7 @@
         "AttributeDescription":"metadata schema of this metadata schema",
         "Datatype":"Controlled Vocabulary",
         "RequirementLevel":"required",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false,
         "ControlledVocabulary": [
            {
@@ -1247,7 +1247,7 @@
         "AttributeDescription":"version number of the metadata schema used",
         "Datatype":"text",
         "RequirementLevel":"required",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false
        },
        {
@@ -1257,7 +1257,7 @@
         "AttributeDescription":"URL where the metadata schema used can be found",
         "Datatype":"URL",
         "RequirementLevel":"required",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false
        },
        {
@@ -1266,7 +1266,7 @@
         "AttributeDescription":"URL where the documentation of metadata schema used can be found",
         "Datatype":"URL",
         "RequirementLevel":"required if applicable",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false
        },
        {
@@ -1286,7 +1286,7 @@
              }
             ],
         "RequirementLevel":"required if applicable",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": true
        },
        {
@@ -1306,7 +1306,7 @@
             }
            ],
         "RequirementLevel":"required if applicable",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": true
        },
        {
@@ -1315,7 +1315,7 @@
         "AttributeDescription":"descrptive metadata of the metadata file",
         "Datatype":"compound",
         "RequirementLevel":"required",
-        "TypeClass":"compound",
+        "DataTypeClass":"compound",
         "Multiple": false,
         "AttributeValueElements": [
             "MetadataName",
@@ -1330,7 +1330,7 @@
         "AttributeDescription":"short description or name of the metadata file",
         "Datatype":"text",
         "RequirementLevel":"required",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false
        },
        {
@@ -1339,7 +1339,7 @@
         "AttributeDescription":"short description or name of the metadata file",
         "Datatype":"compound",
         "RequirementLevel":"required",
-        "TypeClass":"compound",
+        "DataTypeClass":"compound",
         "Multiple": false,
         "AttributeValueElements": [
             "CurrentVersion",
@@ -1352,7 +1352,7 @@
         "AttributeDescription":"current version of the metadata file",
         "Datatype":"text",
         "RequirementLevel":"required",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false
        },
        {
@@ -1361,7 +1361,7 @@
         "AttributeDescription":"short description or name of the metadata file",
         "Datatype":"Controlled Vocabulary",
         "RequirementLevel":"required",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false,
         "ControlledVocabulary": [
            {
@@ -1388,7 +1388,7 @@
         "AttributeDescription":"Date of this version of the metadata",
         "Datatype":"date",
         "RequirementLevel":"recommended",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false
        },
        {
@@ -1397,7 +1397,7 @@
         "AttributeDescription":"contact details of the manager of the metadata",
         "Datatype":"compound",
         "RequirementLevel":"required",
-        "TypeClass":"compound",
+        "DataTypeClass":"compound",
         "Multiple": false,
         "AttributeValueElements": [
             "ContactName",
@@ -1412,7 +1412,7 @@
         "AttributeDescription":"Name of a person or entity to contact about the metadata",
         "Datatype":"text",
         "RequirementLevel":"required",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false
        },
        {
@@ -1421,7 +1421,7 @@
         "AttributeDescription":"Affiliation of a person or entity to contact about the metadata",
         "Datatype":"compound",
         "RequirementLevel":"required",
-        "TypeClass":"compound",
+        "DataTypeClass":"compound",
         "Multiple": true,
         "AttributeValueElements": [
             "ContactAffiliationName",
@@ -1434,7 +1434,7 @@
         "AttributeDescription":"Affiliation of a person or entity to contact about the metadata",
         "Datatype":"text",
         "RequirementLevel":"required",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false
        },
        {
@@ -1443,7 +1443,7 @@
         "AttributeDescription":"acronym of the affiliation of a person or entity to contact about the metadata",
         "Datatype":"text",
         "RequirementLevel":"required",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false
        },
        {
@@ -1452,7 +1452,7 @@
         "AttributeDescription":"Identifier of a person to contact about the metadata",
         "Datatype":"compound",
         "RequirementLevel":"recommended",
-        "TypeClass":"compound",
+        "DataTypeClass":"compound",
         "Multiple": true,
         "AttributeValueElements": [
             "IdentifierScheme",
@@ -1465,7 +1465,7 @@
         "AttributeDescription":"scheme to identify a person",
         "Datatype":"Controlled Vocabulary",
         "RequirementLevel":"required",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false,
         "ControlledVocabulary": [
            {
@@ -1481,7 +1481,7 @@
         "AttributeDescription":"identifier of person linked to the relevant identifier scheme",
         "Datatype":"text",
         "RequirementLevel":"required",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false
        },
        {
@@ -1490,7 +1490,7 @@
         "AttributeDescription":"email address of a person or entity to contact about the metadataa",
         "Datatype":"email",
         "RequirementLevel":"required",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false
        },
        {
@@ -1499,7 +1499,7 @@
         "AttributeDescription":"short descroiption of the metadata file",
         "Datatype":"text",
         "RequirementLevel":"required",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false
        },
        {
@@ -1509,7 +1509,7 @@
         "AttributeDescription":"information on how the metadata was created",
         "Datatype":"compound",
         "RequirementLevel":"optional",
-        "TypeClass":"compound",
+        "DataTypeClass":"compound",
         "Multiple": true,
         "AttributeValueElements": [
             "Mapper_tool_Name",
@@ -1524,7 +1524,7 @@
         "AttributeDescription":"name of the tool used to map could be manual",
         "Datatype":"text",
         "RequirementLevel":"optional",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false
        },
        {
@@ -1534,7 +1534,7 @@
         "AttributeDescription":"version of the tool used if not manual",
         "Datatype":"text",
         "RequirementLevel":"required if applicable",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false
        },
        {
@@ -1545,7 +1545,7 @@
         "JSONSchemaproperty":"$ref",
         "Datatype":"URL",
         "RequirementLevel":"optional",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false
        },
        {
@@ -1557,7 +1557,7 @@
         "AttributeDescription":"specific property that is a reserved word in JSON Schema",
         "DataType":"Controlled vocabulary",
         "RequirementLevel":"optional",
-        "TypeClass":"primitive",
+        "DataTypeClass":"primitive",
         "Multiple": false,
         "ControlledVocabulary": [
             {
