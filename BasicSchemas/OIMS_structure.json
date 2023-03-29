@@ -8,40 +8,40 @@
     "OIMS_Header" : {
        "mapping_info":{},
        "MetaDataSchema"   :[{
-         "OIMS_Content_Object":"",
+         "OIMS_Content_Object":"[required] <one from list under OIMS_Content below>",
          "SchemaProperties":[
              {
-               "SchemaName"            : "OIMS_base",
-               "SchemaDescription"     : "OIMS selfdescribing metadata schema",
-               "SchemaType"            : "selfdescribing metadata schema",
-               "SchemaVersion"         : "2.1.0.0",
-               "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/version_2_1_0_0/OIMS_base.json"
+               "SchemaName"            : "<Schema Name that describes the OIMS Content section below>",
+               "SchemaDescription"     : "<short description of the meta-metadata>",
+               "SchemaType"            : "<sub type of OIMS_Content_Object>",
+               "SchemaVersion"         : "<version of schema used>",
+               "SchemaURL"             : "[required] <e.g. schema on Foresight GitHub repository>",
+               "OIMS_Content_Object"   : "<in most cases this will be 'MetadataMetadata'>"
              }
          ]
       }],  
        "FileDescriptors":{
-         "MetadataName"                : "template for OIMS compatible metadata schema",
-         "MetaDataDescription"         : "basic structure of OIMS compatible metadata schemas",
+         "MetadataName"                : "<template for OIMS compatible metadata schema>",
+         "MetaDataDescription"         : "<basic structure of OIMS compatible metadata schemas>",
          "MetadataVersion"  : {
-             "CurrentVersion"          : "2.1.0.0",
+             "CurrentVersion"          : "2.2.0.0",
              "MetadataVersionStatus"   : "development"
             },
          "Contact":[
             {
-             "ContactName"             : "Gideon Kruseman",
+             "ContactName"             : "<name>",
              "ContactAffiliation"      : {
-                 "ContactAffiliationName"     :"Alliance of Bioversity International & CIAT",
-                 "ContactAffiliationAcronym"  :"Alliance"
+                 "ContactAffiliationName"     :"<affiliation>",
+                 "ContactAffiliationAcronym"  :"<acronym>"
                 },
              "ContactIdentifier": [
                 {
-                 "IdentifierScheme":"ORCID",
-                 "Identifier":"0000-0002-3392-4176"
+                 "IdentifierScheme":"<e.g. ORCID>",
+                 "Identifier":"<actual ID>"
                 }
                ],
              "ContactEmail": [
-                "g.kruseman@cgiar.org",
-                "gkruseman@gmail.com"
+                "example@example.com"
                ]
            }
           ]
