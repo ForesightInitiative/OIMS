@@ -19,7 +19,7 @@
                "SchemaVersion"         : "2.2.0.0",
                "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/2_2_0_0/OIMS_base.json",
                "OIMS_Content_Object"   : "MetadataMetadata",
-               "IncludeProperty"       : ["ALL"] 
+               "IncludeProperty"       : ["ALL"]
                 }]
            },
            {
@@ -423,6 +423,7 @@
         "Multiple": false,
         "ControlledVocabulary": [
           {
+            "\\":["<%GTREE 4.3.1 string%>",
             "ControlledVocabularyItem": "string",
             "ControlledVocabularyItemDescription": "For general textual data, including simple character strings.",
             "OntologyTerm": [
@@ -437,6 +438,7 @@
             ]
            },
            {
+            "\\":["<%GTREE 4.3.2 text%>",
             "ControlledVocabularyItem": "text",
             "ControlledVocabularyItemDescription": "For more substantial amounts of alphanumeric characters or longer text.",
             "OntologyTerm": [
@@ -451,6 +453,7 @@
             ]
            },
            {
+            "\\":["<%GTREE 4.3.3 compound%>",
             "ControlledVocabularyItem": "compound",
             "ControlledVocabularyItemDescription": "For properties with an array of properties as values.",
             "OntologyTerm": [
@@ -465,6 +468,7 @@
             ]
            },
            {
+            "\\":["<%GTREE 4.3.4 date%>",
             "ControlledVocabularyItem": "date",
             "ControlledVocabularyItemDescription": "For date values used in properties like version date.",
             "OntologyTerm": [
@@ -479,6 +483,7 @@
             ]
           },
           {
+            "\\":["<%GTREE 4.3.5 URI%>",
             "ControlledVocabularyItem":"URI",
             "ControlledVocabularyItemDescription":"For properties with URL or URI values.",
             "OntologyTerm": [
@@ -493,6 +498,7 @@
             ]
           },
           {
+            "\\":["<%GTREE 4.3.6 Controlled vocabulary%>",
             "ControlledVocabularyItem": "Controlled vocabulary",
             "ControlledVocabularyItemDescription": "For properties with values that are items in a controlled vocabulary, enumeration, or list.",
             "OntologyTerm": [
@@ -507,6 +513,7 @@
             ]
           },
           {
+            "\\":["<%GTREE 4.3.7 boolean%>",
             "ControlledVocabularyItem": "boolean",
             "ControlledVocabularyItemDescription": "a form of data with only two possible values ( 'true' and 'false') ",
             "OntologyTerm": [
@@ -521,6 +528,7 @@
             ]
           },
           {
+            "\\":["<%GTREE 4.3.8 email%>",
             "ControlledVocabularyItem": "email",
             "ControlledVocabularyItemDescription": "For properties with email address values.",
             "OntologyTerm": [
@@ -533,6 +541,41 @@
                 "OntologyTermQuality": "Exact"
               }
             ]
+          },
+          {
+            "\\":["<%GTREE 4.3.9 integer%>",
+            "ControlledVocabularyItem": "integer",
+            "ControlledVocabularyItemDescription": "integer",
+            "OntologyTerm": [
+               {
+                 "OntologyTermName": "xsd:integer",
+                 "OntologyTermDescription": "The datatype xsd:integer represents an arbitrarily large mathematical integer. An xsd:integer is a sequence of decimal digits, optionally preceded by a + or - sign. Leading zeros are permitted, but decimal points are not.",
+                 "OntologyName": "XML Schema",
+                 "OntologyTermID": "http://www.w3.org/2001/XMLSchema#integer",
+                 "OntologyURL": "http://www.w3.org/TR/xmlschema-2/#integer",
+                 "OntologyTermQuality": "Exact"
+               }
+             ]
+          },
+          {
+            "\\":["<%GTREE 4.3.10 float%>",
+            "ControlledVocabularyItem": "float",
+            "ControlledVocabularyItemDescription": "number with decimal points",
+            "OntologyTerm": [
+               {
+                 "OntologyTermName": "xsd:float",
+                 "OntologyTermDescription": "A built-in data type in the XML Schema definition language used for defining simple type elements that represent single-precision 32-bit floating point numbers.",
+                 "OntologyName": "XML Schema Definition Language",
+                 "OntologyTermID": "http://www.w3.org/2001/XMLSchema#float",
+                 "OntologyURL": "https://www.w3.org/TR/xmlschema-2/#float",
+                 "OntologyTermQuality": "Exact"
+               }
+             ]
+          },
+          {
+            "\\":["<%GTREE 4.3.10 HTML%>",
+            "ControlledVocabularyItem": "HTML",
+            "ControlledVocabularyItemDescription": "specific text type, namely hyper text markup language",
           }
                      ],
         "OntologyTerm": [
@@ -651,7 +694,7 @@
         ]
        },
        {
-        "\\":"<%GTREE 4.5 attribute TypeClass %>",
+        "\\":"<%GTREE 4.5 attribute DataTypeClass %>",
         "AttributeName":"DataTypeClass",
         "AttributeDescription":"if the attribute is compound or primitive",
         "DataType":"Controlled vocabulary",
@@ -922,7 +965,7 @@
           "ControlledVocabulary": [
             {
               "//": "<%GTREE 5.3.6.1 Exact match%>",
-              "VocabularyElementName": "Exact match",
+              "VocabularyElementName": "Exact",
               "VocabularyElementDescription": "The ontology term matches the attribute exactly",
               "OntologyTerm": [
                 {
