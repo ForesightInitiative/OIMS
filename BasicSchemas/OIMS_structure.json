@@ -51,15 +51,8 @@
         "\\":[
          "<%GTREE 2 Content section of the OIMS metadata schema%>"
         ],
-        "Descriptive_Metadata_DataSet":{},
-        "Descriptive_Metadata_DataFile":{},
-        "Technical_Metadata_DataFile":{},
-        "Technical_Metadata_Dataset":{},
-        "Structural_Metadata_DataFile":{},
-        "DataEntity":{},
-        "MetadataMetadata":{},
-        "ETL_Metadata":{},
-        "Rules":{}
+        "OIMS_Content_Object":" <{Descriptive_Metadata_DataSet,Descriptive_Metadata_DataFile,Technical_Metadata_DataFile,Technical_Metadata_Dataset,Structural_Metadata_DataFile,DataEntity,MetadataMetadata,ETL_Metadata,Rules}>",
+        "OIMS_Content_Object_Properties":{}
       }
     ]
    }
