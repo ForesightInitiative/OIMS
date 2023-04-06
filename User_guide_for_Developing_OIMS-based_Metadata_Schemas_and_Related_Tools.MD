@@ -1,5 +1,6 @@
-# User Guide for Developing OIMS-based metadata schemnas and related Tools
+# User Guide for Developing OIMS-based metadata schemas and related Tools
 version 2.2
+
 Gideon Kruseman
 
 ## Introduction:
