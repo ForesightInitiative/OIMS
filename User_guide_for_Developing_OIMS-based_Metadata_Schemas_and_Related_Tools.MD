@@ -1,4 +1,6 @@
-# User Guide for Developing OIMS-based metadata schemnas and related Tools 
+# User Guide for Developing OIMS-based metadata schemnas and related Tools
+version 2.2
+Gideon Kruseman
 
 ## Introduction:
 The Open Ontology-Based Interoperable Information Asset Metadata Schema (OIMS) is a flexible and extensible metadata schema designed to standardize and organize metadata for various information assets like datasets, documents, models, and publications, making them more accessible, transparent, and reusable. To understand the importance of OIMS, let's first discuss some basic concepts.
