@@ -12,6 +12,7 @@
 May 15, 2023
 
 
+
 This working paper shares insights from work in progress by the CGIAR Foresight Initiative, and is shared for discussion. This paper has gone through a light review process at the initiative team leadership level and is shared with the approval of the relevant work package leader, but it has not been formally peer reviewed.
 
 ![WorkingPaperImage](https://github.com/ForesightAndMetrics/OIMS/assets/103105585/78e9825e-b558-49b5-ba7e-858a910eef1d)
@@ -32,13 +33,13 @@ This report was prepared by &lt;implementation team and affiliation(s) as needed
 
 
 1. [Introduction](#1-introduction)
-2. [Context and Background](#2-ContextandBackground)
-3. High level structure of OIMS compatible metadata files
-4. Core properties
-5. Required if applicable attributes
-6. Optional attributes
-7. References
-8. Notes
+2. [Context and Background](#2-context-and-background)
+3. [High level structure of OIMS compatible metadata files](#3-high-level-structure-of-oims-compatible-metadata-files)
+4. [Core properties](#4-core-properties)
+5. [Required if applicable attributes](#5-required-if-applicable-attributes)
+6. [Optional attributes](#6-optional-attributes)
+7. [References](#7-references)
+8. [Notes](#8-notes)
 
 
 
