@@ -166,14 +166,27 @@ The "FileDescriptors" component provides information about the metadata file its
 
 
 ####        3.3.2. Mapping information
+<span style="color: red;">work in progress</span>
 ####        3.3.3. Underlying metadata schema information
+<span style="color: red;">work in progress</span>
+
 ####        3.3.4. Metadata file descriptors
+<span style="color: red;">work in progress</span>
+
 ###    3.4. OIMS Content
+<span style="color: red;">work in progress</span>
+
 
 ## 4. Core properties
 
-The core properties are defined in the OIMS content section as metadata metadata.
-
+The core properties are defined in the OIMS content section as metadata metadata. These core properties include:
+[Comment attribute](#41--the-comment-property)
+[Attribute name](#42-atrributename-the-identifier-of-the-property)
+[Attribute description](#43-attributedescription-description-of-the-property)
+[Data type](#44-datatype-the-datatype)
+[Requirement level](#45-attribute-requirementlevel)
+[Data type class](#46-attribute-datatypeclass)
+[Multiple](#47-attribute-multiple)
 
 
 ### 4.1. “\\”:  the comment property
