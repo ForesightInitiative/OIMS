@@ -1,4 +1,4 @@
-# **OIMS version 2.2 technical documentation **
+# OIMS version 2.2 technical documentation 
 
 
 ## User Guide for Developing OIMS-based metadata schemas and related Tools
@@ -31,7 +31,7 @@ By WP leader or Keith/Elisabetta, if appropriate
 ## Table of Contents
 
 
-1. Introduction
+1. [Introduction](#1-introduction)
 2. Context and Background
 3. High level structure of OIMS compatible metadata files
 4. Core properties
