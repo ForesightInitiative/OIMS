@@ -180,12 +180,19 @@ The "FileDescriptors" component provides information about the metadata file its
 ## 4. Core properties
 
 The core properties are defined in the OIMS content section as metadata metadata. These core properties include:
+
 [Comment attribute](#41--the-comment-property)
+
 [Attribute name](#42-atrributename-the-identifier-of-the-property)
+
 [Attribute description](#43-attributedescription-description-of-the-property)
+
 [Data type](#44-datatype-the-datatype)
+
 [Requirement level](#45-attribute-requirementlevel)
+
 [Data type class](#46-attribute-datatypeclass)
+
 [Multiple](#47-attribute-multiple)
 
 
