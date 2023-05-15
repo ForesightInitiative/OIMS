@@ -1,4 +1,4 @@
-**OIMS version 2.2 technical documentation **
+# **OIMS version 2.2 technical documentation **
 
 
 ## User Guide for Developing OIMS-based metadata schemas and related Tools
@@ -9,7 +9,7 @@
 
 <sup>*</sup> Corresponding author: [g.kruseman@cgiar.org](mailto:g.kruseman@cgiar.org) 
 
-Date
+May 15, 2023
 
 This working paper shares insights from work in progress by the CGIAR Foresight Initiative, and is shared for discussion. This paper has gone through a light review process at the initiative team leadership level and is shared with the approval of the relevant work package leader, but it has not been formally peer reviewed.
 
@@ -28,15 +28,21 @@ This report was prepared by &lt;implementation team and affiliation(s) as needed
 By WP leader or Keith/Elisabetta, if appropriate
 
 
-# Table of Contents
-
-
-[TOC]
-
-
+## Table of Contents
 
 
 1. Introduction
+2. Context and Background
+3. High level structure of OIMS compatible metadata files
+4. Core properties
+5. Required if applicable attributes
+6. Optional attributes
+7. References
+8. Notes
+
+
+
+## 1. Introduction
 
 The Open Ontology-Based Interoperable Information Asset Metadata Schema (OIMS) is a flexible and extensible metadata schema designed to standardize and organize metadata for various information assets like datasets, documents, models, and publications, making them more accessible, transparent, and reusable. To understand the importance of OIMS, let's first discuss some basic concepts.
 
@@ -87,7 +93,7 @@ Each technical chapter consists of a summary, the actual content, and a section 
 
 
 
-2. Context and Background
+## 2. Context and Background
 
 Metadata management plays a critical role in facilitating data discovery, sharing, and reuse in various domains. Metadata is essentially data about data, providing information that describes the content, structure, and context of a dataset. Metadata can include information such as title, description, keywords, author, date created, file format, and licensing terms as well as key information concerning the contents such as variables and their attributes.
 
@@ -109,8 +115,8 @@ OIMS uses the lightweight JSON annotation and has evolved since its initial publ
 
 
 
-3. High level structure of OIMS compatible metadata files
-    1. Overview
+## 3. High level structure of OIMS compatible metadata files
+###    3.1. Overview
 
 In Figure 1 (below) we observe the high-level structure of OIMS which we will discuss shortly.[^1]
 
@@ -128,7 +134,7 @@ Any OIMS-compatible metadata schema has the same high-level structure. “OIMS�
 
 
 
-    2.  OIMS_Content_Object
+ ###   3.2.  OIMS_Content_Object
 
 The “OIMS_Content_Object” property is used in both the header and the content section of an OIMS file. In the OIMS content section it identifies the type of metadata that is covered by the metadata file. In the OIMS header section it identifies the underlying metadata schema that describes the metadadat in the OIMS_content section. In the OIMS header section “OIMS_Content_Object” appears twice. The first time is the link with the OIMS content section, which is especially important if there are multiple sets of metadata covered in the metadata file. The second time it occurs in the OIMS header it indicates which part of the OIMS content ion the underlying metadata file should be taken into account. 
 
@@ -147,8 +153,8 @@ The cons of the approach that are important for development processes:
 1. Increased complexity: The additional level of abstraction may make the schema more complex to read and understand, particularly for users who are not familiar with the concept.
 2. Indirect access: Accessing metadata components requires navigating through the "OIMS_Content_Object" property, which may be less efficient than accessing it directly in an array.
 3. Potentially slower querying: Queries and searches may be slower due to the need to navigate through the additional level of abstraction.
-    3. OIMS header
-        1. Main structure
+###    3.3. OIMS header
+####        3.3.1. Main structure
 
 The OIMS header object is denoted by "OIMS_Header" and comprises three components: "mapping_info," "MetadataSchema," and "FileDescriptors."
 
@@ -158,18 +164,18 @@ The "FileDescriptors" component provides information about the metadata file its
 
 
 
-        2. Mapping information
-        3. Underlying metadata schema information
-        4. Metadata file descriptors
-    4. OIMS Content
-        5. 
-4. Core properties
+####        3.3.2. Mapping information
+####        3.3.3. Underlying metadata schema information
+####        3.3.4. Metadata file descriptors
+###    3.4. OIMS Content
+
+## 4. Core properties
 
 The core properties are defined in the OIMS content section as metadata metadata.
 
 
 
-    5. “\\”:  the comment property
+### 4.1. “\\”:  the comment property
 
 The "\\" property is an optional attribute that allows users to add comments, explanations, observations, or criticisms to the metadata. This attribute supports multiple values and can be expressed as plain text or HTML.
 
@@ -195,7 +201,7 @@ We now explain each key aspect of the "\\" property:
 * **"TypeClass": "primitive"**: Indicates that the attribute belongs to the "primitive" type class. Primitive attributes are basic data types that can be directly represented as a value.
 * **"Multiple": "TRUE"**: States that multiple comments can be added to the metadata using the "\" attribute.
 * **"OntologyTerm"**: Provides information about the corresponding ontology term for the attribute, which helps to standardize and align the attribute with existing ontologies. In this case, the "comment" term from the National Cancer Institute Thesaurus (NCIT) ontology is used, with the term ID "NCIT_C25393" and an exact match in term quality.
-    6. “AtrributeName”: the identifier of the property
+### 4.2. “AtrributeName”: the identifier of the property
 
 The "AttributeName" property is a required attribute that serves as the identifier for a metadata field in the OIMS schema. This attribute is a string value, can appear only once for each metadata field, and belongs to the "primitive" type class.
 
@@ -239,7 +245,7 @@ We now each key aspect of the "AttributeName" property:
 * **"OntologyTerm":** Provides information about the corresponding ontology term for the attribute. In this case, the "Name" term from the National Cancer Institute Thesaurus (NCIT) ontology is used, with the term ID "NCIT_C42614". However, the term quality is marked as "to be confirmed", indicating that the match between the ontology term and the attribute may need further validation.[^2]
 
 
-    7. “AttributeDescription”: description of the property
+ ### 4.3. “AttributeDescription”: description of the property
 
 The "AttributeDescription" property is used to provide a clear and concise description of each metadata attribute in the OIMS schema. This attribute is required for all metadata fields to help users better understand the purpose and context of each property.
 
@@ -267,7 +273,7 @@ each key aspect of the "AttributeDescription" property:
 * **"OntologyTerm"**: Provides information about the corresponding ontology term for the attribute. In this case, the "Description" term from the National Cancer Institute Thesaurus (NCIT) ontology is used, with the term ID "C25365". However, the term quality is marked as "to be confirmed", indicating that the match between the ontology term and the attribute may need further validation.[^3]
 
 
-    8. “DataType”: the datatype 
+### 4.4. “DataType”: the datatype 
 
 The "DataType" property is a required primitive type with a controlled vocabulary. It is used to specify the form that a value will have within the data dictionary metadata fields. The controlled vocabulary includes several terms to describe the possible datatypes (see code snippet below).
 
@@ -293,13 +299,13 @@ The JSON code snippet also includes an ontology term for the "DataType" property
 
 
 
-    9. Attribute “RequirementLevel”
+### 4.5. Attribute “RequirementLevel”
 
 The attribute requirement level indicates if an attribute is required, recommended or optionaleither always or when applicable.
 
 
 
-    10. Attribute DataTypeClass: 
+### 4.6. Attribute DataTypeClass: 
 
 Metadata fields in a system can be classified into two main classes: primitive and compound. The classification is based on the nature of the attribute's data type and structure.
 
@@ -313,7 +319,7 @@ In summary, metadata fields can be classified as primitive or compound based on 
 
 
 
-    11. Attribute Multiple
+### 4.7. Attribute Multiple
 
 Multiple is a Boolean that takes on the value true or false. If set to true it means the attribute being described can have multiple values. The attribute "multiple" is a common characteristic found in certain metadata fields. It refers to the ability of an attribute to hold multiple values instead of just a single value. When an attribute is marked as "multiple," it signifies that it can accommodate more than one occurrence or instance of the associated data.
 
@@ -329,14 +335,14 @@ In summary, the attribute "multiple" signifies that a metadata field can hold mu
 
 
 
-5. Required if applicable attributes
-    12. Controlled vocabulary
+## 5. Required if applicable attributes
+### 5.1. Controlled vocabulary
 
 If the data type of an attribute is a controlled vocabulary, list, enumeration or well-defined factor, then the controlled vocabulary elements need to be specified. Especially at higher levels of abstraction (metametadata), these controlled vocabulary elements need to be well described in unambiguous terms. Controlled vocabulary attribute is a compound type with controlled vocabulary item name “ControlledVocabularyItem” and a description "ControlledVocabularyItemDescription". Ideally, the controlled vocabulary terms come with ontology terms attached to them.
 
 
 
-    13. Ontology terms
+### 5.2. Ontology terms
 
 Ontology terms play a crucial role in knowledge representation and organization within various domains. They serve as building blocks for creating structured and meaningful relationships between concepts, entities, and attributes. Here are several reasons why ontology terms are important:
 
@@ -368,7 +374,7 @@ In summary, the compound attribute "ontology term" consists of sub-attributes su
 
 
 
-    14. Attribute value elements
+### 5.3. Attribute value elements
 
 If an attribute is of the type compound and elements of the attribute are fixed, then the elements should be identified in the metametadata. The attribute “AttributeValueElements” captures the sub-attributes that are part of a compound attribute.
 
@@ -386,8 +392,8 @@ In summary, the "AttributeValueElements" attribute is used in the metametadata t
 
 
 
-6. Optional attributes
-    15. “DefaultValue”: Default value of an attribute if a value is not provided
+## 6. Optional attributes
+### 6.1. “DefaultValue”: Default value of an attribute if a value is not provided
 
 In this section, we discuss the "DefaultValue" property, which defines the default value of an attribute if it is not set in the metadata. The provided screenshot shows the corresponding JSON code snippet:
 
@@ -405,7 +411,7 @@ For the "DefaultValue" property, an ontology term from the QUDT (Quantities, Uni
 
 
 
-    16. “ValueReservedWords”: reserved words in text fields
+### 6.2. “ValueReservedWords”: reserved words in text fields
 
 In this section, we discuss the "ValueReservedWords" property and its sub-properties, "ReservedWordName" and "ReservedWordDescription". These properties define reserved words that have a special meaning in the context of the attribute and are not covered by Controlled Vocabulary. The provided screenshot shows the corresponding JSON code snippet below.
 
@@ -425,7 +431,7 @@ Regarding ontology terms for "ValueReservedWords", "ReservedWordName", and "Rese
 
 
 
-    17. The attribute content object
+### 6.3. The attribute content object
 
 The attribute "ContentObjects" is another attribute somewhat comparable to “attributeValueElements” that consists of two sub-attributes: "AllowedContentObjects" and "AllowedContentRule". These sub-attributes define the rules and restrictions associated with the content objects allowed within a certain context or system.
 
@@ -445,10 +451,12 @@ In summary, the "ContentObjects" attribute consists of sub-attributes "AllowedCo
 
 
 
-7. References
+## 7. References
 
 <!-- Footnotes themselves at the bottom. -->
-## Notes
+
+
+## 8. Notes
 
 [^1]:
      [https://github.com/ForesightAndMetrics/OIMS/blob/main/BasicSchemas/OIMS_structure.json](https://github.com/ForesightAndMetrics/OIMS/blob/main/BasicSchemas/OIMS_structure.json) 
