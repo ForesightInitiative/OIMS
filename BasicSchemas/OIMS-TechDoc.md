@@ -11,8 +11,10 @@
 
 May 15, 2023
 
+
 This working paper shares insights from work in progress by the CGIAR Foresight Initiative, and is shared for discussion. This paper has gone through a light review process at the initiative team leadership level and is shared with the approval of the relevant work package leader, but it has not been formally peer reviewed.
 
+![WorkingPaperImage](https://github.com/ForesightAndMetrics/OIMS/assets/103105585/78e9825e-b558-49b5-ba7e-858a910eef1d)
 
 
 The CGIAR Initiative on Foresight combines state-of-the-art analytics, innovative use of data, and close engagement with national, regional and global partners to offer better insights into alternative transformation pathways that can inform choices and sharpen decision-making today, leading to more productive, sustainable and inclusive food, land and water systems in the future. More information can be found at [https://www.cgiar.org/initiative/24-foresight-and-metrics-to-accelerate-inclusive-and-sustainable-agrifood-system-transformation/](https://www.cgiar.org/initiative/24-foresight-and-metrics-to-accelerate-inclusive-and-sustainable-agrifood-system-transformation/). 
