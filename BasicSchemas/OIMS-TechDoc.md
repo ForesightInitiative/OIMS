@@ -25,16 +25,14 @@ This report was prepared by &lt;implementation team and affiliation(s) as needed
 
 
 
-**Preface**
 
-By WP leader or Keith/Elisabetta, if appropriate
 
 
 ## Table of Contents
 
 
 1. [Introduction](#1-introduction)
-2. Context and Background
+2. [Context and Background](#2-ContextandBackground)
 3. High level structure of OIMS compatible metadata files
 4. Core properties
 5. Required if applicable attributes
