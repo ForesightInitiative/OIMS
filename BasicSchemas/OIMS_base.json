@@ -16,7 +16,7 @@
                "SchemaName"            : "OIMS_base",
                "SchemaDescription"     : "OIMS selfdescribing metadata schema",
                "SchemaType"            : "selfdescribing metadata schema",
-               "SchemaVersion"         : "2.2.0.1",
+               "SchemaVersion"         : "2.2.0.2",
                "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/OIMS_base.json",
                "OIMS_Content_Object"   : "MetadataMetadata",
                "IncludeProperty"       : ["ALL"]
@@ -29,7 +29,7 @@
                "SchemaName"            : "OIMS_base",
                "SchemaDescription"     : "OIMS selfdescribing metadata schema",
                "SchemaType"            : "selfdescribing metadata schema",
-               "SchemaVersion"         : "2.2.0.1",
+               "SchemaVersion"         : "2.2.0.2",
                "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/OIMS_base.json",
                "OIMS_Content_Object"   : "MetadataMetadata"
                 },
@@ -37,7 +37,7 @@
                "SchemaName"            : "OIMS_base",
                "SchemaDescription"     : "OIMS selfdescribing metadata schema",
                "SchemaType"            : "selfdescribing metadata schema",
-               "SchemaVersion"         : "2.2.0.0",
+               "SchemaVersion"         : "2.2.0.2",
                "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/OIMS_base.json",
                "OIMS_Content_Object"   : "OIMS_Structure_Metadata",
                "IncludeProperty"       : ["ALL"]
@@ -51,7 +51,7 @@
                "SchemaName"            : "OIMS_base",
                "SchemaDescription"     : "OIMS selfdescribing metadata schema",
                "SchemaType"            : "selfdescribing metadata schema",
-               "SchemaVersion"         : "2.2.0.0",
+               "SchemaVersion"         : "2.2.0.2",
                "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/OIMS_base.json",
                "OIMS_Content_Object"   : "MetadataMetadata"
                 },
@@ -59,7 +59,7 @@
                "SchemaName"            : "OIMS_base",
                "SchemaDescription"     : "OIMS selfdescribing metadata schema",
                "SchemaType"            : "selfdescribing metadata schema",
-               "SchemaVersion"         : "2.2.0.0",
+               "SchemaVersion"         : "2.2.0.2",
                "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/OIMS_base.json",
                "OIMS_Content_Object"   : "OIMS_Header_Metadata",
                "IncludeProperty"       : ["ALL"]
@@ -70,9 +70,9 @@
             "MetadataName"     :  "OIMS_base",
             "MetaDataDescription" :"OIMS selfdescribing metadata schema",
             "MetadataVersion"  : {
-                "CurrentVersion"        : "2.2.0.0",
+                "CurrentVersion"        : "2.2.0.2",
                 "MetadataVersionStatus" : "development",
-                "VersionDate"           : "March 22, 2023"
+                "VersionDate"           : "May 26, 2023"
                },
             "Contact":[
                {
@@ -147,140 +147,71 @@
         "DataTypeClass":"primitive",
         "Multiple": false,
         "ControlledVocabulary": [
-            "Descriptive_Metadata_DataSet",
-            "Descriptive_Metadata_DataFile",
-            "Technical_Metadata_DataFile",
-            "Technical_Metadata_Dataset",
-            "Structural_Metadata_DataFile",
-            "DataEntity",
-            "MetadataMetadata",
-            "ETL_Metadata",
-            "OIMS_Header_Metadata",
-            "OIMS_Structure_Metadata",
-            "Rules"
-        ]
-       },
-       {
-       "\\": [
-            "<%GTREE 2.5 OIMS_Content_Object_Properties%>"
-           ],
-        "AttributeName":"OIMS_Content_Object_Properties",
-        "AttributeDescription":"section with metadata of the type described in OIMS_Content_object",
-        "DataType":"compound",
-        "RequirementLevel":"required",
-        "DataTypeClass":"compound",
-        "Multiple": true
-       }
-      ]
-     },
-     {
-      "OIMS_Content_Object":"MetadataMetadata",
-      "OIMS_Content_Object_Properties":[
-       {
-        "\\":[
-           "<%GTREE 3 Key attributes for transparency%>",
-           "<%GTREE 3.1 attribute \\ [comment]%>"
-
-          ],
-        "AttributeName":"\\",
-        "AttributeDescription":"comment field",
-        "DataType":[
-             "text",
-             "HTML"
-        ],
-        "RequirementLevel":"optional",
-        "DataTypeClass":"primitive",
-        "Multiple": true,
-        "OntologyTerm": [
            {
-              "OntologyTermName":"comment",
-              "OntologyTermDescription":"A written explanation, observation or criticism added to textual material.",
-              "OntologyName":"NCIT",
-              "OntologyTermID":"NCIT_C25393",
-              "OntologyURL":"http://purl.obolibrary.org/obo/NCIT_C25393",
-              "OntologyTermQuality":"Exact"
-           },
+             "//": "<%GTREE 2.4.1 Descriptive metadata at dataset level%>",
+             "VocabularyElementName": "Descriptive_Metadata_DataSet",
+             "VocabularyElementDescription": "descriptive metadata at dataset level"
+           ),
            {
-             "OntologyTermName": "note",
-             "OntologyTermDescription": "A general note, for any purpose.",
-             "OntologyName": "SKOS",
-             "OntologyTermID": "http://www.w3.org/2004/02/skos/core#note",
-             "OntologyURL": "http://www.w3.org/2004/02/skos/core#note",
-             "OntologyTermQuality": "Exact"
-           }
-        ]
-       },
-       {
-         "\\":[
-           "<%GTREE 3.2 attribute Status [StatusCondition]%>"
-         ],
-         "AttributeName": "StatusCondition",
-         "AttributeDescription": "The current state or condition of an attribute",
-         "DataType": "Controlled vocabulary",
-         "RequirementLevel": "optional",
-         "DataTypeClass": "primitive",
-         "Multiple": false,
-         "ControlledVocabulary": [
+             "//": "<%GTREE 2.4.2 technical metadata at dataset level%>",
+             "VocabularyElementName": "Technical_Metadata_Dataset",
+             "VocabularyElementDescription": "descriptive metadata at dataset level"
+           ),
            {
-             "//": "<%GTREE 3.2.1 Active%>",
-             "VocabularyElementName": "Active",
-             "VocabularyElementDescription": "Currently in use or operation",
-             "OntologyTerm": [
-               {
-                 "OntologyTermName": "Active",
-                 "OntologyTermDescription": "Currently in use or operation",
-                 "OntologyName": "EDAM",
-                 "OntologyTermID": "EDAM:0000181",
-                 "OntologyURL": "http://edamontology.org/0000181",
-                 "OntologyTermQuality": "exact"
-               }
-             ]
-           },
+             "//": "<%GTREE 2.4.3 Descriptive and technical metadata at dataset level%>",
+             "VocabularyElementName": "Descriptive_and_Technical_Metadata_DataSet",
+             "VocabularyElementDescription": "descriptive metadata at dataset level"
+           ),
            {
-             "//": "<%GTREE 3.2.2 Inactive%>",
-             "VocabularyElementName": "Inactive",
-             "VocabularyElementDescription": "Not currently in use or operation",
-             "OntologyTerm": [
-               {
-                 "OntologyTermName": "Inactive",
-                 "OntologyTermDescription": "Not currently in use or operation",
-                 "OntologyName": "EDAM",
-                 "OntologyTermID": "EDAM:0000182",
-                 "OntologyURL": "http://edamontology.org/0000182",
-                 "OntologyTermQuality": "exact"
-               }
-             ]
-           },
+             "//": "<%GTREE 2.4.4 Descriptive metadata at data file level%>",
+             "VocabularyElementName": "Descriptive_Metadata_DataFile",
+             "VocabularyElementDescription": "descriptive metadata at dataset level"
+           ),
            {
-             "//": "<%GTREE 3.2.3 Deprecated%>",
-             "VocabularyElementName": "Deprecated",
-             "VocabularyElementDescription": "No longer recommended for use, typically due to being superseded",
-             "OntologyTerm": [
-               {
-                 "OntologyTermName": "Deprecated",
-                 "OntologyTermDescription": "No longer recommended for use, typically due to being superseded",
-                 "OntologyName": "EDAM",
-                 "OntologyTermID": "EDAM:0000183",
-                 "OntologyURL": "http://edamontology.org/0000183",
-                 "OntologyTermQuality": "exact"
-               }
-             ]
-           },
+             "//": "<%GTREE 2.4.5 Technical metadata at data file level%>",
+             "VocabularyElementName": "Technical_Metadata_DataFile",
+             "VocabularyElementDescription": "Technical metadata at data file level"
+           ),
            {
-             "//": "<%GTREE 3.2.4 Under Review%>",
-             "VocabularyElementName": "Under Review",
-             "VocabularyElementDescription": "Currently being examined or evaluated for potential changes",
-             "OntologyTerm": [
-               {
-                 "OntologyTermName": "Under Review",
-                 "OntologyTermDescription": "Currently being examined or evaluated for potential changes",
-                 "OntologyName": "EDAM",
-                 "OntologyTermID": "EDAM:0000184",
-                 "OntologyURL": "http://edamontology.org/0000184",
-                 "OntologyTermQuality": "exact"
-               }
-             ]
-           }
+             "//": "<%GTREE 2.4.6 Descriptive and technical metadata at data file level%>",
+             "VocabularyElementName": "Descriptive_and_Technical_Metadata_DataFile",
+             "VocabularyElementDescription": "Descriptive and technical metadata at data file level"
+           ),
+           {
+             "//": "<%GTREE 2.4.7 Structural metadata of data within files%>",
+             "VocabularyElementName": "Structural_Metadata_DataFile",
+             "VocabularyElementDescription": "Structural metadata of data within files"
+           ),
+           {
+             "//": "<%GTREE 2.4.8 Data entity information%>",
+             "VocabularyElementName": "DataEntity",
+             "VocabularyElementDescription": "information about data entities and their relationships"
+           ),
+           {
+             "//": "<%GTREE 2.4.9 metadata metadata %>",
+             "VocabularyElementName": "MetadataMetadata",
+             "VocabularyElementDescription": "metametadata or the metadata of metadata attributes and properties"
+           ),
+           {
+             "//": "<%GTREE 2.4.10 metadata of models tools and ETL procedures%>",
+             "VocabularyElementName": "ETL_Metadata",
+             "VocabularyElementDescription": "metadata of models tools and ETL procedures"
+           ),
+           {
+             "//": "<%GTREE 2.4.11 metadata of OIMS header fields%>",
+             "VocabularyElementName": "OIMS_Header_Metadata",
+             "VocabularyElementDescription": "metadata of OIMS header fields"
+           ),
+           {
+             "//": "<%GTREE 2.4.12 metadata of the structure of OIMS compatible metadata files%>",
+             "VocabularyElementName": "OIMS_Structure_Metadata",
+             "VocabularyElementDescription": "descriptive metadata at dataset level"
+           ),
+           {
+             "//": "<%GTREE 2.4.13 Rules governing metadata and their relationships%>",
+             "VocabularyElementName": "Rules",
+             "VocabularyElementDescription": "Rules governing metadata and their relationships"
+           )
          ],
          "OntologyTerm": [
            {
