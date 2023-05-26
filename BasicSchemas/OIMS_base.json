@@ -16,7 +16,7 @@
                "SchemaName"            : "OIMS_base",
                "SchemaDescription"     : "OIMS selfdescribing metadata schema",
                "SchemaType"            : "selfdescribing metadata schema",
-               "SchemaVersion"         : "2.2.0.0",
+               "SchemaVersion"         : "2.2.0.1",
                "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/OIMS_base.json",
                "OIMS_Content_Object"   : "MetadataMetadata",
                "IncludeProperty"       : ["ALL"]
@@ -29,7 +29,7 @@
                "SchemaName"            : "OIMS_base",
                "SchemaDescription"     : "OIMS selfdescribing metadata schema",
                "SchemaType"            : "selfdescribing metadata schema",
-               "SchemaVersion"         : "2.2.0.0",
+               "SchemaVersion"         : "2.2.0.1",
                "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/OIMS_base.json",
                "OIMS_Content_Object"   : "MetadataMetadata"
                 },
@@ -197,7 +197,7 @@
               "OntologyTermDescription":"A written explanation, observation or criticism added to textual material.",
               "OntologyName":"NCIT",
               "OntologyTermID":"NCIT_C25393",
-              "OntolgyURL":"http://purl.obolibrary.org/obo/NCIT_C25393",
+              "OntologyURL":"http://purl.obolibrary.org/obo/NCIT_C25393",
               "OntologyTermQuality":"Exact"
            },
            {
@@ -205,7 +205,7 @@
              "OntologyTermDescription": "A general note, for any purpose.",
              "OntologyName": "SKOS",
              "OntologyTermID": "http://www.w3.org/2004/02/skos/core#note",
-             "OntolgyURL": "http://www.w3.org/2004/02/skos/core#note",
+             "OntologyURL": "http://www.w3.org/2004/02/skos/core#note",
              "OntologyTermQuality": "Exact"
            }
         ]
@@ -319,7 +319,7 @@
               "OntologyTermDescription":"The words or language units by which a thing is known.",
               "OntologyName":"NCIT",
               "OntologyTermID":"NCIT_C42614",
-              "OntolgyURL":"http://purl.obolibrary.org/obo/NCIT_C42614",
+              "OntologyURL":"http://purl.obolibrary.org/obo/NCIT_C42614",
               "OntologyTermQuality":"to be confirmed"
            }
         ]
@@ -338,7 +338,7 @@
                 "OntologyTermDescription":"A written or verbal account, representation, statement, or explanation of something.",
                 "OntologyName":"NCIT",
                 "OntologyTermID":"C25365",
-                "OntolgyURL":"http://purl.obolibrary.org/obo/NCIT_C25365",
+                "OntologyURL":"http://purl.obolibrary.org/obo/NCIT_C25365",
                 "OntologyTermQuality":"to be confirmed"
              }
           ]
@@ -363,7 +363,7 @@
                 "OntologyTermDescription": "A string of characters.",
                 "OntologyName": "RDF",
                 "OntologyTermID": "rdf:Literal",
-                "OntolgyURL": "https://www.w3.org/TR/rdf11-concepts/#dfn-literal",
+                "OntologyURL": "https://www.w3.org/TR/rdf11-concepts/#dfn-literal",
                 "OntologyTermQuality": "Exact"
               }
             ]
@@ -378,7 +378,7 @@
                 "OntologyTermDescription": "Data that primarily includes sequences of characters.",
                 "OntologyName": "Schema.org",
                 "OntologyTermID": "schema:Text",
-                "OntolgyURL": "https://schema.org/Text",
+                "OntologyURL": "https://schema.org/Text",
                 "OntologyTermQuality": "Exact"
               }
             ]
@@ -393,7 +393,7 @@
                 "OntologyTermDescription": "An object composed of multiple other objects.",
                 "OntologyName": "CIDOC-CRM",
                 "OntologyTermID": "E90_Substance",
-                "OntolgyURL": "http://www.cidoc-crm.org/Entity/E90_Substance/Version-6.2.1",
+                "OntologyURL": "http://www.cidoc-crm.org/Entity/E90_Substance/Version-6.2.1",
                 "OntologyTermQuality": "Related"
               }
             ]
@@ -408,7 +408,7 @@
                 "OntologyTermDescription": "A particular day, month, or year.",
                 "OntologyName": "Schema.org",
                 "OntologyTermID": "schema:Date",
-                "OntolgyURL": "https://schema.org/Date",
+                "OntologyURL": "https://schema.org/Date",
                 "OntologyTermQuality": "Exact"
               }
             ]
@@ -423,7 +423,7 @@
                 "OntologyTermDescription":"A Uniform Resource Identifier reference data type.",
                 "OntologyName":"XML Schema",
                 "OntologyTermID":"",
-                "OntolgyURL":"https://www.w3.org/TR/xmlschema11-2/#anyURI",
+                "OntologyURL":"https://www.w3.org/TR/xmlschema11-2/#anyURI",
                 "OntologyTermQuality":"Exact"
               }
             ]
@@ -438,7 +438,7 @@
                 "OntologyTermDescription": "A collection of standardized terms and their meanings that are used to provide consistent labeling and descriptions of concepts within a domain.",
                 "OntologyName": "SKOS",
                 "OntologyTermID": "skos:ConceptScheme",
-                "OntolgyURL": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+                "OntologyURL": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
                 "OntologyTermQuality": "Exact"
               }
             ]
@@ -453,7 +453,7 @@
                 "OntologyTermDescription": "A data type that has one of two possible values (usually denoted true and false) which represent logic values.",
                 "OntologyName": "NCIT",
                 "OntologyTermID": "C65228",
-                "OntolgyURL": "http://purl.obolibrary.org/obo/NCIT_C65228",
+                "OntologyURL": "http://purl.obolibrary.org/obo/NCIT_C65228",
                 "OntologyTermQuality": "Exact"
               }
             ]
@@ -468,7 +468,7 @@
                 "OntologyTermDescription": "A string that represents the email address of a person or organization.",
                 "OntologyName": "Schema.org",
                 "OntologyTermID": "schema:email",
-                "OntolgyURL": "https://schema.org/email",
+                "OntologyURL": "https://schema.org/email",
                 "OntologyTermQuality": "Exact"
               }
             ]
@@ -515,7 +515,7 @@
               "OntologyTermDescription":"An indication of the form that a value will have.",
               "OntologyName":"NCIT",
               "OntologyTermID":"C42645",
-              "OntolgyURL":"http://purl.obolibrary.org/obo/NCIT_C42645 ",
+              "OntologyURL":"http://purl.obolibrary.org/obo/NCIT_C42645 ",
               "OntologyTermQuality":"to be confirmed"
            },
            {
@@ -523,7 +523,7 @@
               "OntologyTermDescription": "A category of information, indicating the nature or characteristics of the content of a resource.",
               "OntologyName": "DCMI",
               "OntologyTermID": "dcterms:type",
-              "OntolgyURL": "http://purl.org/dc/terms/type",
+              "OntologyURL": "http://purl.org/dc/terms/type",
               "OntologyTermQuality": "Exact"
            }
                   ]
@@ -548,7 +548,7 @@
                       "OntologyTermDescription":"An indication as to whether entity is mandatory",
                       "OntologyName":"NCIT",
                       "OntologyTermID":"C164599",
-                      "OntolgyURL":"http://purl.obolibrary.org/obo/NCIT_C164599",
+                      "OntologyURL":"http://purl.obolibrary.org/obo/NCIT_C164599",
                       "OntologyTermQuality":"to be confirmed"
                    }
                 ]
@@ -563,7 +563,7 @@
                    "OntologyTermDescription": "Suggested as appropriate or suitable, but not strictly required",
                    "OntologyName": "NCIT",
                    "OntologyTermID": "NCIT_C25697",
-                   "OntolgyURL": "http://purl.obolibrary.org/obo/NCIT_C25697",
+                   "OntologyURL": "http://purl.obolibrary.org/obo/NCIT_C25697",
                    "OntologyTermQuality": "to be confirmed"
               }]
             },
@@ -576,7 +576,7 @@
                    "OntologyTermDescription": "A requirement that is mandatory only under certain conditions or circumstances",
                    "OntologyName": "NCIT",
                    "OntologyTermID": "NCIT_C25698",
-                   "OntolgyURL": "http://purl.obolibrary.org/obo/NCIT_C25698",
+                   "OntologyURL": "http://purl.obolibrary.org/obo/NCIT_C25698",
                    "OntologyTermQuality": "to be confirmed"
                  }]
             },
@@ -590,7 +590,7 @@
                    "OntologyTermDescription": "A recommendation that is appropriate or suitable only under certain conditions or circumstances",
                    "OntologyName": "NCIT",
                    "OntologyTermID": "NCIT_C25699",
-                   "OntolgyURL": "http://purl.obolibrary.org/obo/NCIT_C25699",
+                   "OntologyURL": "http://purl.obolibrary.org/obo/NCIT_C25699",
                    "OntologyTermQuality": "to be confirmed"
                  }
                 ]
@@ -605,7 +605,7 @@
                       "OntologyTermDescription":"possible but not necessary; left to choice",
                       "OntologyName":"NCIT",
                       "OntologyTermID":"C25603",
-                      "OntolgyURL":"http://purl.obolibrary.org/obo/NCIT_C25603",
+                      "OntologyURL":"http://purl.obolibrary.org/obo/NCIT_C25603",
                       "OntologyTermQuality":"to be confirmed"
                    }
                 ]
@@ -618,7 +618,7 @@
             "OntologyTermDescription": "The degree to which a metadata attribute is required or recommended.",
             "OntologyName": "EDAM",
             "OntologyTermID": "http://edamontology.org/data_3774",
-            "OntolgyURL": "http://edamontology.org/data_3774",
+            "OntologyURL": "http://edamontology.org/data_3774",
             "OntologyTermQuality": "to be confirmed"
           }
 
@@ -642,7 +642,7 @@
                 "OntologyTermDescription": "A basic or simple type that does not have underlying attributes",
                 "OntologyName": "SIO",
                 "OntologyTermID": "SIO_000614",
-                "OntolgyURL": "http://semanticscience.org/resource/SIO_000614",
+                "OntologyURL": "http://semanticscience.org/resource/SIO_000614",
                 "OntologyTermQuality": "Exact"
               }
             ]
@@ -656,7 +656,7 @@
                 "OntologyTermDescription": "A type that has underlying attributes",
                 "OntologyName": "SIO",
                 "OntologyTermID": "SIO_000615",
-                "OntolgyURL": "http://semanticscience.org/resource/SIO_000615",
+                "OntologyURL": "http://semanticscience.org/resource/SIO_000615",
                 "OntologyTermQuality": "Exact"
               }
             ]
@@ -668,7 +668,7 @@
             "OntologyTermDescription": "A class of data item that is intended to capture the general category of the data item",
             "OntologyName": "IAO",
             "OntologyTermID": "IAO_0000029",
-            "OntolgyURL": "http://purl.obolibrary.org/obo/IAO_0000029",
+            "OntologyURL": "http://purl.obolibrary.org/obo/IAO_0000029",
             "OntologyTermQuality": "To be coinfirmed"
           },
           {
@@ -676,7 +676,7 @@
             "OntologyTermDescription": "A class that characterizes a set of entities that have common properties",
             "OntologyName": "SIO",
             "OntologyTermID": "SIO_000097",
-            "OntolgyURL": "http://semanticscience.org/resource/SIO_000097",
+            "OntologyURL": "http://semanticscience.org/resource/SIO_000097",
             "OntologyTermQuality": "Exact"
           }
         ]
@@ -695,7 +695,7 @@
               "OntologyTermDescription": "A related resource that is included either physically or logically in the described resource.",
               "OntologyName": "DCMI",
               "OntologyTermID": "http://purl.org/dc/terms/hasPart",
-              "OntolgyURL": "http://purl.org/dc/terms/hasPart",
+              "OntologyURL": "http://purl.org/dc/terms/hasPart",
               "OntologyTermQuality": "Related"
            }
          ]
@@ -721,7 +721,7 @@
               "OntologyTermDescription":"A set of terms that are selected and defined based on the requirements set out by the user group, usually a set of vocabulary is chosen to promote consistency across data collection projects.",
               "OntologyName":"NCIT",
               "OntologyTermID":"C25704",
-              "OntolgyURL":"http://purl.obolibrary.org/obo/NCIT_C25704",
+              "OntologyURL":"http://purl.obolibrary.org/obo/NCIT_C25704",
               "OntologyTermQuality":"to be confirmed"
            }
         ]
@@ -740,7 +740,7 @@
             "OntologyTermDescription": "A term or label used in a controlled vocabulary",
             "OntologyName": "NCIt",
             "OntologyTermID": "C400",
-            "OntolgyURL": "http://purl.obolibrary.org/obo/NCIT_C400",
+            "OntologyURL": "http://purl.obolibrary.org/obo/NCIT_C400",
             "OntologyTermQuality": "exact"
           }
         ]
@@ -759,7 +759,7 @@
             "OntologyTermDescription": "A definition of a term in a controlled vocabulary",
             "OntologyName": "NCIt",
             "OntologyTermID": "C25567",
-            "OntolgyURL": "http://purl.obolibrary.org/obo/NCIT_C25567",
+            "OntologyURL": "http://purl.obolibrary.org/obo/NCIT_C25567",
             "OntologyTermQuality": "exact"
           }
         ]
@@ -796,7 +796,7 @@
             "OntologyTermDescription",
             "OntologyName",
             "OntologyTermID",
-            "OntolgyURL",
+            "OntologyURL",
             "OntologyTermQuality"
         ],
         "OntologyTerm": [
@@ -1008,7 +1008,7 @@
            "OntologyTermDescription": "The value of a parameter that is used when no other value is specified.",
            "OntologyName": "QUDT",
            "OntologyTermID": "QUDT_DefaultValue",
-           "OntolgyURL": "http://www.qudt.org/qudt/owl/1.0.0/datatype.owl#DefaultValue",
+           "OntologyURL": "http://www.qudt.org/qudt/owl/1.0.0/datatype.owl#DefaultValue",
            "OntologyTermQuality": "Exact"
          }
        ]
