@@ -16,7 +16,7 @@
                "SchemaName"            : "OIMS_base",
                "SchemaDescription"     : "OIMS selfdescribing metadata schema",
                "SchemaType"            : "selfdescribing metadata schema",
-               "SchemaVersion"         : "2.2.0.2",
+               "SchemaVersion"         : "2.2.0.3",
                "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/OIMS_base.json",
                "OIMS_Content_Object"   : "MetadataMetadata",
                "IncludeProperty"       : ["ALL"]
@@ -29,7 +29,7 @@
                "SchemaName"            : "OIMS_base",
                "SchemaDescription"     : "OIMS selfdescribing metadata schema",
                "SchemaType"            : "selfdescribing metadata schema",
-               "SchemaVersion"         : "2.2.0.2",
+               "SchemaVersion"         : "2.2.0.3",
                "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/OIMS_base.json",
                "OIMS_Content_Object"   : "MetadataMetadata"
                 },
@@ -37,7 +37,7 @@
                "SchemaName"            : "OIMS_base",
                "SchemaDescription"     : "OIMS selfdescribing metadata schema",
                "SchemaType"            : "selfdescribing metadata schema",
-               "SchemaVersion"         : "2.2.0.2",
+               "SchemaVersion"         : "2.2.0.3",
                "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/OIMS_base.json",
                "OIMS_Content_Object"   : "OIMS_Structure_Metadata",
                "IncludeProperty"       : ["ALL"]
@@ -51,7 +51,7 @@
                "SchemaName"            : "OIMS_base",
                "SchemaDescription"     : "OIMS selfdescribing metadata schema",
                "SchemaType"            : "selfdescribing metadata schema",
-               "SchemaVersion"         : "2.2.0.2",
+               "SchemaVersion"         : "2.2.0.3",
                "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/OIMS_base.json",
                "OIMS_Content_Object"   : "MetadataMetadata"
                 },
@@ -59,7 +59,7 @@
                "SchemaName"            : "OIMS_base",
                "SchemaDescription"     : "OIMS selfdescribing metadata schema",
                "SchemaType"            : "selfdescribing metadata schema",
-               "SchemaVersion"         : "2.2.0.2",
+               "SchemaVersion"         : "2.2.0.3",
                "SchemaURL"             : "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/OIMS_base.json",
                "OIMS_Content_Object"   : "OIMS_Header_Metadata",
                "IncludeProperty"       : ["ALL"]
@@ -77,6 +77,7 @@
             "Contact":[
                {
                 "ContactName"            :"Gideon Kruseman",
+                "ContactRole"            :"metadata schema developer"
                 "ContactAffiliation"     : {
                     "ContactAffiliationName"     :"Alliance of Bioversity International & CIAT",
                     "ContactAffiliationAcronym"  :"Alliance"
@@ -1267,7 +1268,7 @@
          ]
        },
        {
-        "\\":"<%GTREE 7.2.2.3 MetadataVersionStatus: status of the metadata file%>",
+        "\\":"<%GTREE 7.2.2.3 MetadataVersionDate: date of the metadata file%>",
         "AttributeName":"VersionDate",
         "AttributeDescription":"Date of this version of the metadata",
         "DataType":"Date",
@@ -1276,7 +1277,7 @@
         "Multiple": false
        },
        {
-        "\\":"<%GTREE 7.2.2.3 Contact: contact details of the manager of the metadata%>",
+        "\\":"<%GTREE 7.2.3 Contact: contact details of the manager of the metadata%>",
         "AttributeName":"Contact",
         "AttributeDescription":"contact details of the manager of the metadata",
         "DataType":"compound",
@@ -1300,7 +1301,16 @@
         "Multiple": false
        },
        {
-        "\\":"<%GTREE 7.2.3.2 ContactAffiliation: Affiliation of a person or entity to contact about the metadata%>",
+        "\\":"<%GTREE 7.2.3.2 ContactRole: Role of contact person or entity%>",
+        "AttributeName":"ContactRole",
+        "AttributeDescription":"Role of contact person or entity ",
+        "DataType":"text",
+        "RequirementLevel":"required",
+        "DataTypeClass":"primitive",
+        "Multiple": false
+       },
+       {
+        "\\":"<%GTREE 7.2.3.3 ContactAffiliation: Affiliation of a person or entity to contact about the metadata%>",
         "AttributeName":"ContactAffiliation",
         "AttributeDescription":"Affiliation of a person or entity to contact about the metadata",
         "DataType":"compound",
