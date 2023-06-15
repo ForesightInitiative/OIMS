@@ -24,7 +24,7 @@ The next chapter "Developing Querying Tools for OIMS" discusses key elements to 
 2. Query optimization: Optimize queries for speed and performance by converting the nested OIMS JSON structure into a machine-readable format. This format should be optimized for querying but may not be as human-intelligible as the original JSON format.
 3. Open-source tools: Utilize open-source tools for conversions to promote transparency and reproducibility.
 
-The next chapeter "Developing Conversion Tools for OIMS" discusses how to create tools that can convert structured metadata files, such as CSV files, into OIMS-compatible JSON files, while maintaining the flexibility and extensibility of the OIMS schema.
+The next chapter "Developing Conversion Tools for OIMS" discusses how to create tools that can convert structured metadata files, such as CSV files, into OIMS-compatible JSON files, while maintaining the flexibility and extensibility of the OIMS schema.
 
 The final Chapter "Developing Analysis Tools for OIMS" discusses how to develop analysis tools that can work with OIMS-compatible metadata files to enhance the access, transparency, and use of information assets. These tools should be able to handle both the OIMS JSON format and the machine-readable format optimized for querying.
 
