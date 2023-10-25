@@ -2,23 +2,32 @@
   "$schema": "http://json-schema.org/schema#",
   "$id": "https://github.com/ForesightAndMetrics/OIMS/tree/main/BasicSchemas/OIMS_structure.json",
   "title": "OIMS Metadata Schema template",
+  "description": "Basic structure of an OIMS compatible metadata file",
   "type": "object",
   "properties": {
     "OIMS": {
       "type": "object",
       "properties": {
-        "OIMS_Header": {
+        "OIMS_header": {
           "type": "object",
           "properties": {
             "mapping_info": {
-              "type": "object"
-            },
-            "MetaDataSchema": {
               "type": "array",
               "items": {
                 "type": "object",
                 "properties": {
-                  "OIMS_Content_Object": {
+                  "mapper_tool_name": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "metadata_schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "OIMS_content_object": {
                     "oneOf": [
                       { "const": "DataEntity" },
                       { "const": "Descriptive_Metadata_DataFile" },
@@ -31,38 +40,38 @@
                       { "const": "Technical_Metadata_Dataset" }
                     ]
                   },
-                  "SchemaProperties": {
+                  "schema_properties": {
                     "type": "array",
                     "items": {
                       "type": "object",
                       "properties": {
-                        "SchemaName": {
+                        "schema_name": {
                           "type": "string"
                         },
-                        "SchemaDescription": {
+                        "schema_description": {
                           "type": "string"
                         },
-                        "SchemaType": {
+                        "schema_type": {
                           "type": "string"
                         },
-                        "SchemaVersion": {
+                        "schema_version": {
                           "type": "string"
                         },
-                        "SchemaURL": {
+                        "schema_url": {
                           "type": "string"
-                        },"OIMS_Content_Object": {
+                        },"OIMS_content_object": {
                           "oneOf": [
                             { "const": "MetadataMetadata" }
                           ]
                         }
                       },
                       "required": [
-                        "SchemaDescription",
-                        "SchemaName",
-                        "SchemaType",
-                        "SchemaURL",
-                        "SchemaVersion",
-                        "OIMS_Content_Object"
+                        "schema_description",
+                        "schema_name",
+                        "schema_type",
+                        "schema_url",
+                        "schema_version",
+                        "OIMS_content_object"
                       ]
                     }
                   }
@@ -74,72 +83,72 @@
               },
               "minItems": 1
             },
-            "FileDescriptors": {
+            "file_descriptors": {
               "type": "object",
               "properties": {
-                "MetadataName": {
+                "metadata_name": {
                   "type": "string"
                 },
-                "MetaDataDescription": {
+                "meta_data_description": {
                   "type": "string"
                 },
-                "MetadataVersion": {
+                "metadata_version": {
                   "type": "object",
                   "properties": {
-                    "CurrentVersion": {
+                    "current_version": {
                       "type": "string"
                     },
-                    "MetadataVersionStatus": {
+                    "metadata_version_status": {
                       "type": "string"
                     }
                   },
                   "required": [
-                    "CurrentVersion",
-                    "MetadataVersionStatus"
+                    "current_version",
+                    "metadata_version_status"
                   ]
                 },
-                "Contact": {
+                "contact": {
                   "type": "array",
                   "items": {
                     "type": "object",
                     "properties": {
-                      "ContactName": {
+                      "contact_name": {
                         "type": "string"
                       },
-                      "ContactAffiliation": {
+                      "contact_affiliation": {
                         "type": "object",
                         "properties": {
-                          "ContactAffiliationName": {
+                          "contact_affiliation_name": {
                             "type": "string"
                           },
-                          "ContactAffiliationAcronym": {
+                          "contact_affiliation_acronym": {
                             "type": "string"
                           }
                         },
                         "required": [
-                          "ContactAffiliationAcronym",
-                          "ContactAffiliationName"
+                          "contact_affiliation_acronym",
+                          "contact_affiliation_name"
                         ]
                       },
-                      "ContactIdentifier": {
+                      "contact_identifier": {
                         "type": "array",
                         "items": {
                           "type": "object",
                           "properties": {
-                            "IdentifierScheme": {
+                            "identifier_scheme": {
                               "type": "string"
                             },
-                            "Identifier": {
+                            "identifier": {
                               "type": "string"
                             }
                           },
                           "required": [
-                            "Identifier",
-                            "IdentifierScheme"
+                            "identifier",
+                            "identifier_scheme"
                           ]
                         }
                       },
-                      "ContactEmail": {
+                      "contact_email": {
                         "type": "array",
                         "items": {
                           "type": "string"
@@ -147,34 +156,34 @@
                       }
                     },
                     "required": [
-                      "ContactAffiliation",
-                      "ContactEmail",
-                      "ContactIdentifier",
-                      "ContactName"
+                      "contact_affiliation",
+                      "contact_email",
+                      "contact_identifier",
+                      "contact_name"
                     ]
                   }
                 }
               },
               "required": [
-                "Contact",
-                "MetaDataDescription",
-                "MetadataName",
-                "MetadataVersion"
+                "contact",
+                "meta_data_description",
+                "metadata_name",
+                "metadata_version"
               ]
             }
           },
           "required": [
-            "FileDescriptors",
-            "MetaDataSchema",
+            "file_descriptors",
+            "metadata_schema",
             "mapping_info"
           ]
         },
-        "OIMS_Content": {
+        "OIMS_content": {
           "type": "array",
           "items": {
             "type": "object",
             "properties": {
-              "OIMS_Content_Object":{
+              "OIMS_content_object":{
                 "oneOf": [
                   { "const": "DataEntity" },
                   { "const": "Descriptive_Metadata_DataFile" },
@@ -187,16 +196,30 @@
                   { "const": "Technical_Metadata_Dataset" }
                 ]
               },
-              "OIMS_Content_Properties": {
-                "type": "object"
+              "OIMS_content_object_properties": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "metadata": {}
+                  },
+                  "required": [
+                    "metadata"
+                  ]
+                }
               }
-            }
-          }          
+            },
+            "required": [
+              "OIMS_content_object_properties",
+              "OIMS_content_object"
+            ]
+          }
         }
       },
       "required": [
-        "OIMS_Content",
-        "OIMS_Header"
+        "\\",
+        "OIMS_header",
+        "OIMS_content"
       ]
     }
   },
@@ -208,19 +231,11 @@
   },
 "definitions": {
     "comment": {
-      "oneOf": [
-        {
-          "type": "string",
-          "description": "Single comment"
-        },
-        {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "Array of comments"
-        }
-      ]
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Array of comments"
     }
   }
 
