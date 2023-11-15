@@ -45,8 +45,8 @@ Change log from 2.3.1.0 to 2.3.2.0
 There were some missing elements related to the OIMS content properties that have been added for consistency.
 
 ## Citation
-When publishing papers based on the schema we encourage the authors to provide the link to the [github directory](https://github.com/ForesightAndMetrics/OIMS) and use the following citation: \
-Kruseman G., LaPorte M.-A. 2023. A Flexible, Extensible, Machine-Readable, Human-Intelligible, and Ontology-Agnostic Metadata Schema (OIMS) version 2.0.1..0. https://github.com/ForesightAndMetrics/OIMS  
+When publishing papers based on the schema we encourage the authors to provide the link to the [github directory](https://github.com/ForesightInitiative/OIMS) and use the following citation: \
+Kruseman G., LaPorte M.-A. 2023. A Flexible, Extensible, Machine-Readable, Human-Intelligible, and Ontology-Agnostic Metadata Schema (OIMS) version 2.0.1..0. https://github.com/ForesightInitiative/OIMS  
 
 ## Further reading / references
 Kruseman G. 2022.A Flexible, Extensible, Machine-Readable, Human-Intelligible, and Ontology-Agnostic Metadata Schema (OIMS). _Frontiers in Sustainable Food Systems_ vol. 6. DOI=10.3389/fsufs.2022.767863  
