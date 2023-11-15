@@ -58,6 +58,7 @@
                 "OIMS_content_object": " <{Descriptive_Metadata_DataSet,Descriptive_Metadata_DataFile,Technical_Metadata_DataFile,Technical_Metadata_Dataset,Structural_Metadata_DataFile,DataEntity,MetadataMetadata,ETL_Metadata,Rules}>",
                 "OIMS_content_object_properties": [
                     {
+                        "metadata_class": [],
                         "metadata": [
                             {}
                         ]
