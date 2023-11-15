@@ -11,7 +11,7 @@ Author: \[ \
 \] \
 Date: 15 Novemnber 2023 \
 published OIMS Version: 2.3.1.0 \
-current OIMS version: 2.3.2.0
+current OIMS version: 2.3.2.0 \
 OIMS documentation version: 2.1.0.1 \
 Status: under development
 
