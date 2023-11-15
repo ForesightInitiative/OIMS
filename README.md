@@ -27,6 +27,7 @@ change to snake case: all properties in the OIMS base metadata schema have been 
 In OIMS_content.OIMS_content_object_properties. An intermediate level has been added, called metadata. OIMS_content_object_properties was an array of objects. It still is and one of those objects is “metadata” which is an array of objects, namely the metadatametadata. Other possible objects of OIMS_content_object_properties are entity identification and relevant entity relationships. These entity relationships are not relevant in the OIMS_base schema.
 Entity related metadata is added to the metadata under "OIMS_content_object": "OIMS_Structure_Metadata".
 Minor issues
+
 Change log from 2.3.0.0 to 2.3.1.0
 
 Ensured that mapping info in the main structure is an array of objects
@@ -39,7 +40,8 @@ There were some required in applicable attributes that were tagged with required
 The attribute data_type is not multiple. In the case that more than one data type is allowed we have added the data type “any”
 Minor edits of typos
 
-hange log from 2.3.1.0 to 2.3.2.0
+Change log from 2.3.1.0 to 2.3.2.0
+
 There were some missing elements related to the OIMS content properties that have been added for consistency.
 
 ## Citation
