@@ -235,35 +235,67 @@
                                 "multiple": false
                             },
                             {
-                                "\\": ["<%GTREE 2.3.2.3 entity_relationship%>"],
-                                "attribute_name": "entity_relationship_type",
-                                "attribute_description": "type of relationship between the current entity and other entities",
+                                "\\": ["<%GTREE 2.3.2.1.4 persistent_entity_url%>"],
+                                "attribute_name": "persistent_entity_url",
+                                "attribute_description": "url linking to the entity",
+                                "data_type": "url",
+                                "requirement_level": "recommended",
+                                "data_type_class": "primitive",
+                                "multiple": false
+                            },
+                            {
+                                "\\": ["<%GTREE 2.3.2.2 entity_relationship%>"],
+                                "attribute_name": "entity_relationship",
+                                "attribute_description": "relationship between the current entity and other entities",
                                 "data_type": "compound_object",
                                 "requirement_level": "required if applicable",
                                 "data_type_class": "compound",
                                 "multiple": true,
                                 "attribute_value_elements": [
-                                    "entity_label",
-                                    "persistent_entity_id_schema_name",
-                                    "persistent_entity_id_identifier"
+                                    "entity_relationship_type",
+                                    "entity_list"
                                 ]
                             },
                             {
-                                "\\": ["<%GTREE 2.3.2.3.1 entity_relationship_type%>"],
+                                "\\": ["<%GTREE 2.3.2.2.1 entity_relationship_type%>"],
                                 "attribute_name": "entity_relationship_type",
-                                "attribute_description": "type of relationship between the current entity and other entities",
+                                "attribute_description": "relationship between the current entity and other entities",
+                                "data_type": "controlled_vocabulary",
+                                "requirement_level": "required",
+                                "data_type_class": "primitive",
+                                "multiple": false,
+                                "controlled_vocabulary":  [
+                                    {
+                                        "\\": ["<%GTREE 2.3.2.2.1.1 parent%>"],
+                                        "vocabulary_element_name": "parent_of",
+                                        "vocabulary_element_description": "the current entity is a parent of the listed entities"
+                                    },
+                                    {
+                                        "\\": ["<%GTREE 2.3.2.2.1.2 child%>"],
+                                        "vocabulary_element_name": "child_of",
+                                        "vocabulary_element_description": "the current entity is a child of the listed entities"
+                                    },
+                                    {
+                                        "\\": ["<%GTREE 2.3.2.2.1.3 child%>"],
+                                        "vocabulary_element_name": "has_siblings",
+                                        "vocabulary_element_description": "the current entity has siblings namely the listed entities"
+                                    }
+                                ]
+                            },
+                            {
+                                "\\": ["<%GTREE 2.3.2.2.3 entity_list%>"],
+                                "attribute_name": "entity_list",
+                                "attribute_description": "relationship between the current entity and other entities",
                                 "data_type": "compound_object",
                                 "requirement_level": "required if applicable",
                                 "data_type_class": "compound",
                                 "multiple": true,
                                 "attribute_value_elements": [
-                                    "entity_label",
-                                    "persistent_entity_id_schema_name",
-                                    "persistent_entity_id_identifier"
+                                    "persistent_entity_id"
                                 ]
                             },
                             {
-                                "\\": ["<%GTREE 2.3.2.4 metadata_class%>"],
+                                "\\": ["<%GTREE 2.3.2.3 metadata_class%>"],
                                 "attribute_name": "metadata_class",
                                 "attribute_description": "class of the metadata",
                                 "data_type": "controlled_vocabulary",
@@ -766,7 +798,7 @@
                                 ]
                             },
                             {
-                                "\\": ["<%GTREE 3.5 attribute DataTypeClass %>"],
+                                "\\": ["<%GTREE 3.5 attribute Data Type Class %>"],
                                 "attribute_name": "data_type_class",
                                 "attribute_description": "if the attribute is compound or primitive",
                                 "data_type": "controlled_vocabulary",
@@ -1586,6 +1618,15 @@
                                 "multiple": false
                             },
                             {
+                                "\\": ["<%GTREE 7.2.2.4 Metadata change loge%>"],
+                                "attribute_name": "metadata_change_log",
+                                "attribute_description": "log of chnages to the metadata",
+                                "data_type": "text",
+                                "requirement_level": "recommended",
+                                "data_type_class": "primitive",
+                                "multiple": true
+                            },
+                            {
                                 "\\": ["<%GTREE 7.2.3 Contact: contact details of the manager of the metadata%>"],
                                 "attribute_name": "contact",
                                 "attribute_description": "contact details of the manager of the metadata",
@@ -1693,7 +1734,7 @@
                                 "data_type": "email",
                                 "requirement_level": "required",
                                 "data_type_class": "primitive",
-                                "multiple": false
+                                "multiple": true
                             },
                             {
                                 "\\": ["<%GTREE 7.2.4 metadata description%>"],
@@ -1703,6 +1744,15 @@
                                 "requirement_level": "required",
                                 "data_type_class": "primitive",
                                 "multiple": false
+                            },
+                            {
+                                "\\": ["<%GTREE 7.2.5 Metadata notes%>"],
+                                "attribute_name": "metadata_notes",
+                                "attribute_description": "any notes about the metadata not caotured in other attribute fields",
+                                "data_type": "text",
+                                "requirement_level": "optional",
+                                "data_type_class": "primitive",
+                                "multiple": true
                             },
                             {
                                 "\\": [
