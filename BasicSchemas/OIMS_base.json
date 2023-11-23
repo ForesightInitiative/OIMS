@@ -164,25 +164,7 @@
                                 "data_type": "text",
                                 "requirement_level": "required",
                                 "data_type_class": "primitive",
-                                "multiple": false,
-                                "ontology_term": [
-                                    {
-                                        "ontology_term_name": "Status",
-                                        "ontology_term_description": "A categorical descriptor of the status of something, e.g., the status of an entity in a process, or the status of a process itself.",
-                                        "ontology_name": "EDAM",
-                                        "ontology_term_id": "http://edamontology.org/data_2332",
-                                        "ontology_url": "http://edamontology.org/data_2332",
-                                        "ontology_term_quality": "Exact"
-                                    },
-                                    {
-                                        "ontology_term_name": "lifecycleStatus",
-                                        "ontology_term_description": "The status of a resource in its lifecycle.",
-                                        "ontology_name": "DCMI",
-                                        "ontology_term_id": "http://purl.org/dc/terms/lifecycleStatus",
-                                        "ontology_url": "http://purl.org/dc/terms/lifecycleStatus",
-                                        "ontology_term_quality": "Exact"
-                                    }
-                                ]
+                                "multiple": false
                             },
                             {
                                 "\\": ["<%GTREE 2.3.2 OIMS_content_properties%>"],
@@ -1312,12 +1294,30 @@
                                 "\\": [
                                     "<%GTREE 6.2 attribute Status [Statuscondition]%>"
                                 ],
-                                "attribute_name": "StatusCondition",
+                                "attribute_name": "status_condition",
                                 "attribute_description": "Status",
                                 "data_type": "controlled_vocabulary",
                                 "requirement_level": "optional",
                                 "data_type_class": "primitive",
                                 "multiple": false,
+                                "ontology_term": [
+                                    {
+                                        "ontology_term_name": "Status",
+                                        "ontology_term_description": "A categorical descriptor of the status of something, e.g., the status of an entity in a process, or the status of a process itself.",
+                                        "ontology_name": "EDAM",
+                                        "ontology_term_id": "http://edamontology.org/data_2332",
+                                        "ontology_url": "http://edamontology.org/data_2332",
+                                        "ontology_term_quality": "Exact"
+                                    },
+                                    {
+                                        "ontology_term_name": "lifecycleStatus",
+                                        "ontology_term_description": "The status of a resource in its lifecycle.",
+                                        "ontology_name": "DCMI",
+                                        "ontology_term_id": "http://purl.org/dc/terms/lifecycleStatus",
+                                        "ontology_url": "http://purl.org/dc/terms/lifecycleStatus",
+                                        "ontology_term_quality": "Exact"
+                                    }
+                                ],
                                 "controlled_vocabulary": [
                                     {
                                         "//": ["<%GTREE 6.2.1 Active%>"],

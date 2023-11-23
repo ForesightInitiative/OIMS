@@ -25,7 +25,10 @@
                   "mapper_tool_name": {
                     "type": "string"
                   }
-                }
+                },
+                "required": [
+                  "mapper_tool_name"
+                ]
               }
             },
             "metadata_schema": {
@@ -57,7 +60,8 @@
                         },
                         "schema_url": {
                           "type": "string"
-                        },"OIMS_content_object": {
+                        },
+                        "OIMS_content_object": {
                           "oneOf": [
                             { "const": "MetadataMetadata" }
                           ]
@@ -75,8 +79,8 @@
                   }
                 },
                 "required": [
-                  "OIMS_Content_Object",
-                  "SchemaProperties"
+                  "OIMS_content_object",
+                  "schema_properties"
                 ]
               },
               "minItems": 1
@@ -98,11 +102,15 @@
                     },
                     "metadata_version_status": {
                       "type": "string"
+                    },
+                    "version_date": {
+                      "type": "string"
                     }
                   },
                   "required": [
                     "current_version",
-                    "metadata_version_status"
+                    "metadata_version_status",
+                    "version_date"
                   ]
                 },
                 "contact": {
@@ -111,6 +119,9 @@
                     "type": "object",
                     "properties": {
                       "contact_name": {
+                        "type": "string"
+                      },
+                      "contact_role": {
                         "type": "string"
                       },
                       "contact_affiliation": {
@@ -419,7 +430,7 @@
                               "type": "string"
                             }
                           },
-                          "StatusCondition": {
+                          "status_condition": {
                             "description": "Status",
                             "type": "string"
                           }
