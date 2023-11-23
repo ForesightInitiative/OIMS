@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://github.com/ForesightAndMetrics/OIMS/tree/main/BasicSchemas/OIMS_structure.json",
-  "title": "OIMS Metadata Schema template",
+  "$id": "https://github.com/ForesightInitiative/OIMS/tree/main/BasicSchemas/OIMS_structure.json",
+  "title": "OIMS Metadata Schema template based on OIM<S version 2.3.2.1",
   "description": "Basic structure of an OIMS compatible metadata file",
   "type": "object",
   "properties": {
@@ -19,7 +19,10 @@
                   "mapper_tool_name": {
                     "type": "string"
                   }
-                }
+                },
+                "required": [
+                  "mapper_tool_name"
+                ]
               }
             },
             "metadata_schema": {
@@ -28,17 +31,7 @@
                 "type": "object",
                 "properties": {
                   "OIMS_content_object": {
-                    "oneOf": [
-                      { "const": "DataEntity" },
-                      { "const": "Descriptive_Metadata_DataFile" },
-                      { "const": "Descriptive_Metadata_DataSet" },
-                      { "const": "ETL_Metadata" },
-                      { "const": "MetadataMetadata" },
-                      { "const": "Rules" },
-                      { "const": "Structural_Metadata_DataFile" },
-                      { "const": "Technical_Metadata_DataFile" },
-                      { "const": "Technical_Metadata_Dataset" }
-                    ]
+                    "type": "string"
                   },
                   "schema_properties": {
                     "type": "array",
@@ -60,9 +53,7 @@
                         "schema_url": {
                           "type": "string"
                         },"OIMS_content_object": {
-                          "oneOf": [
-                            { "const": "MetadataMetadata" }
-                          ]
+                          "type": "string"
                         }
                       },
                       "required": [
@@ -184,24 +175,22 @@
             "type": "object",
             "properties": {
               "OIMS_content_object":{
-                "oneOf": [
-                  { "const": "DataEntity" },
-                  { "const": "Descriptive_Metadata_DataFile" },
-                  { "const": "Descriptive_Metadata_DataSet" },
-                  { "const": "ETL_Metadata" },
-                  { "const": "MetadataMetadata" },
-                  { "const": "Rules" },
-                  { "const": "Structural_Metadata_DataFile" },
-                  { "const": "Technical_Metadata_DataFile" },
-                  { "const": "Technical_Metadata_Dataset" }
-                ]
+                "type": "string"
               },
               "OIMS_content_object_properties": {
                 "type": "array",
                 "items": {
                   "type": "object",
                   "properties": {
-                    "metadata": {}
+                    "metadata": {
+                      "type":"array",
+                      "items": {
+                        "type": "object"
+                      }
+                    },
+                    "metadata_class":{
+                      "type":"string"
+                    }
                   },
                   "required": [
                     "metadata"
