@@ -20,7 +20,7 @@
                             "schema_name": "OIMS_base",
                             "schema_description": "OIMS selfdescribing metadata schema",
                             "schema_type": "selfdescribing metadata schema",
-                            "schema_version": "2.3.2.0",
+                            "schema_version": "2.3.2.1",
                             "schema_url": "https://github.com/ForesightInitiative/OIMS/blob/main/BasicSchemas/OIMS_base.json",
                             "OIMS_content_object": "MetadataMetadata",
                             "include_property": [
@@ -36,7 +36,7 @@
                             "schema_name": "OIMS_base",
                             "schema_description": "OIMS selfdescribing metadata schema",
                             "schema_type": "selfdescribing metadata schema",
-                            "schema_version": "2.3.2.0",
+                            "schema_version": "2.3.2.1",
                             "schema_url": "https://github.com/ForesightInitiative/OIMS/blob/main/BasicSchemas/OIMS_base.json",
                             "OIMS_content_object": "MetadataMetadata"
                         },
@@ -44,7 +44,7 @@
                             "schema_name": "OIMS_base",
                             "schema_description": "OIMS selfdescribing metadata schema",
                             "schema_type": "selfdescribing metadata schema",
-                            "schema_version": "2.3.2.0",
+                            "schema_version": "2.3.2.1",
                             "schema_url": "https://github.com/ForesightInitiative/OIMS/blob/main/BasicSchemas/OIMS_base.json",
                             "OIMS_content_object": "OIMS_Structure_Metadata",
                             "include_property": [
@@ -60,7 +60,7 @@
                             "schema_name": "OIMS_base",
                             "schema_description": "OIMS selfdescribing metadata schema",
                             "schema_type": "selfdescribing metadata schema",
-                            "schema_version": "2.3.2.0",
+                            "schema_version": "2.3.2.1",
                             "schema_url": "https://github.com/ForesightInitiative/OIMS/blob/main/BasicSchemas/OIMS_base.json",
                             "OIMS_content_object": "MetadataMetadata"
                         },
@@ -68,7 +68,7 @@
                             "schema_name": "OIMS_base",
                             "schema_description": "OIMS selfdescribing metadata schema",
                             "schema_type": "selfdescribing metadata schema",
-                            "schema_version": "2.3.2.0",
+                            "schema_version": "2.3.2.1",
                             "schema_url": "https://github.com/ForesightInitiative/OIMS/blob/main/BasicSchemas/OIMS_base.json",
                             "OIMS_content_object": "OIMS_Header_Metadata",
                             "include_property": [
@@ -82,7 +82,7 @@
                 "metadata_name": "OIMS_base",
                 "meta_data_description": "OIMS selfdescribing metadata schema",
                 "metadata_version": {
-                    "current_version": "2.3.2.0",
+                    "current_version": "2.3.2.1",
                     "metadata_version_status": "development",
                     "version_date": "August 22, 2023"
                 },
@@ -958,7 +958,7 @@
                             },
                             {
                                 "\\": ["<%GTREE 4.3 attribute Ontology %>"],
-                                "attribute_name": "ontology",
+                                "attribute_name": "ontology_term",
                                 "attribute_description": "Tagging atributes with ontology terms",
                                 "data_type": "compound_object",
                                 "requirement_level": "required if applicable",
@@ -1318,7 +1318,7 @@
                                 "requirement_level": "optional",
                                 "data_type_class": "primitive",
                                 "multiple": false,
-                                "controled_vocabulary": [
+                                "controlled_vocabulary": [
                                     {
                                         "//": ["<%GTREE 6.2.1 Active%>"],
                                         "vocabulary_element_name": "Active",

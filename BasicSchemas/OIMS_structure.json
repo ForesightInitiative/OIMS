@@ -3,14 +3,15 @@
         "\\": [
             "optimized for viewing in GTREE",
             "https://www.medictcare.nl/gamstools/",
-            "GTREE requires GAMS and for viewing purposes",
+            "GTREE requires GAMS for optimal viewing purposes",
+            "this structure is based on OIMS version 2.3.2",
             "<%GTREE 1 heading section of the OIMS metadata schema%>"
         ],
         "OIMS_header": {
-            "mapping_info": {},
+            "mapping_info": [{}],
             "metadata_schema": [
                 {
-                    "OIMS_content_object": "[required] <one from list under OIMS_Content below>",
+                    "OIMS_content_object": "[required] <machine readable and human intelligible identifier> see OIMS_content below",
                     "schema_properties": [
                         {
                             "schema_name": "<Schema Name that describes the OIMS Content section below>",
@@ -18,7 +19,7 @@
                             "schema_type": "<sub type of OIMS_Content_Object>",
                             "schema_version": "<version of schema used>",
                             "schema_url": "[required] <e.g. schema on Foresight GitHub repository>",
-                            "OIMS_content_object": "[required] <section of OIMS_Content containing relevant metadata: in most cases this will be 'MetadataMetadata'>"
+                            "OIMS_content_object": "[required] <section of OIMS_Content in metametadata file containing relevant metadata>"
                         }
                     ]
                 }
@@ -27,7 +28,7 @@
                 "metadata_name": "<template for OIMS compatible metadata>",
                 "meta_data_description": "<basic structure of OIMS compatible metadata schemas>",
                 "metadata_version": {
-                    "current_version": "2.2.0.0",
+                    "current_version": "<version of this metadata>",
                     "metadata_version_status": "under review"
                 },
                 "contact": [
@@ -55,7 +56,7 @@
                 "\\": [
                     "<%GTREE 2 Content section of the OIMS metadata schema%>"
                 ],
-                "OIMS_content_object": " <{Descriptive_Metadata_DataSet,Descriptive_Metadata_DataFile,Technical_Metadata_DataFile,Technical_Metadata_Dataset,Structural_Metadata_DataFile,DataEntity,MetadataMetadata,ETL_Metadata,Rules}>",
+                "OIMS_content_object": " <machine readable and human intelligible identifier>",
                 "OIMS_content_object_properties": [
                     {
                         "metadata_class": [],
