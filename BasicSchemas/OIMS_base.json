@@ -19,7 +19,7 @@
                         {
                             "schema_name": "OIMS_base",
                             "schema_description": "OIMS selfdescribing metadata schema",
-                            "schema_type": "selfdescribing metadata schema",
+                            "schema_type": "self-describing metadata schema",
                             "schema_version": "2.3.2.1",
                             "schema_url": "https://github.com/ForesightInitiative/OIMS/blob/main/BasicSchemas/OIMS_base.json",
                             "OIMS_content_object": "MetadataMetadata",
@@ -35,7 +35,7 @@
                         {
                             "schema_name": "OIMS_base",
                             "schema_description": "OIMS selfdescribing metadata schema",
-                            "schema_type": "selfdescribing metadata schema",
+                            "schema_type": "self-describing metadata schema",
                             "schema_version": "2.3.2.1",
                             "schema_url": "https://github.com/ForesightInitiative/OIMS/blob/main/BasicSchemas/OIMS_base.json",
                             "OIMS_content_object": "MetadataMetadata"
@@ -43,7 +43,7 @@
                         {
                             "schema_name": "OIMS_base",
                             "schema_description": "OIMS selfdescribing metadata schema",
-                            "schema_type": "selfdescribing metadata schema",
+                            "schema_type": "self-describing metadata schema",
                             "schema_version": "2.3.2.1",
                             "schema_url": "https://github.com/ForesightInitiative/OIMS/blob/main/BasicSchemas/OIMS_base.json",
                             "OIMS_content_object": "OIMS_Structure_Metadata",
@@ -59,7 +59,7 @@
                         {
                             "schema_name": "OIMS_base",
                             "schema_description": "OIMS selfdescribing metadata schema",
-                            "schema_type": "selfdescribing metadata schema",
+                            "schema_type": "self-describing metadata schema",
                             "schema_version": "2.3.2.1",
                             "schema_url": "https://github.com/ForesightInitiative/OIMS/blob/main/BasicSchemas/OIMS_base.json",
                             "OIMS_content_object": "MetadataMetadata"
@@ -67,7 +67,7 @@
                         {
                             "schema_name": "OIMS_base",
                             "schema_description": "OIMS selfdescribing metadata schema",
-                            "schema_type": "selfdescribing metadata schema",
+                            "schema_type": "self-describing metadata schema",
                             "schema_version": "2.3.2.1",
                             "schema_url": "https://github.com/ForesightInitiative/OIMS/blob/main/BasicSchemas/OIMS_base.json",
                             "OIMS_content_object": "OIMS_Header_Metadata",
@@ -80,7 +80,7 @@
             ],
             "file_descriptors": {
                 "metadata_name": "OIMS_base",
-                "meta_data_description": "OIMS selfdescribing metadata schema",
+                "meta_data_description": "OIMS self-describing metadata schema",
                 "metadata_version": {
                     "current_version": "2.3.2.1",
                     "metadata_version_status": "development",
@@ -1395,7 +1395,7 @@
                                     "<%GTREE 7 metadata heading section %>",
                                     "<%GTREE 7.1 MetaDataSchema: metadata schema used %>"
                                 ],
-                                "attribute_name": "meta_data_schema",
+                                "attribute_name": "metadata_schema",
                                 "attribute_description": "metadata schema(s) of this metadata schema",
                                 "data_type": "compound_object",
                                 "requirement_level": "required",
@@ -1454,11 +1454,11 @@
                                 "multiple": false,
                                 "controlled_vocabulary": [
                                     {
-                                        "vocabulary_element_name": "selfdescribing metadata schema",
+                                        "vocabulary_element_name": "self-describing metadata schema",
                                         "vocabulary_element_description": "basis of OIMS is a self-describing metadata schema"
                                     },
                                     {
-                                        "vocabulary_element_name": "primary metadata",
+                                        "vocabulary_element_name": "primary metametadata",
                                         "vocabulary_element_description": "apex metadata schema description"
                                     },
                                     {
@@ -1773,8 +1773,7 @@
                             },
                             {
                                 "\\": [
-                                    "<%GTREE 7.3.1 mapping info on how the metadata was created%>",
-                                    "note that this is work in progress and not fully developed"
+                                    "<%GTREE 7.3.1 mapper tool name%>"
                                 ],
                                 "attribute_name": "mapper_tool_name",
                                 "attribute_description": "name of the tool used to map could be manual",
@@ -1785,8 +1784,7 @@
                             },
                             {
                                 "\\": [
-                                    "<%GTREE 7.3.2 mapping info on how the metadata was created%>",
-                                    "note that this is work in progress and not fully developed"
+                                    "<%GTREE 7.3.2 mapper tool version%>"
                                 ],
                                 "attribute_name": "mapper_tool_version",
                                 "attribute_description": "version of the tool used if not manual",
@@ -1797,16 +1795,109 @@
                             },
                             {
                                 "\\": [
-                                    "<%GTREE 7.3.3 mapping info on how the metadata was created%>",
-                                    "note that this is work in progress and not fully developed"
+                                    "<%GTREE 7.3.3 mapper tool url%>"
                                 ],
                                 "attribute_name": "mapper_tool_url",
-                                "attribute_description": "name of the tool used to map could be manual",
+                                "attribute_description": "persistent url of the mapper tool",
                                 "json_schemaproperty": "$ref",
-                                "data_type": "uri",
-                                "requirement_level": "optional",
+                                "data_type": "url",
+                                "requirement_level": "recommended",
                                 "data_type_class": "primitive",
                                 "multiple": false
+                            },
+                            {
+                                "\\": [
+                                    "<%GTREE 7.3.4 mapper input%>",
+                                    "note that this is work in progress and not fully developed"
+                                ],
+                                "attribute_name": "mapper_input",
+                                "attribute_description": "input into the mapper tool provided for transparency purposes",
+                                "data_type": "compound_object",
+                                "requirement_level": "recommended",
+                                "data_type_class": "compound",
+                                "multiple": true,
+                                "attribute_value_elements":[
+                                    "mapper_input_type",
+                                    "mapper_input_values"
+                                ]
+                            },
+                            {
+                                "\\": [
+                                    "<%GTREE 7.3.4.1 mapper input type%>",
+                                    "note that this is work in progress and not fully developed"
+                                ],
+                                "attribute_name": "mapper_input_type",
+                                "attribute_description": "type of information into on input into the mapper tool provided for transparency purposes",
+                                "data_type": "controlled_vocabulary",
+                                "requirement_level": "required",
+                                "data_type_class": "primitive",
+                                "multiple": false,
+                                "controlled_vocabulary":[
+                                    {
+                                        "vocabulary_element_name": "command line paremeter",
+                                        "vocabulary_element_description": "command line parameter"
+                                    },
+                                    {
+                                        "vocabulary_element_name": "transparency report",
+                                        "vocabulary_element_description": "report containing all the relevant settings, user input and other information for understanding how metadata was generated"
+                                    }
+                                ]
+                            },
+                            {
+                                "\\": [
+                                    "<%GTREE 7.3.4.2 mapper input values%>",
+                                    "note that this is work in progress and not fully developed"
+                                ],
+                                "attribute_name": "mapper_input_values",
+                                "attribute_description": "values linked to the type of information into on input into the mapper tool provided for transparency purposes",
+                                "data_type": "compound object",
+                                "requirement_level": "required",
+                                "data_type_class": "compound",
+                                "multiple": true
+                            },
+                            {
+                                "\\": [
+                                    "<%GTREE 7.3.4.2.1 mapper input values if command line parameter: parameter name%>",
+                                    "note that this is work in progress and not fully developed"
+                                ],
+                                "attribute_name": "parameter_name",
+                                "attribute_description": "name of the command line parameter",
+                                "data_type": "text",
+                                "requirement_level": "required if applicable",
+                                "data_type_class": "primitive"
+                            },
+                            {
+                                "\\": [
+                                    "<%GTREE 7.3.4.2.2 mapper input values if command line parameter: parameter value%>",
+                                    "note that this is work in progress and not fully developed"
+                                ],
+                                "attribute_name": "parameter_value",
+                                "attribute_description": "value of the command line parameter",
+                                "data_type": "any",
+                                "requirement_level": "required if applicable",
+                                "data_type_class": "primitive"
+                            },
+                            {
+                                "\\": [
+                                    "<%GTREE 7.3.4.2.3 mapper input values if transparency report: report name%>",
+                                    "note that this is work in progress and not fully developed"
+                                ],
+                                "attribute_name": "report_name",
+                                "attribute_description": "name of the report",
+                                "data_type": "text",
+                                "requirement_level": "required if applicable",
+                                "data_type_class": "primitive"
+                            },
+                            {
+                                "\\": [
+                                    "<%GTREE 7.3.4.2.4 mapper input values if transparency report: report url%>",
+                                    "note that this is work in progress and not fully developed"
+                                ],
+                                "attribute_name": "report_url",
+                                "attribute_description": "persistent url of the transparency repport containing mapper input information",
+                                "data_type": "url",
+                                "requirement_level": "required if applicable",
+                                "data_type_class": "primitive"
                             },
                             {
                                 "\\": [
