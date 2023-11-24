@@ -83,12 +83,12 @@
                 "meta_data_description": "OIMS self-describing metadata schema",
                 "metadata_version": {
                     "current_version": "2.3.2.1",
-                    "metadata_version_status": "development",
-                    "version_date": "August 22, 2023"
+                    "metadata_version_status": "released",
+                    "version_date": "November 30, 2023"
                 },
                 "contact": [
                     {
-                        "contact_name": "Gideon Kruseman",
+                        "contact_name": "Kruseman, Gideon",
                         "contact_role": "metadata schema developer",
                         "contact_affiliation": {
                             "contact_affiliation_name": "Alliance of Bioversity International & CIAT",
@@ -113,6 +113,7 @@
                 "OIMS_content_object": "OIMS_Structure_Metadata",
                 "OIMS_content_object_properties": [
                     {
+                        "metadata_class": ["metametadata"],
                         "metadata": [
                             {
                                 "\\": [
@@ -450,6 +451,7 @@
                 "OIMS_content_object": "MetadataMetadata",
                 "OIMS_content_object_properties": [
                     {
+                        "metadata_class": ["metametadata"],
                         "metadata": [
                             {
                                 "\\": [
@@ -1389,6 +1391,7 @@
                 "OIMS_content_object": "OIMS_Header_Metadata",
                 "OIMS_content_object_properties": [
                     {
+                        "metadata_class": ["metametadata"],
                         "metadata": [
                             {
                                 "\\": [
@@ -1468,7 +1471,16 @@
                                 ]
                             },
                             {
-                                "\\": ["<%GTREE 7.1.1.4 Schemaversion: version number of the metadata schema used %>"],
+                                "\\": ["<%GTREE 7.1.1.4 metadata schema type used %>"],
+                                "attribute_name": "schema_subtype",
+                                "attribute_description": "metadata schema of this metadata schema",
+                                "data_type": "text",
+                                "requirement_level": "recommended",
+                                "data_type_class": "primitive",
+                                "multiple": false
+                            },
+                            {
+                                "\\": ["<%GTREE 7.1.1.5 Schemaversion: version number of the metadata schema used %>"],
                                 "attribute_name": "schema_version",
                                 "attribute_description": "version number of the metadata schema used",
                                 "data_type": "text",
@@ -1477,7 +1489,7 @@
                                 "multiple": false
                             },
                             {
-                                "\\": ["<%GTREE 7.1.1.5 SchemaURL: URL where the metadata schema used can be found%>"],
+                                "\\": ["<%GTREE 7.1.1.6 SchemaURL: URL where the metadata schema used can be found%>"],
                                 "attribute_name": "schema_url",
                                 "json_schemaproperty": "$ref",
                                 "attribute_description": "URL where the metadata schema used can be found",
@@ -1487,7 +1499,7 @@
                                 "multiple": false
                             },
                             {
-                                "\\": ["<%GTREE 7.1.1.6 SchemSchemaDocumentationURL: URL where the metadata schema used can be found%>"],
+                                "\\": ["<%GTREE 7.1.1.7 SchemSchemaDocumentationURL: URL where the metadata schema used can be found%>"],
                                 "attribute_name": "schema_documentation_url",
                                 "attribute_description": "URL where the documentation of metadata schema used can be found",
                                 "data_type": "uri",
@@ -1496,7 +1508,7 @@
                                 "multiple": false
                             },
                             {
-                                "\\": ["<%GTREE 7.1.1.7 Include property%>"],
+                                "\\": ["<%GTREE 7.1.1.8 Include property%>"],
                                 "attribute_name": "include_property",
                                 "attribute_description": "which attributes in the metadata schema should be used, relevant if multiple schemas as used default value if not chosen is ALL",
                                 "data_type": "text",
@@ -1516,7 +1528,7 @@
                                 "multiple": true
                             },
                             {
-                                "\\": ["<%GTREE 7.1.1.8 exclude property%>"],
+                                "\\": ["<%GTREE 7.1.1.9 exclude property%>"],
                                 "attribute_name": "exclude_property",
                                 "attribute_description": "which attributes in the metadata schema should be not used, relevant if multiple schemas as used default value if not chosen is NONE",
                                 "data_type": "text",
@@ -1599,11 +1611,15 @@
                                         "vocabulary_element_description": "meta data file is being tested for consistency"
                                     },
                                     {
+                                        "vocabulary_element_name": "under review",
+                                        "vocabulary_element_description": "meta data file is under review"
+                                    },
+                                    {
                                         "vocabulary_element_name": "provisional publication",
                                         "vocabulary_element_description": "the metadata has been tested and the file is OIMS compatible but still needs revisions"
                                     },
                                     {
-                                        "vocabulary_element_name": "publication",
+                                        "vocabulary_element_name": "released",
                                         "vocabulary_element_description": "published metadata"
                                     }
                                 ]
@@ -1625,6 +1641,15 @@
                                 "requirement_level": "recommended",
                                 "data_type_class": "primitive",
                                 "multiple": true
+                            },
+                            {
+                                "\\": ["<%GTREE 7.2.2.5 Previous version: previous version of the metadata file%>"],
+                                "attribute_name": "previous_version",
+                                "attribute_description": "previous version of the metadata file",
+                                "data_type": "text",
+                                "requirement_level": "optional",
+                                "data_type_class": "primitive",
+                                "multiple": false
                             },
                             {
                                 "\\": ["<%GTREE 7.2.3 Contact: contact details of the manager of the metadata%>"],
