@@ -7,6 +7,9 @@
             "GTREE requires GAMS and for viewing purposes"
         ],
         "OIMS_header": {
+            "\\": [
+                "<%GTREE 1.1 mapping information, this basic version was generated manually%>"
+            ],
             "mapping_info": [
                 {
                     "mapper_tool_name": "Manual"
@@ -14,6 +17,9 @@
             ],
             "metadata_schema": [
                 {
+                    "\\": [
+                        "<%GTREE 1.2 metadata schema information about which schemas describe which parts of the OIMS content%>"
+                    ],
                     "OIMS_content_object": "MetadataMetadata",
                     "schema_properties": [
                         {
@@ -79,6 +85,9 @@
                 }
             ],
             "file_descriptors": {
+                "\\": [
+                     "<%GTREE 1.2 metadata file descriptors%>"
+                ],
                 "metadata_name": "OIMS_base",
                 "meta_data_description": "OIMS self-describing metadata schema",
                 "metadata_version": {
@@ -117,7 +126,7 @@
                         "metadata": [
                             {
                                 "\\": [
-                                    "<%GTREE 2 major OIMS components%>",
+                                    "<%GTREE 2 major OIMS components metadata%>",
                                     "<%GTREE 2.1 OIMS%>"
                                 ],
                                 "attribute_name": "OIMS",
@@ -249,17 +258,17 @@
                                 "multiple": false,
                                 "controlled_vocabulary":  [
                                     {
-                                        "\\": ["<%GTREE 2.3.2.2.1.1 parent%>"],
+                                        "\\": ["<%GTREE 2.3.2.2.1.1 parent of%>"],
                                         "vocabulary_element_name": "parent_of",
                                         "vocabulary_element_description": "the current entity is a parent of the listed entities"
                                     },
                                     {
-                                        "\\": ["<%GTREE 2.3.2.2.1.2 child%>"],
+                                        "\\": ["<%GTREE 2.3.2.2.1.2 child of%>"],
                                         "vocabulary_element_name": "child_of",
                                         "vocabulary_element_description": "the current entity is a child of the listed entities"
                                     },
                                     {
-                                        "\\": ["<%GTREE 2.3.2.2.1.3 child%>"],
+                                        "\\": ["<%GTREE 2.3.2.2.1.3 has_siblings%>"],
                                         "vocabulary_element_name": "has_siblings",
                                         "vocabulary_element_description": "the current entity has siblings namely the listed entities"
                                     }
@@ -363,13 +372,13 @@
                                     },
                                     {
                                         "//": ["<%GTREE 2.3.2.4.16 meta data of metametadata%>"],
-                                        "vocabulary_element_name": "metadata_metametadata",
+                                        "vocabulary_element_name": "metametadata",
                                         "vocabulary_element_description": "metadata describing the metadata of metadata"
                                     }
                                 ]
                             },
                             {
-                                "\\": ["<%GTREE 2.3.2.5 entity_class%>"],
+                                "\\": ["<%GTREE 2.3.2.4 entity_class%>"],
                                 "attribute_name": "entity_class",
                                 "attribute_description": "class of the entity",
                                 "data_type": "controlled_vocabulary",
@@ -435,7 +444,7 @@
                                 ]
                             },
                             {
-                                "\\": ["<%GTREE 2.3.2.6 metadata%>"],
+                                "\\": ["<%GTREE 2.3.2.5 metadata%>"],
                                 "attribute_name": "metadata",
                                 "attribute_description": "actual metadata",
                                 "data_type": "compound_object",
