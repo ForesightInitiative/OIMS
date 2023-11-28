@@ -48,7 +48,7 @@ Change log from 2.3.2.0 to 2.3.2.1
 
 In OIMS 2.3.2.0 two typos were detected using a novel tool under development for OIMS consistency testing. Moreover, the json schema validation files were updated to reflect the changes in version 2.3.
 
-Change to version 2.3.2 Improved tagging for entities and entity relationships.
+Change to version 2.3.3 Improved tagging for entities and entity relationships.
 
 
 ## Citation
