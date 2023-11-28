@@ -26,7 +26,7 @@
                             "schema_name": "OIMS_base",
                             "schema_description": "OIMS selfdescribing metadata schema",
                             "schema_type": "self-describing metadata schema",
-                            "schema_version": "2.3.2.1",
+                            "schema_version": "2.3.3.0",
                             "schema_url": "https://github.com/ForesightInitiative/OIMS/blob/main/BasicSchemas/OIMS_base.json",
                             "OIMS_content_object": "MetadataMetadata",
                             "include_property": [
@@ -42,7 +42,7 @@
                             "schema_name": "OIMS_base",
                             "schema_description": "OIMS selfdescribing metadata schema",
                             "schema_type": "self-describing metadata schema",
-                            "schema_version": "2.3.2.1",
+                            "schema_version": "2.3.3.0",
                             "schema_url": "https://github.com/ForesightInitiative/OIMS/blob/main/BasicSchemas/OIMS_base.json",
                             "OIMS_content_object": "MetadataMetadata"
                         },
@@ -50,7 +50,7 @@
                             "schema_name": "OIMS_base",
                             "schema_description": "OIMS selfdescribing metadata schema",
                             "schema_type": "self-describing metadata schema",
-                            "schema_version": "2.3.2.1",
+                            "schema_version": "2.3.3.0",
                             "schema_url": "https://github.com/ForesightInitiative/OIMS/blob/main/BasicSchemas/OIMS_base.json",
                             "OIMS_content_object": "OIMS_Structure_Metadata",
                             "include_property": [
@@ -66,7 +66,7 @@
                             "schema_name": "OIMS_base",
                             "schema_description": "OIMS selfdescribing metadata schema",
                             "schema_type": "self-describing metadata schema",
-                            "schema_version": "2.3.2.1",
+                            "schema_version": "2.3.3.0",
                             "schema_url": "https://github.com/ForesightInitiative/OIMS/blob/main/BasicSchemas/OIMS_base.json",
                             "OIMS_content_object": "MetadataMetadata"
                         },
@@ -74,7 +74,7 @@
                             "schema_name": "OIMS_base",
                             "schema_description": "OIMS selfdescribing metadata schema",
                             "schema_type": "self-describing metadata schema",
-                            "schema_version": "2.3.2.1",
+                            "schema_version": "2.3.3.0",
                             "schema_url": "https://github.com/ForesightInitiative/OIMS/blob/main/BasicSchemas/OIMS_base.json",
                             "OIMS_content_object": "OIMS_Header_Metadata",
                             "include_property": [
@@ -91,7 +91,7 @@
                 "metadata_name": "OIMS_base",
                 "meta_data_description": "OIMS self-describing metadata schema",
                 "metadata_version": {
-                    "current_version": "2.3.2.1",
+                    "current_version": "2.3.3.0",
                     "metadata_version_status": "released",
                     "version_date": "November 30, 2023"
                 },
@@ -275,7 +275,65 @@
                                 ]
                             },
                             {
-                                "\\": ["<%GTREE 2.3.2.2.3 entity_list%>"],
+                                "\\": ["<%GTREE 2.3.2.2.2 entity_relationship_subtype%>"],
+                                "attribute_name": "entity_relationship_subtype",
+                                "attribute_description": "relationship between the current entity and other entities",
+                                "data_type": "compound_object",
+                                "requirement_level": "recommended if applicable",
+                                "data_type_class": "compound",
+                                "multiple": false
+                            },
+                            {
+                                "\\": ["<%GTREE 2.3.2.2.2.1 entity_relationship_subtype%>"],
+                                "attribute_name": "standard_entity_relationship_type",
+                                "attribute_description": "relationship between the current entity and other entities",
+                                "data_type": "controlled_vocabulary",
+                                "requirement_level": "required if applicable",
+                                "data_type_class": "primitive",
+                                "multiple": false,
+                                "controlled_vocabulary":  [
+                                    {
+                                        "\\": ["<%GTREE 2.3.2.2.2.1.1 supplementary%>"],
+                                        "vocabulary_element_name": "supplementary",
+                                        "vocabulary_element_description": "supplementary information releted to current entity"
+                                    },
+                                    {
+                                        "\\": ["<%GTREE 2.3.2.2.2.1.2 shared key%>"],
+                                        "vocabulary_element_name": "shared_key",
+                                        "vocabulary_element_description": "the current entity has shared keys with the listed entities"
+                                    },
+                                    {
+                                        "\\": ["<%GTREE 2.3.2.2.1.2.3 segment%>"],
+                                        "vocabulary_element_name": "segment",
+                                        "vocabulary_element_description": "the current entity forms a whole with the listed entities"
+                                    },
+                                    {
+                                        "\\": ["<%GTREE 2.3.2.2.1.2.3 other%>"],
+                                        "vocabulary_element_name": "other_sibling",
+                                        "vocabulary_element_description": "other type of sibling relationship with the listed entities"
+                                    }
+                                ]
+                            },
+                            {
+                                "\\": ["<%GTREE 2.3.2.2.3 entity_relationship_order%>"],
+                                "attribute_name": "entity_relationship_order",
+                                "attribute_description": "if there is a specific order between siblings",
+                                "data_type": "boolean",
+                                "requirement_level": "required if applicable",
+                                "data_type_class": "prinitive",
+                                "multiple": false
+                            },
+                            {
+                                "\\": ["<%GTREE 2.3.2.2.4 entity_relationship_order_position%>"],
+                                "attribute_name": "entity_relationship_order_position",
+                                "attribute_description": "if there is a specific order between siblings what is the position of the current entity",
+                                "data_type": "integer",
+                                "requirement_level": "required if applicable",
+                                "data_type_class": "prinitive",
+                                "multiple": false
+                            },
+                            {
+                                "\\": ["<%GTREE 2.3.2.2.5 entity_list%>"],
                                 "attribute_name": "entity_list",
                                 "attribute_description": "relationship between the current entity and other entities",
                                 "data_type": "compound_object",
@@ -283,8 +341,18 @@
                                 "data_type_class": "compound",
                                 "multiple": true,
                                 "attribute_value_elements": [
-                                    "persistent_entity_id"
+                                    "persistent_entity_id",
+                                    "entity_order_in_list"
                                 ]
+                            },
+                            {
+                                "\\": ["<%GTREE 2.3.2.2.5.1 entity order in list%>"],
+                                "attribute_name": "entity_order_in_list",
+                                "attribute_description": "relationship order between the current entity and other entities",
+                                "data_type": "integer",
+                                "requirement_level": "required if applicable",
+                                "data_type_class": "primitive",
+                                "multiple": false
                             },
                             {
                                 "\\": ["<%GTREE 2.3.2.3 metadata_class%>"],
