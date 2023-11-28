@@ -45,7 +45,11 @@ Change log from 2.3.1.0 to 2.3.2.0
 There were some missing elements related to the OIMS content properties that have been added for consistency.
 
 Change log from 2.3.2.0 to 2.3.2.1
-In OIMS 2.3.2.0 two typos were detected using a novel tool under development for OIMS consistency testing
+
+In OIMS 2.3.2.0 two typos were detected using a novel tool under development for OIMS consistency testing. Moreover, the json schema validation files were updated to reflect the changes in version 2.3.
+
+Change to version 2.3.2 Improved tagging for entities and entity relationships.
+
 
 ## Citation
 When publishing papers based on the schema we encourage the authors to provide the link to the [github directory](https://github.com/ForesightInitiative/OIMS) and use the following citation: \
