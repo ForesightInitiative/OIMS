@@ -1,7 +1,7 @@
 {
-  "$schema": "http://json-schema.org/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/ForesightInitiative/OIMS/tree/main/BasicSchemas/OIMS_structure.json",
-  "title": "OIMS Metadata Schema template based on OIM<S version 2.3.2.1",
+  "title": "OIMS Metadata Schema template based on OIM<S version 2.3.3",
   "description": "Basic structure of an OIMS compatible metadata file",
   "type": "object",
   "properties": {
@@ -68,8 +68,8 @@
                   }
                 },
                 "required": [
-                  "OIMS_Content_Object",
-                  "SchemaProperties"
+                  "OIMS_content_object",
+                  "schema_properties"
                 ]
               },
               "minItems": 1
@@ -218,7 +218,7 @@
   "patternProperties": {
     "^\\\\$": { "$ref": "#/definitions/comment" }
   },
-"definitions": {
+  "definitions": {
     "comment": {
       "type": "array",
       "items": {
@@ -227,5 +227,4 @@
       "description": "Array of comments"
     }
   }
-
 }

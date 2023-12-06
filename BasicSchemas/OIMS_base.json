@@ -284,7 +284,7 @@
                                 "multiple": false
                             },
                             {
-                                "\\": ["<%GTREE 2.3.2.2.2.1 entity_relationship_subtype%>"],
+                                "\\": ["<%GTREE 2.3.2.2.2.1 standard entity relationship subtype%>"],
                                 "attribute_name": "standard_entity_relationship_type",
                                 "attribute_description": "relationship between the current entity and other entities",
                                 "data_type": "controlled_vocabulary",
@@ -313,6 +313,15 @@
                                         "vocabulary_element_description": "other type of sibling relationship with the listed entities"
                                     }
                                 ]
+                            },
+                            {
+                                "\\": ["<%GTREE 2.3.2.2.2.2 non-entity relationship subtype%>"],
+                                "attribute_name": "non_standard_entity_relationship_type",
+                                "attribute_description": "relationship between the current entity and other entities",
+                                "data_type": "text",
+                                "requirement_level": "required if applicable",
+                                "data_type_class": "primitive",
+                                "multiple": false
                             },
                             {
                                 "\\": ["<%GTREE 2.3.2.2.3 entity_relationship_order%>"],
@@ -364,84 +373,64 @@
                                 "multiple": true,
                                 "controlled_vocabulary": [
                                     {
-                                        "//": ["<%GTREE 2.3.2.4.1 Descriptive metadata at dataset level%>"],
-                                        "vocabulary_element_name": "Descriptive_Metadata_DataSet",
-                                        "vocabulary_element_description": "descriptive metadata at dataset level"
+                                        "//": ["<%GTREE 2.3.2.4.1 Descriptive metadata %>"],
+                                        "vocabulary_element_name": "descriptive_metadata",
+                                        "vocabulary_element_description": "descriptive metadata "
                                     },
                                     {
-                                        "//": ["<%GTREE 2.3.2.4.2 technical metadata at dataset level%>"],
-                                        "vocabulary_element_name": "Technical_Metadata_Dataset",
-                                        "vocabulary_element_description": "descriptive metadata at dataset level"
+                                        "//": ["<%GTREE 2.3.2.4.2 Technical metadata %>"],
+                                        "vocabulary_element_name": "technical_metadata",
+                                        "vocabulary_element_description": "technical metadata "
                                     },
                                     {
-                                        "//": ["<%GTREE 2.3.2.4.3 Descriptive and technical metadata at dataset level%>"],
-                                        "vocabulary_element_name": "Descriptive_and_Technical_Metadata_DataSet",
-                                        "vocabulary_element_description": "descriptive metadata at dataset level"
+                                        "//": ["<%GTREE 2.3.2.4.3 Administrative metadata %>"],
+                                        "vocabulary_element_name": "administrative_metadata",
+                                        "vocabulary_element_description": "administrative metadata"
                                     },
                                     {
-                                        "//": ["<%GTREE 2.3.2.4.4 Descriptive metadata at data file level%>"],
-                                        "vocabulary_element_name": "Descriptive_Metadata_DataFile",
-                                        "vocabulary_element_description": "descriptive metadata at dataset level"
+                                        "//": ["<%GTREE 2.3.2.4.4 Ethics metadata %>"],
+                                        "vocabulary_element_name": "ethics_metadata",
+                                        "vocabulary_element_description": "ethics metadata"
                                     },
                                     {
-                                        "//": ["<%GTREE 2.3.2.4.5 Technical metadata at data file level%>"],
-                                        "vocabulary_element_name": "Technical_Metadata_DataFile",
-                                        "vocabulary_element_description": "Technical metadata at data file level"
+                                        "//": ["<%GTREE 2.3.2.4.5 Provenance metadata %>"],
+                                        "vocabulary_element_name": "provenance_metadata",
+                                        "vocabulary_element_description": "provenance metadata"
                                     },
                                     {
-                                        "//": ["<%GTREE 2.3.2.4.6 Descriptive and technical metadata at data file level%>"],
-                                        "vocabulary_element_name": "Descriptive_and_Technical_Metadata_DataFile",
-                                        "vocabulary_element_description": "Descriptive and technical metadata at data file level"
+                                        "//": ["<%GTREE 2.3.2.4.6 preservation metadata %>"],
+                                        "vocabulary_element_name": "preservation_metadata",
+                                        "vocabulary_element_description": "preservation or life-cycle metadata"
                                     },
                                     {
-                                        "//": ["<%GTREE 2.3.2.4.7 Structural metadata of data within files%>"],
-                                        "vocabulary_element_name": "Structural_Metadata_DataFile",
-                                        "vocabulary_element_description": "Structural metadata of data within files"
-                                    },
-                                    {
-                                        "//": ["<%GTREE 2.3.2.4.8 Data entity information%>"],
-                                        "vocabulary_element_name": "DataEntity",
+                                        "//": ["<%GTREE 2.3.2.4.7 Structural metadata %>"],
+                                        "vocabulary_element_name": "structural_metadata_DataFile",
                                         "vocabulary_element_description": "information about data entities and their relationships"
                                     },
                                     {
+                                        "//": ["<%GTREE 2.3.2.4.8 Definition metadata%>"],
+                                        "vocabulary_element_name": "definition_metadata",
+                                        "vocabulary_element_description": "definition metadata of data within files linked to data dictionaries"
+                                    },
+                                    {
                                         "//": ["<%GTREE 2.3.2.4.9 metadata metadata %>"],
-                                        "vocabulary_element_name": "MetadataMetadata",
+                                        "vocabulary_element_name": "metametadata",
                                         "vocabulary_element_description": "metametadata or the metadata of metadata attributes and properties"
                                     },
                                     {
-                                        "//": ["<%GTREE 2.3.2.4.10 metadata of models tools and ETL procedures%>"],
-                                        "vocabulary_element_name": "ETL_Metadata",
+                                        "//": ["<%GTREE 2.3.2.4.10 quality assurance metadata%>"],
+                                        "vocabulary_element_name": "quality_assurance metadata",
                                         "vocabulary_element_description": "metadata of models tools and ETL procedures"
                                     },
                                     {
-                                        "//": ["<%GTREE 2.3.2.4.11 metadata of OIMS header fields%>"],
-                                        "vocabulary_element_name": "OIMS_Header_Metadata",
-                                        "vocabulary_element_description": "metadata of OIMS header fields"
-                                    },
-                                    {
-                                        "//": ["<%GTREE 2.3.2.4.12 metadata of the structure of OIMS compatible metadata files%>"],
-                                        "vocabulary_element_name": "OIMS_Structure_Metadata",
-                                        "vocabulary_element_description": "descriptive metadata at dataset level"
-                                    },
-                                    {
-                                        "//": ["<%GTREE 2.3.2.4.13 Rules governing metadata and their relationships%>"],
-                                        "vocabulary_element_name": "Rules",
+                                        "//": ["<%GTREE 2.3.2.4.11 Rules governing metadata and their relationships%>"],
+                                        "vocabulary_element_name": "rules",
                                         "vocabulary_element_description": "Rules governing metadata and their relationships"
                                     },
                                     {
-                                        "//": ["<%GTREE 2.3.2.4.14 asset metadata%>"],
+                                        "//": ["<%GTREE 2.3.2.4.12 asset metadata%>"],
                                         "vocabulary_element_name": "asset_metadata",
                                         "vocabulary_element_description": "metadata of data, data files, datasets and collections, or publications and documents, or tools, models and ETL procedures"
-                                    },
-                                    {
-                                        "//": ["<%GTREE 2.3.2.4.15 metadata of asset metadata%>"],
-                                        "vocabulary_element_name": "asset_metametadata",
-                                        "vocabulary_element_description": "metadata describing the metadata of data, data files, datasets and collections, or publications and documents, or tools, models and ETL procedures"
-                                    },
-                                    {
-                                        "//": ["<%GTREE 2.3.2.4.16 meta data of metametadata%>"],
-                                        "vocabulary_element_name": "metametadata",
-                                        "vocabulary_element_description": "metadata describing the metadata of metadata"
                                     }
                                 ]
                             },
@@ -1711,7 +1700,7 @@
                                 "multiple": false
                             },
                             {
-                                "\\": ["<%GTREE 7.2.2.4 Metadata change loge%>"],
+                                "\\": ["<%GTREE 7.2.2.4 Metadata change log%>"],
                                 "attribute_name": "metadata_change_log",
                                 "attribute_description": "log of chnages to the metadata",
                                 "data_type": "text",

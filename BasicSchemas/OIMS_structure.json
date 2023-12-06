@@ -4,7 +4,7 @@
             "optimized for viewing in GTREE",
             "https://www.medictcare.nl/gamstools/",
             "GTREE requires GAMS for optimal viewing purposes",
-            "this structure is based on OIMS version 2.3.2",
+            "this structure is based on OIMS version 2.3.3",
             "<%GTREE 1 heading section of the OIMS metadata schema%>"
         ],
         "OIMS_header": {
@@ -17,6 +17,7 @@
                             "schema_name": "<Schema Name that describes the OIMS Content section below>",
                             "schema_description": "<short description of the meta-metadata>",
                             "schema_type": "<sub type of OIMS_Content_Object>",
+                            "schema_subtype": "<subtype of the above schema_type>",
                             "schema_version": "<version of schema used>",
                             "schema_url": "[required] <e.g. schema on Foresight GitHub repository>",
                             "OIMS_content_object": "[required] <section of OIMS_Content in metametadata file containing relevant metadata>"
@@ -25,10 +26,10 @@
                 }
             ],
             "file_descriptors": {
-                "metadata_name": "<template for OIMS compatible metadata>",
+                "metadata_name": "[required] <template for OIMS compatible metadata>",
                 "meta_data_description": "<basic structure of OIMS compatible metadata schemas>",
                 "metadata_version": {
-                    "current_version": "<version of this metadata>",
+                    "current_version": "[required] <version of this metadata>",
                     "metadata_version_status": "under review"
                 },
                 "contact": [
@@ -56,7 +57,7 @@
                 "\\": [
                     "<%GTREE 2 Content section of the OIMS metadata schema%>"
                 ],
-                "OIMS_content_object": " <machine readable and human intelligible identifier>",
+                "OIMS_content_object": "[required]  <machine readable and human intelligible identifier>",
                 "OIMS_content_object_properties": [
                     {
                         "metadata_class": [],
