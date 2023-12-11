@@ -1,6 +1,6 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$id": "https://github.com/ForesightAndMetrics/OIMS/BasicSchemas/OIMS_base.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/ForesightInitiative/OIMS/main/BasicSchemas/OIMS_base.schema.json",
   "title": "schema build on OIMS_basis.json only",
   "description": "Basic structure of an OIMS compatible metadata file built on the self-describing metadata schema only",
   "type": "object",
@@ -37,9 +37,7 @@
                 "type": "object",
                 "properties": {
                   "OIMS_content_object": {
-                    "oneOf": [
-                      { "const": "MetadataMetadata" }
-                    ]
+                    "type": "string"
                   },
                   "schema_properties": {
                     "type": "array",
@@ -496,7 +494,6 @@
         }
       },
       "required": [
-        "\\",
         "OIMS_header",
         "OIMS_content"
         ]
