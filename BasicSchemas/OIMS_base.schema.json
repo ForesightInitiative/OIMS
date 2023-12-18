@@ -60,11 +60,7 @@
                                                     "type": "string"
                                                 },
                                                 "OIMS_content_object": {
-                                                    "oneOf": [
-                                                        {
-                                                            "const": "MetadataMetadata"
-                                                        }
-                                                    ]
+                                                    "type": "string"
                                                 }
                                             },
                                             "required": [
@@ -202,254 +198,271 @@
                                 "type": "string"
                             },
                             "OIMS_content_object_properties": {
-                                "type": "array",
-                                "items": {
-                                    "type": "object",
-                                    "properties": {
-                                        "metadata": {
-                                            "type": "array",
-                                            "items": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "attribute_name": {
-                                                        "description": "name of the data dictionary metadata field",
-                                                        "type": "string"
-                                                    },
-                                                    "attribute_description": {
-                                                        "description": "description of the data dictionary metadata field",
-                                                        "type": "string"
-                                                    },
-                                                    "data_type": {
-                                                        "description": "datatypes used in the data dictionary metadata fields",
-                                                        "type": "string",
-                                                        "enum": [
-                                                            "string",
-                                                            "text",
-                                                            "compound_object",
-                                                            "date",
-                                                            "uri",
-                                                            "controlled_vocabulary",
-                                                            "boolean",
-                                                            "email",
-                                                            "integer",
-                                                            "float",
-                                                            "html",
-                                                            "any"
-                                                        ]
-                                                    },
-                                                    "requirement_level": {
-                                                        "description": "see OIMS self describing metadata schema",
-                                                        "type": "string",
-                                                        "enum": [
-                                                            "required",
-                                                            "recommended",
-                                                            "required if applicable",
-                                                            "recommended if applicable",
-                                                            "optional"
-                                                        ]
-                                                    },
-                                                    "data_type_class": {
-                                                        "description": "if the attribute is compound or primitive",
-                                                        "type": "string",
-                                                        "enum": [
-                                                            "primitive",
-                                                            "compound"
-                                                        ]
-                                                    },
-                                                    "multiple": {
-                                                        "description": "can the attribute have multiple values",
-                                                        "type": "boolean"
-                                                    },
-                                                    "controlled_vocabulary": {
-                                                        "description": "Controlled Vocabulary definition if data type is Controlled Vocabulary also known as an enumeration in STATA or a factor in R",
-                                                        "type": "array",
-                                                        "items": {
-                                                            "type": "object",
-                                                            "properties": {
-                                                                "vocabulary_element_name": {
-                                                                    "type": "string"
-                                                                },
-                                                                "controlled_vocabulary_description": {
-                                                                    "type": "string"
-                                                                }
-                                                            }
-                                                        }
-                                                    },
-                                                    "vocabulary_element_name": {
-                                                        "description": "the element identifier in a Controlled Vocabulary",
-                                                        "type": "string"
-                                                    },
-                                                    "controlled_vocabulary_description": {
-                                                        "description": "the description of an element in a Controlled Vocabulary in human-intelligible terms",
-                                                        "type": "string"
-                                                    },
-                                                    "attribute_value_elements": {
-                                                        "description": "details of the DataType compound used to identify the required attributes in an attribute array",
-                                                        "type": "array",
-                                                        "items": {
-                                                            "type": "string"
-                                                        }
-                                                    },
-                                                    "ontology": {
-                                                        "description": "Tagging atributes with ontology terms",
-                                                        "type": "array",
-                                                        "items": {
-                                                            "type": "object",
-                                                            "properties": {
-                                                                "ontology_term_name": {
-                                                                    "type": "string"
-                                                                },
-                                                                "ontology_term_description": {
-                                                                    "type": "string"
-                                                                },
-                                                                "ontology_name": {
-                                                                    "type": "string"
-                                                                },
-                                                                "ontology_term_id": {
-                                                                    "type": "string"
-                                                                },
-                                                                "ontology_url": {
-                                                                    "type": "string"
-                                                                },
-                                                                "ontology_term_quality": {
-                                                                    "type": "string"
-                                                                }
-                                                            }
-                                                        }
-                                                    },
-                                                    "ontology_term_name": {
-                                                        "description": "Term in an ontology that describes the relevant attribute value",
-                                                        "type": "string"
-                                                    },
-                                                    "ontology_term_description": {
-                                                        "description": "Description of the ontology term",
-                                                        "type": "string"
-                                                    },
-                                                    "ontology_name": {
-                                                        "description": "The name of the ontology from which we take the ontology term",
-                                                        "type": "string"
-                                                    },
-                                                    "ontology_term_id": {
-                                                        "description": "the identifier for the ontology term in the specified ontology",
-                                                        "type": "string"
-                                                    },
-                                                    "ontology_url": {
-                                                        "description": "persistent URL where the ontology term can be found",
-                                                        "type": "string"
-                                                    },
-                                                    "ontology_term_quality": {
-                                                        "description": "identifies to what degree the ontology term matches the attribute value",
-                                                        "type": "string",
-                                                        "enum": [
-                                                            "Exact",
-                                                            "Too general",
-                                                            "Too specific",
-                                                            "Partial match",
-                                                            "Related",
-                                                            "Not a match",
-                                                            "To be confirmed"
-                                                        ]
-                                                    },
-                                                    "default_value": {
-                                                        "description": "default value of the attribute if not set in the metadata",
-                                                        "type": "string"
-                                                    },
-                                                    "value_reserved_words": {
-                                                        "description": "reserved words that have a special meaning in the contexr of the attribute and are not covered by Controlled Vocabulary",
-                                                        "type": "array",
-                                                        "items": {
-                                                            "type": "object",
-                                                            "properties": {
-                                                                "reserved_word_name": {
-                                                                    "type": "string"
-                                                                },
-                                                                "reserved_word_description": {
-                                                                    "type": "string"
-                                                                }
-                                                            }
-                                                        }
-                                                    },
-                                                    "reserved_word_name": {
-                                                        "description": "reserved words that have a special meaning in the context of the attribute and are not covered by Controlled Vocabulary",
-                                                        "type": "string"
-                                                    },
-                                                    "reserved_word_description": {
-                                                        "description": "definition of reserved words that have a special meaning in the contexr of the attribute and are not covered by Controlled Vocabulary",
-                                                        "type": "string"
-                                                    },
-                                                    "content_objects": {
-                                                        "description": "comparable to AttributeValueElements but less restrictive",
+                                "type": "object",
+                                "properties": {
+                                    "metadata": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "attribute_name": {
+                                                    "description": "name of the data dictionary metadata field",
+                                                    "type": "string"
+                                                },
+                                                "attribute_description": {
+                                                    "description": "description of the data dictionary metadata field",
+                                                    "type": "string"
+                                                },
+                                                "data_type": {
+                                                    "description": "datatypes used in the data dictionary metadata fields",
+                                                    "type": "string",
+                                                    "enum": [
+                                                        "string",
+                                                        "text",
+                                                        "compound_object",
+                                                        "date",
+                                                        "uri",
+                                                        "controlled_vocabulary",
+                                                        "boolean",
+                                                        "email",
+                                                        "integer",
+                                                        "float",
+                                                        "html",
+                                                        "any"
+                                                    ]
+                                                },
+                                                "requirement_level": {
+                                                    "description": "see OIMS self describing metadata schema",
+                                                    "type": "string",
+                                                    "enum": [
+                                                        "required",
+                                                        "recommended",
+                                                        "required if applicable",
+                                                        "recommended if applicable",
+                                                        "optional"
+                                                    ]
+                                                },
+                                                "data_type_class": {
+                                                    "description": "if the attribute is compound or primitive",
+                                                    "type": "string",
+                                                    "enum": [
+                                                        "primitive",
+                                                        "compound"
+                                                    ]
+                                                },
+                                                "multiple": {
+                                                    "description": "can the attribute have multiple values",
+                                                    "type": "boolean"
+                                                },
+                                                "controlled_vocabulary": {
+                                                    "description": "Controlled Vocabulary definition if data type is Controlled Vocabulary also known as an enumeration in STATA or a factor in R",
+                                                    "type": "array",
+                                                    "items": {
                                                         "type": "object",
                                                         "properties": {
-                                                            "allowed_content_objects": {
+                                                            "vocabulary_element_name": {
                                                                 "type": "string"
                                                             },
-                                                            "allowed_content_rule": {
+                                                            "controlled_vocabulary_description": {
                                                                 "type": "string"
                                                             }
                                                         }
-                                                    },
-                                                    "allowed_content_objects": {
-                                                        "description": "list of allowed content",
-                                                        "type": "array",
-                                                        "items": {
-                                                            "type": "string"
-                                                        }
-                                                    },
-                                                    "allowed_content_rule": {
-                                                        "description": "rule how to manage the list of allowed content",
-                                                        "type": "object",
-                                                        "properties": {
-                                                            "allowed_content_rule_type": {
-                                                                "type": "string"
-                                                            },
-                                                            "allowed_content_rule_number": {
-                                                                "type": "string"
-                                                            }
-                                                        }
-                                                    },
-                                                    "allowed_content_rule_type": {
-                                                        "description": "specifics about rule how to manage the list of allowed content",
-                                                        "type": "string",
-                                                        "enum": [
-                                                            "AtLeast",
-                                                            "AtMost",
-                                                            "Exactly"
-                                                        ]
-                                                    },
-                                                    "allowed_content_rule_number": {
-                                                        "description": "",
-                                                        "type": "number"
-                                                    },
-                                                    "\\": {
-                                                        "description": "comment field",
-                                                        "type": "array",
-                                                        "items": {
-                                                            "type": "string"
-                                                        }
-                                                    },
-                                                    "status_condition": {
-                                                        "description": "Status",
+                                                    }
+                                                },
+                                                "vocabulary_element_name": {
+                                                    "description": "the element identifier in a Controlled Vocabulary",
+                                                    "type": "string"
+                                                },
+                                                "controlled_vocabulary_description": {
+                                                    "description": "the description of an element in a Controlled Vocabulary in human-intelligible terms",
+                                                    "type": "string"
+                                                },
+                                                "attribute_value_elements": {
+                                                    "description": "details of the DataType compound used to identify the required attributes in an attribute array",
+                                                    "type": "array",
+                                                    "items": {
                                                         "type": "string"
                                                     }
                                                 },
-                                                "required": [
-                                                    "attribute_name",
-                                                    "attribute_description",
-                                                    "data_type",
-                                                    "requirement_level",
-                                                    "data_type_class",
-                                                    "multiple"
-                                                ],
-                                                "if": {
+                                                "ontology": {
+                                                    "description": "Tagging atributes with ontology terms",
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "ontology_term_name": {
+                                                                "type": "string"
+                                                            },
+                                                            "ontology_term_description": {
+                                                                "type": "string"
+                                                            },
+                                                            "ontology_name": {
+                                                                "type": "string"
+                                                            },
+                                                            "ontology_term_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "ontology_url": {
+                                                                "type": "string"
+                                                            },
+                                                            "ontology_term_quality": {
+                                                                "type": "string"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "ontology_term_name": {
+                                                    "description": "Term in an ontology that describes the relevant attribute value",
+                                                    "type": "string"
+                                                },
+                                                "ontology_term_description": {
+                                                    "description": "Description of the ontology term",
+                                                    "type": "string"
+                                                },
+                                                "ontology_name": {
+                                                    "description": "The name of the ontology from which we take the ontology term",
+                                                    "type": "string"
+                                                },
+                                                "ontology_term_id": {
+                                                    "description": "the identifier for the ontology term in the specified ontology",
+                                                    "type": "string"
+                                                },
+                                                "ontology_url": {
+                                                    "description": "persistent URL where the ontology term can be found",
+                                                    "type": "string"
+                                                },
+                                                "ontology_term_quality": {
+                                                    "description": "identifies to what degree the ontology term matches the attribute value",
+                                                    "type": "string",
+                                                    "enum": [
+                                                        "Exact",
+                                                        "Too general",
+                                                        "Too specific",
+                                                        "Partial match",
+                                                        "Related",
+                                                        "Not a match",
+                                                        "To be confirmed"
+                                                    ]
+                                                },
+                                                "default_value": {
+                                                    "description": "default value of the attribute if not set in the metadata",
+                                                    "type": "string"
+                                                },
+                                                "value_reserved_words": {
+                                                    "description": "reserved words that have a special meaning in the contexr of the attribute and are not covered by Controlled Vocabulary",
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "reserved_word_name": {
+                                                                "type": "string"
+                                                            },
+                                                            "reserved_word_description": {
+                                                                "type": "string"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "reserved_word_name": {
+                                                    "description": "reserved words that have a special meaning in the context of the attribute and are not covered by Controlled Vocabulary",
+                                                    "type": "string"
+                                                },
+                                                "reserved_word_description": {
+                                                    "description": "definition of reserved words that have a special meaning in the contexr of the attribute and are not covered by Controlled Vocabulary",
+                                                    "type": "string"
+                                                },
+                                                "content_objects": {
+                                                    "description": "comparable to AttributeValueElements but less restrictive",
+                                                    "type": "object",
                                                     "properties": {
-                                                        "data_type": {
-                                                            "const": "controlled_vocabulary"
+                                                        "allowed_content_objects": {
+                                                            "type": "string"
+                                                        },
+                                                        "allowed_content_rule": {
+                                                            "type": "string"
+                                                        }
+                                                    }
+                                                },
+                                                "allowed_content_objects": {
+                                                    "description": "list of allowed content",
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "allowed_content_rule": {
+                                                    "description": "rule how to manage the list of allowed content",
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "allowed_content_rule_type": {
+                                                            "type": "string"
+                                                        },
+                                                        "allowed_content_rule_number": {
+                                                            "type": "string"
+                                                        }
+                                                    }
+                                                },
+                                                "allowed_content_rule_type": {
+                                                    "description": "specifics about rule how to manage the list of allowed content",
+                                                    "type": "string",
+                                                    "enum": [
+                                                        "AtLeast",
+                                                        "AtMost",
+                                                        "Exactly"
+                                                    ]
+                                                },
+                                                "allowed_content_rule_number": {
+                                                    "description": "",
+                                                    "type": "number"
+                                                },
+                                                "\\": {
+                                                    "description": "comment field",
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "status_condition": {
+                                                    "description": "Status",
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "attribute_name",
+                                                "attribute_description",
+                                                "data_type",
+                                                "requirement_level",
+                                                "data_type_class",
+                                                "multiple"
+                                            ],
+                                            "if": {
+                                                "properties": {
+                                                    "data_type": {
+                                                        "const": "controlled_vocabulary"
+                                                    }
+                                                },
+                                                "then": {
+                                                    "properties": {
+                                                        "controlled_vocabulary": {
+                                                            "type": "array",
+                                                            "minItems": 1
+                                                        }
+                                                    }
+                                                },
+                                                "else": {
+                                                    "if": {
+                                                        "properties": {
+                                                            "data_type": {
+                                                                "const": "compound_object"
+                                                            }
                                                         }
                                                     },
                                                     "then": {
                                                         "properties": {
-                                                            "controlled_vocabulary": {
+                                                            "data_type_class": {
+                                                                "const": "compound"
+                                                            },
+                                                            "attribute_value_elements": {
                                                                 "type": "array",
                                                                 "minItems": 1
                                                             }
@@ -457,39 +470,19 @@
                                                     },
                                                     "else": {
                                                         "if": {
-                                                            "properties": {
-                                                                "data_type": {
-                                                                    "const": "compound_object"
-                                                                }
-                                                            }
+                                                            "properties": {}
                                                         },
                                                         "then": {
-                                                            "properties": {
-                                                                "data_type_class": {
-                                                                    "const": "compound"
-                                                                },
-                                                                "attribute_value_elements": {
-                                                                    "type": "array",
-                                                                    "minItems": 1
-                                                                }
-                                                            }
-                                                        },
-                                                        "else": {
-                                                            "if": {
-                                                                "properties": {}
-                                                            },
-                                                            "then": {
-                                                                "properties": {}
-                                                            }
+                                                            "properties": {}
                                                         }
                                                     }
                                                 }
                                             }
-                                        },
-                                        "required": [
-                                            "metadata"
-                                        ]
-                                    }
+                                        }
+                                    },
+                                    "required": [
+                                        "metadata"
+                                    ]
                                 }
                             },
                             "required": [
