@@ -157,7 +157,7 @@
               },
               "required": [
                 "contact",
-                "meta_data_description",
+                "metadata_description",
                 "metadata_name",
                 "metadata_version"
               ]
