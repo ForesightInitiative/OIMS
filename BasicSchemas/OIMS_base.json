@@ -89,7 +89,7 @@
                      "<%GTREE 1.2 metadata file descriptors%>"
                 ],
                 "metadata_name": "OIMS_base",
-                "meta_data_description": "OIMS self-describing metadata schema",
+                "metadata_description": "OIMS self-describing metadata schema",
                 "metadata_version": {
                     "current_version": "2.3.3.0",
                     "metadata_version_status": "released",
