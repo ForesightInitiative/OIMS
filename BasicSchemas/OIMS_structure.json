@@ -4,7 +4,7 @@
             "optimized for viewing in GTREE",
             "https://www.medictcare.nl/gamstools/",
             "GTREE requires GAMS for optimal viewing purposes",
-            "this structure is based on OIMS version 2.3.3",
+            "this structure is based on OIMS version 2.4",
             "<%GTREE 1 heading section of the OIMS metadata schema%>"
         ],
         "OIMS_header": {
@@ -58,14 +58,14 @@
                     "<%GTREE 2 Content section of the OIMS metadata schema%>"
                 ],
                 "OIMS_content_object": "[required]  <machine readable and human intelligible identifier>",
-                "OIMS_content_object_properties": [
+                "OIMS_content_object_properties": 
                     {
                         "metadata_class": [],
                         "metadata": [
                             {}
                         ]
                     }
-                ]
+
             }
         ]
     }

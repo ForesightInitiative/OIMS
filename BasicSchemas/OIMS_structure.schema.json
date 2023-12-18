@@ -1,221 +1,219 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/ForesightInitiative/OIMS/tree/main/BasicSchemas/OIMS_structure.json",
-  "title": "OIMS Metadata Schema template based on OIM<S version 2.3.3",
-  "description": "Basic structure of an OIMS compatible metadata file",
-  "type": "object",
-  "properties": {
-    "OIMS": {
-      "type": "object",
-      "properties": {
-        "OIMS_header": {
-          "type": "object",
-          "properties": {
-            "mapping_info": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "mapper_tool_name": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "mapper_tool_name"
-                ]
-              }
-            },
-            "metadata_schema": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "OIMS_content_object": {
-                    "type": "string"
-                  },
-                  "schema_properties": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "properties": {
-                        "schema_name": {
-                          "type": "string"
-                        },
-                        "schema_description": {
-                          "type": "string"
-                        },
-                        "schema_type": {
-                          "type": "string"
-                        },
-                        "schema_version": {
-                          "type": "string"
-                        },
-                        "schema_url": {
-                          "type": "string"
-                        },"OIMS_content_object": {
-                          "type": "string"
-                        }
-                      },
-                      "required": [
-                        "schema_description",
-                        "schema_name",
-                        "schema_type",
-                        "schema_url",
-                        "schema_version",
-                        "OIMS_content_object"
-                      ]
-                    }
-                  }
-                },
-                "required": [
-                  "OIMS_content_object",
-                  "schema_properties"
-                ]
-              },
-              "minItems": 1
-            },
-            "file_descriptors": {
-              "type": "object",
-              "properties": {
-                "metadata_name": {
-                  "type": "string"
-                },
-                "metadata_description": {
-                  "type": "string"
-                },
-                "metadata_version": {
-                  "type": "object",
-                  "properties": {
-                    "current_version": {
-                      "type": "string"
-                    },
-                    "metadata_version_status": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "current_version",
-                    "metadata_version_status"
-                  ]
-                },
-                "contact": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "contact_name": {
-                        "type": "string"
-                      },
-                      "contact_affiliation": {
-                        "type": "object",
-                        "properties": {
-                          "contact_affiliation_name": {
-                            "type": "string"
-                          },
-                          "contact_affiliation_acronym": {
-                            "type": "string"
-                          }
-                        },
-                        "required": [
-                          "contact_affiliation_acronym",
-                          "contact_affiliation_name"
-                        ]
-                      },
-                      "contact_identifier": {
-                        "type": "array",
-                        "items": {
-                          "type": "object",
-                          "properties": {
-                            "identifier_scheme": {
-                              "type": "string"
-                            },
-                            "identifier": {
-                              "type": "string"
-                            }
-                          },
-                          "required": [
-                            "identifier",
-                            "identifier_scheme"
-                          ]
-                        }
-                      },
-                      "contact_email": {
-                        "type": "array",
-                        "items": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "required": [
-                      "contact_affiliation",
-                      "contact_email",
-                      "contact_identifier",
-                      "contact_name"
-                    ]
-                  }
-                }
-              },
-              "required": [
-                "contact",
-                "metadata_description",
-                "metadata_name",
-                "metadata_version"
-              ]
-            }
-          },
-          "required": [
-            "file_descriptors",
-            "metadata_schema",
-            "mapping_info"
-          ]
-        },
-        "OIMS_content": {
-          "type": "array",
-          "items": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://github.com/ForesightInitiative/OIMS/tree/main/BasicSchemas/OIMS_structure.json",
+    "title": "OIMS Metadata Schema template based on OIM<S version 2.4",
+    "description": "Basic structure of an OIMS compatible metadata file",
+    "type": "object",
+    "properties": {
+        "OIMS": {
             "type": "object",
             "properties": {
-              "OIMS_content_object":{
-                "type": "string"
-              },
-              "OIMS_content_object_properties": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "metadata": {
-                      "type":"array",
-                      "items": {
-                        "type": "object"
-                      }
+                "OIMS_header": {
+                    "type": "object",
+                    "properties": {
+                        "mapping_info": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "mapper_tool_name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "mapper_tool_name"
+                                ]
+                            }
+                        },
+                        "metadata_schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "OIMS_content_object": {
+                                        "type": "string"
+                                    },
+                                    "schema_properties": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "schema_name": {
+                                                    "type": "string"
+                                                },
+                                                "schema_description": {
+                                                    "type": "string"
+                                                },
+                                                "schema_type": {
+                                                    "type": "string"
+                                                },
+                                                "schema_version": {
+                                                    "type": "string"
+                                                },
+                                                "schema_url": {
+                                                    "type": "string"
+                                                },
+                                                "OIMS_content_object": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "schema_description",
+                                                "schema_name",
+                                                "schema_type",
+                                                "schema_url",
+                                                "schema_version",
+                                                "OIMS_content_object"
+                                            ]
+                                        }
+                                    }
+                                },
+                                "required": [
+                                    "OIMS_content_object",
+                                    "schema_properties"
+                                ]
+                            },
+                            "minItems": 1
+                        },
+                        "file_descriptors": {
+                            "type": "object",
+                            "properties": {
+                                "metadata_name": {
+                                    "type": "string"
+                                },
+                                "metadata_description": {
+                                    "type": "string"
+                                },
+                                "metadata_version": {
+                                    "type": "object",
+                                    "properties": {
+                                        "current_version": {
+                                            "type": "string"
+                                        },
+                                        "metadata_version_status": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "current_version",
+                                        "metadata_version_status"
+                                    ]
+                                },
+                                "contact": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "contact_name": {
+                                                "type": "string"
+                                            },
+                                            "contact_affiliation": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "contact_affiliation_name": {
+                                                        "type": "string"
+                                                    },
+                                                    "contact_affiliation_acronym": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "contact_affiliation_acronym",
+                                                    "contact_affiliation_name"
+                                                ]
+                                            },
+                                            "contact_identifier": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "identifier_scheme": {
+                                                            "type": "string"
+                                                        },
+                                                        "identifier": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "identifier",
+                                                        "identifier_scheme"
+                                                    ]
+                                                }
+                                            },
+                                            "contact_email": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "required": [
+                                            "contact_affiliation",
+                                            "contact_email",
+                                            "contact_identifier",
+                                            "contact_name"
+                                        ]
+                                    }
+                                }
+                            },
+                            "required": [
+                                "contact",
+                                "metadata_description",
+                                "metadata_name",
+                                "metadata_version"
+                            ]
+                        }
                     },
-                    "metadata_class":{
-                      "type":"array",
-                      "items": {
-                        "type": "string"
-                      }
+                    "required": [
+                        "file_descriptors",
+                        "metadata_schema",
+                        "mapping_info"
+                    ]
+                },
+                "OIMS_content": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "OIMS_content_object": {
+                                "type": "string"
+                            },
+                            "OIMS_content_object_properties": {
+                                "type": "object",
+                                "properties": {
+                                    "metadata": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object"
+                                        }
+                                    },
+                                    "metadata_class": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "required": [
+                                    "metadata"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "OIMS_content_object_properties",
+                            "OIMS_content_object"
+                        ]
                     }
-                  },
-                  "required": [
-                    "metadata"
-                  ]
                 }
-              }
             },
             "required": [
-              "OIMS_content_object_properties",
-              "OIMS_content_object"
+                "\\",
+                "OIMS_header",
+                "OIMS_content"
             ]
-          }
         }
-      },
-      "required": [
-        "\\",
-        "OIMS_header",
-        "OIMS_content"
-      ]
-    }
-  },
-  "required": [
-    "OIMS"
-  ]
+    },
+    "required": [
+        "OIMS"
+    ]
 }

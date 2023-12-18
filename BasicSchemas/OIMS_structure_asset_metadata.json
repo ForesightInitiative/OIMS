@@ -1,0 +1,94 @@
+{
+    "OIMS": {
+        "\\": [
+            "This is the structure of an OIMS-compatible metadata file for assets such as datasets and underlying data, models and tools, publications",
+            "It is based on OIMS base version 2.4"
+            "The structure schema is optimized for viewing in GTREE as it creates a tree structure which allows easy navigation",
+            "https://www.medictcare.nl/gamstools/",
+            "GTREE requires GAMS and for viewing purposes",
+            "<%GTREE 1 heading section of the OIMS metadata schema%>"
+        ],
+        "OIMS_header": {
+            "mapping_info": {},
+            "metadata_schema": [
+                {
+                    "OIMS_content_object": "[required] <one from list under OIMS_Content below>",
+                    "schema_properties": [
+                        {
+                            "schema_name": "<Schema Name that describes the OIMS Content section below>",
+                            "schema_description": "<short description of the meta-metadata>",
+                            "schema_type": "<sub type of OIMS_Content_Object>",
+                            "schema_version": "<version of schema used>",
+                            "schema_url": "[required] <e.g. schema on Foresight GitHub repository>",
+                            "OIMS_content_object": "[required] <section of OIMS_Content containing relevant metadata: in most cases this will be 'MetadataMetadata'>"
+                        }
+                    ]
+                }
+            ],
+            "file_descriptors": {
+                "metadata_name": "<template for OIMS compatible metadata>",
+                "meta_data_description": "<basic structure of OIMS compatible primary metadata files>",
+                "metadata_version": {
+                    "current_version": "<add version number>",
+                    "metadata_version_status": "under review"
+                },
+                "contact": [
+                    {
+                        "contact_name": "<name>",
+                        "contact_affiliation": {
+                            "contact_affiliation_name": "<affiliation>",
+                            "contact_affiliation_acronym": "<acronym>"
+                        },
+                        "contact_identifier": [
+                            {
+                                "identifier_scheme": "<e.g. ORCID>",
+                                "identifier": "<actual ID>"
+                            }
+                        ],
+                        "contact_email": [
+                            "example@example.com"
+                        ]
+                    }
+                ]
+            }
+        },
+        "OIMS_content": [
+            {
+                "\\": [
+                    "<%GTREE 2 Content section of the OIMS metadata schema%>"
+                ],
+                "OIMS_content_object": " <{Descriptive_Metadata_DataSet,Descriptive_Metadata_DataFile,Technical_Metadata_DataFile,Technical_Metadata_Dataset,Structural_Metadata_DataFile,DataEntity,MetadataMetadata,ETL_Metadata,Rules}>",
+                "OIMS_content_object_properties": {
+                    "persistent_entity_id": [
+                        {
+                            "entity_label": "",
+                            "persistent_entity_schema_name": "",
+                            "persistent_entity_schema_identifier": ""
+                        }
+                    ],
+                    "entity_relationship": [
+                        {
+                            "entity_relationship_type": "",
+                            "entity_list": [
+                                {
+                                    "persistent_entity_id": [
+                                        {
+                                            "entity_label": "",
+                                            "persistent_entity_schema_name": "",
+                                            "persistent_entity_schema_identifier": ""
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "entity_class": "<controlled vocabulary with elements such as dataset, collection, datafile, model, document>",
+                    "metadata_class": ["[required] <at least one element>"],
+                    "metadata": [
+                        {}
+                    ]
+                }
+            }
+        ]
+    }
+}
