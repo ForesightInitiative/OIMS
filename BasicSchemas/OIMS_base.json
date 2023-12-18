@@ -4,7 +4,7 @@
             "<%GTREE 1 heading section of the OIMS selfdescribing metadata schema%>",
             "optimized for viewing in GTREE",
             "https://www.medictcare.nl/gamstools/",
-            "GTREE requires GAMS and for viewing purposes"
+            "GTREE requires GAMS for optimal viewing purposes"
         ],
         "OIMS_header": {
             "\\": [
@@ -27,7 +27,7 @@
                             "schema_description": "OIMS selfdescribing metadata schema",
                             "schema_type": "self-describing metadata schema",
                             "schema_version": "2.4",
-                            "schema_url": "https://github.com/ForesightInitiative/OIMS/blob/main/BasicSchemas/OIMS_base.json",
+                            "schema_url": "https://raw.githubusercontent.com/ForesightInitiative/OIMS/main/BasicSchemas/OIMS_base.json",
                             "schema_pid": {
                                 "pid_scheme": "handle",
                                 "pid": ""
@@ -2282,7 +2282,7 @@
                             ],
                             "attribute_name": "mapper_input_values",
                             "attribute_description": "values linked to the type of information into on input into the mapper tool provided for transparency purposes",
-                            "data_type": "compound object",
+                            "data_type": "compound_object",
                             "requirement_level": "required",
                             "data_type_class": "compound",
                             "multiple": true

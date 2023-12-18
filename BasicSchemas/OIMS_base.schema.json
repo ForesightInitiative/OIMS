@@ -222,6 +222,7 @@
                                                         "compound_object",
                                                         "date",
                                                         "uri",
+                                                        "url",
                                                         "controlled_vocabulary",
                                                         "boolean",
                                                         "email",
@@ -479,27 +480,27 @@
                                                 }
                                             }
                                         }
-                                    },
-                                    "required": [
-                                        "metadata"
-                                    ]
-                                }
-                            },
-                            "required": [
-                                "OIMS_content_object_properties",
-                                "OIMS_content_object"
-                            ]
-                        }
+                                    }
+                                },
+                                "required": [
+                                    "metadata"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "OIMS_content_object_properties",
+                            "OIMS_content_object"
+                        ]
                     }
-                },
-                "required": [
-                    "OIMS_header",
-                    "OIMS_content"
-                ]
-            }
-        },
-        "required": [
-            "OIMS"
-        ]
-    }
+                }
+            },
+            "required": [
+                "OIMS_header",
+                "OIMS_content"
+            ]
+        }
+    },
+    "required": [
+        "OIMS"
+    ]
 }
