@@ -17,7 +17,7 @@
                         {
                             "schema_name": "<Schema Name that describes the OIMS Content section below>",
                             "schema_description": "<short description of the meta-metadata>",
-                            "schema_type": "<sub type of OIMS_Content_Object>",
+                            "schema_type": "primary metadata",
                             "schema_version": "<version of schema used>",
                             "schema_url": "[required] <e.g. schema on Foresight GitHub repository>",
                             "OIMS_content_object": "[required] <section of OIMS_Content containing relevant metadata: in most cases this will be 'MetadataMetadata'>"
