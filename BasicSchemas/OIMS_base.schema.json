@@ -501,18 +501,6 @@
     },
     "required": [
       "OIMS"
-    ],
-    "patternProperties": {
-      "^\\\\$": { "$ref": "#/definitions/comment" }
-    },
-    "definitions": {
-      "comment": {
-        "type": "array",
-        "items": {
-          "type": "string"
-        },
-        "description": "Array of comments"
-      }
-    }
+    ]
   }
 }
