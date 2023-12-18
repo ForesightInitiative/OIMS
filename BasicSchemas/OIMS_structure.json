@@ -27,7 +27,7 @@
             ],
             "file_descriptors": {
                 "metadata_name": "[required] <template for OIMS compatible metadata>",
-                "meta_data_description": "<basic structure of OIMS compatible metadata schemas>",
+                "metadata_description": "<basic structure of OIMS compatible metadata schemas>",
                 "metadata_version": {
                     "current_version": "[required] <version of this metadata>",
                     "metadata_version_status": "under review"
