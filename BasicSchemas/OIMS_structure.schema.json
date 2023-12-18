@@ -80,7 +80,7 @@
                 "metadata_name": {
                   "type": "string"
                 },
-                "meta_data_description": {
+                "metadata_description": {
                   "type": "string"
                 },
                 "metadata_version": {
