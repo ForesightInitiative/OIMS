@@ -1,6 +1,8 @@
 {
-    "title": "OIMS version 2.4 Metadata validator",
-    "description": "JSON Schema validator for any OIMS compatible metadata file",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://github.com/ForesightInitiative/OIMS/tree/main/BasicSchemas/OIMS_structure.json",
+    "title": "OIMS Metadata Schema template based on OIM<S version 2.4",
+    "description": "Basic structure of an OIMS compatible metadata file",
     "type": "object",
     "properties": {
         "OIMS": {

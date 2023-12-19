@@ -47,7 +47,7 @@
                             "schema_description": "OIMS selfdescribing metadata schema",
                             "schema_type": "self-describing metadata schema",
                             "schema_version": "2.4",
-                            "schema_url": "https://github.com/ForesightInitiative/OIMS/blob/main/BasicSchemas/OIMS_base.json",
+                            "schema_url": "https://raw.githubusercontent.com/ForesightInitiative/OIMS/main/BasicSchemas/OIMS_base.json",
                             "schema_pid": {
                                 "pid_scheme": "handle",
                                 "pid": ""
@@ -59,7 +59,7 @@
                             "schema_description": "OIMS selfdescribing metadata schema",
                             "schema_type": "self-describing metadata schema",
                             "schema_version": "2.4",
-                            "schema_url": "https://github.com/ForesightInitiative/OIMS/blob/main/BasicSchemas/OIMS_base.json",
+                            "schema_url": "https://raw.githubusercontent.com/ForesightInitiative/OIMS/main/BasicSchemas/OIMS_base.json",
                             "schema_pid": {
                                 "pid_scheme": "handle",
                                 "pid": ""
@@ -79,7 +79,7 @@
                             "schema_description": "OIMS selfdescribing metadata schema",
                             "schema_type": "self-describing metadata schema",
                             "schema_version": "2.4",
-                            "schema_url": "https://github.com/ForesightInitiative/OIMS/blob/main/BasicSchemas/OIMS_base.json",
+                            "schema_url": "https://raw.githubusercontent.com/ForesightInitiative/OIMS/main/BasicSchemas/OIMS_base.json",
                             "schema_pid": {
                                 "pid_scheme": "handle",
                                 "pid": ""
@@ -91,7 +91,7 @@
                             "schema_description": "OIMS selfdescribing metadata schema",
                             "schema_type": "self-describing metadata schema",
                             "schema_version": "2.4",
-                            "schema_url": "https://github.com/ForesightInitiative/OIMS/blob/main/BasicSchemas/OIMS_base.json",
+                            "schema_url": "https://raw.githubusercontent.com/ForesightInitiative/OIMS/main/BasicSchemas/OIMS_base.json",
                             "schema_pid": {
                                 "pid_scheme": "handle",
                                 "pid": ""
@@ -532,6 +532,13 @@
                                     ],
                                     "vocabulary_element_name": "asset_metadata",
                                     "vocabulary_element_description": "metadata of data, data files, datasets and collections, or publications and documents, or tools, models and ETL procedures"
+                                },
+                                {
+                                    "//": [
+                                        "<%GTREE 2.3.2.4.13 mapping metadata%>"
+                                    ],
+                                    "vocabulary_element_name": "mapping_metadata",
+                                    "vocabulary_element_description": "metadata of mappings or concordances between elements of different classifications, including but not limited to formal ontologies"
                                 }
                             ]
                         },
