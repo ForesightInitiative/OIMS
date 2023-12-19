@@ -1,6 +1,6 @@
 {
-    "title": "OIMS Metadata Schema template based on OIM<S version 2.4",
-    "description": "Basic structure of an OIMS compatible metadata file",
+    "title": "Metadata validation Schema based on OIMS version 2.4",
+    "description": "JSON Schema 2020-12 validation for any OIMS compatible metametadata file based on OIMS base version 2.4 released December 2023",
     "type": "object",
     "properties": {
         "OIMS": {

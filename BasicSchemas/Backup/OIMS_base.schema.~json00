@@ -1,7 +1,6 @@
 {
-    "$id": "https://raw.githubusercontent.com/ForesightInitiative/OIMS/main/BasicSchemas/OIMS_base.schema.json",
-    "title": "OIMS Metadata Schema template based on OIM<S version 2.4",
-    "description": "Basic structure of an OIMS compatible metadata file",
+    "title": "OIMS Metadata Schema based on OIMS version 2.4",
+    "description": "JSON Schema validation for any OIMS compatible metametadata file based on OIMS base version 2.4 released December 2023",
     "type": "object",
     "properties": {
         "OIMS": {
