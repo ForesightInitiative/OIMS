@@ -1,5 +1,4 @@
 {
-    "$id": "https://raw.githubusercontent.com/ForesightInitiative/OIMS/main/BasicSchemas/OIMS_base.schema.json",
     "title": "OIMS Metadata Schema template based on OIM<S version 2.4",
     "description": "Basic structure of an OIMS compatible metadata file",
     "type": "object",
