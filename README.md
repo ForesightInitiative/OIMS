@@ -9,11 +9,11 @@ Author: \[ \
           Author email: g.kruseman@cgiar.org \
   } \
 \] \
-Date: 23 Novemnber 2023 \
-published OIMS Version: 2.3.1.0 \
-current OIMS version: 2.3.2.1 \
-OIMS documentation version: 2.1.0.1 \
-Status: current version under review
+Date: 22 Decenmber 2023 \
+published OIMS Version: 2.3 \
+current OIMS version: 2.4 \
+OIMS documentation version: 2.3.2 \
+Status: current version validated and almost ready for use only thing missing is the persistent identity and AN update to the documentation to capture the latest improvements.
 
 ## Purpose
 For enhancing data interoperability working towards the standardization on metadata is essential. OIMS is a lightweight, flexible, extensible, machine readable and human-intelligible metadata schema that does not depend on a specific ontology. The metadata schema for metadata of data files is based on the concept of data lakes where data is stored as they are. The purpose of the schema is to enhance data interoperability. The lack of interoperability of messy socio-economic datasets that contain a mixture of structured, semi-structured, and unstructured data means that many datasets are underutilized. Adding a minimum set of rich metadata and describing new and existing data dictionaries in a standardized way goes a long way to make these high-variety datasets interoperable and reusable and hence allows timely and actionable information to be gleaned from those datasets. The presented metadata schema OIMS can help to standardize the description of metadata. Kruseman (2022) introduces overall concepts of metadata, discusses design principles of metadata schemes, and presents the structure and an applied example of OIMS.
@@ -49,6 +49,8 @@ Change log from 2.3.2.0 to 2.3.2.1
 In OIMS 2.3.2.0 two typos were detected using a novel tool under development for OIMS consistency testing. Moreover, the json schema validation files were updated to reflect the changes in version 2.3.
 
 Change to version 2.3.3 Improved tagging for entities and entity relationships.
+
+Change to version 2.4 Added persistent identifiers to metadata schema section of the header to ensure greater FAIR-ness. Moreover, the url links are noiw completely machine readable. 
 
 
 ## Citation
