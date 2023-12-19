@@ -1,4 +1,6 @@
 {
+    "title": "OIMS Metadata Schema template based on OIM<S version 2.4",
+    "description": "Basic structure of an OIMS compatible metadata file",
     "type": "object",
     "properties": {
         "OIMS": {
