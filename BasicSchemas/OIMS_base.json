@@ -544,7 +544,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 2.3.2.4 entity_class%>"
+                                "<%GTREE 2.3.2.5 entity_class%>"
                             ],
                             "attribute_name": "entity_class",
                             "attribute_description": "class of the entity",
