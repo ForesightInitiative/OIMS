@@ -30,7 +30,7 @@
                             "schema_url": "https://raw.githubusercontent.com/ForesightInitiative/OIMS/main/BasicSchemas/OIMS_base.json",
                             "schema_pid": {
                                 "pid_scheme": "handle",
-                                "pid": "https://hdl.handle.net/10568/135663"
+                                "pid": ""
                             },
                             "OIMS_content_object": "MetadataMetadata",
                             "include_property": [
@@ -50,7 +50,7 @@
                             "schema_url": "https://raw.githubusercontent.com/ForesightInitiative/OIMS/main/BasicSchemas/OIMS_base.json",
                             "schema_pid": {
                                 "pid_scheme": "handle",
-                                "pid": "https://hdl.handle.net/10568/135663"
+                                "pid": ""
                             },
                             "OIMS_content_object": "MetadataMetadata"
                         },
@@ -62,7 +62,7 @@
                             "schema_url": "https://raw.githubusercontent.com/ForesightInitiative/OIMS/main/BasicSchemas/OIMS_base.json",
                             "schema_pid": {
                                 "pid_scheme": "handle",
-                                "pid": "https://hdl.handle.net/10568/135663"
+                                "pid": ""
                             },
                             "OIMS_content_object": "OIMS_Structure_Metadata",
                             "include_property": [
@@ -82,7 +82,7 @@
                             "schema_url": "https://raw.githubusercontent.com/ForesightInitiative/OIMS/main/BasicSchemas/OIMS_base.json",
                             "schema_pid": {
                                 "pid_scheme": "handle",
-                                "pid": "https://hdl.handle.net/10568/135663"
+                                "pid": ""
                             },
                             "OIMS_content_object": "MetadataMetadata"
                         },
@@ -94,7 +94,7 @@
                             "schema_url": "https://raw.githubusercontent.com/ForesightInitiative/OIMS/main/BasicSchemas/OIMS_base.json",
                             "schema_pid": {
                                 "pid_scheme": "handle",
-                                "pid": "https://hdl.handle.net/10568/135663"
+                                "pid": ""
                             },
                             "OIMS_content_object": "OIMS_Header_Metadata",
                             "include_property": [
@@ -117,7 +117,7 @@
                 },
                 "metadata_pid": {
                     "pid_scheme": "handle",
-                    "pid": "https://hdl.handle.net/10568/135663"
+                    "pid": ""
                 },
                 "contact": [
                     {

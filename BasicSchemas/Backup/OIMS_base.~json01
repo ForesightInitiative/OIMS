@@ -30,7 +30,7 @@
                             "schema_url": "https://raw.githubusercontent.com/ForesightInitiative/OIMS/main/BasicSchemas/OIMS_base.json",
                             "schema_pid": {
                                 "pid_scheme": "handle",
-                                "pid": "https://hdl.handle.net/10568/135663"
+                                "pid": ""
                             },
                             "OIMS_content_object": "MetadataMetadata",
                             "include_property": [
@@ -50,7 +50,7 @@
                             "schema_url": "https://raw.githubusercontent.com/ForesightInitiative/OIMS/main/BasicSchemas/OIMS_base.json",
                             "schema_pid": {
                                 "pid_scheme": "handle",
-                                "pid": "https://hdl.handle.net/10568/135663"
+                                "pid": ""
                             },
                             "OIMS_content_object": "MetadataMetadata"
                         },
@@ -62,7 +62,7 @@
                             "schema_url": "https://raw.githubusercontent.com/ForesightInitiative/OIMS/main/BasicSchemas/OIMS_base.json",
                             "schema_pid": {
                                 "pid_scheme": "handle",
-                                "pid": "https://hdl.handle.net/10568/135663"
+                                "pid": ""
                             },
                             "OIMS_content_object": "OIMS_Structure_Metadata",
                             "include_property": [
@@ -82,7 +82,7 @@
                             "schema_url": "https://raw.githubusercontent.com/ForesightInitiative/OIMS/main/BasicSchemas/OIMS_base.json",
                             "schema_pid": {
                                 "pid_scheme": "handle",
-                                "pid": "https://hdl.handle.net/10568/135663"
+                                "pid": ""
                             },
                             "OIMS_content_object": "MetadataMetadata"
                         },
@@ -94,7 +94,7 @@
                             "schema_url": "https://raw.githubusercontent.com/ForesightInitiative/OIMS/main/BasicSchemas/OIMS_base.json",
                             "schema_pid": {
                                 "pid_scheme": "handle",
-                                "pid": "https://hdl.handle.net/10568/135663"
+                                "pid": ""
                             },
                             "OIMS_content_object": "OIMS_Header_Metadata",
                             "include_property": [
@@ -117,7 +117,7 @@
                 },
                 "metadata_pid": {
                     "pid_scheme": "handle",
-                    "pid": "https://hdl.handle.net/10568/135663"
+                    "pid": ""
                 },
                 "contact": [
                     {
@@ -1925,7 +1925,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 7.2.1 Metadata Name: short description or name of the metadata file%>"
+                                "<%GTREE 7.2.1 MetadataName: short description or name of the metadata file%>"
                             ],
                             "attribute_name": "metadata_name",
                             "attribute_description": "short description or name of the metadata file",
@@ -1936,7 +1936,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 7.2.2 Metadata Version: short description or name of the metadata file%>"
+                                "<%GTREE 7.2.2 MetadataVersion: short description or name of the metadata file%>"
                             ],
                             "attribute_name": "metadata_version",
                             "attribute_description": "short description or name of the metadata file",
@@ -1951,7 +1951,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 7.2.2.1 Current Version: current version of the metadata file%>"
+                                "<%GTREE 7.2.2.1 CurrentVersion: current version of the metadata file%>"
                             ],
                             "attribute_name": "current_version",
                             "attribute_description": "current version of the metadata file",
@@ -1962,7 +1962,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 7.2.2.2 Metadata Version Status: status of the metadata file%>"
+                                "<%GTREE 7.2.2.2 MetadataVersionStatus: status of the metadata file%>"
                             ],
                             "attribute_name": "metadata_version_status",
                             "attribute_description": "short description or name of the metadata file",
@@ -1995,7 +1995,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 7.2.2.3 Metadata Version Date: date of the metadata file%>"
+                                "<%GTREE 7.2.2.3 MetadataVersionDate: date of the metadata file%>"
                             ],
                             "attribute_name": "version_date",
                             "attribute_description": "Date of this version of the metadata",
@@ -2045,7 +2045,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 7.2.3.1 Contact Name: Name of a person or entity to contact about the metadata%>"
+                                "<%GTREE 7.2.3.1 ContactName: Name of a person or entity to contact about the metadata%>"
                             ],
                             "attribute_name": "contact_name",
                             "attribute_description": "Name of a person or entity to contact about the metadata",
@@ -2056,7 +2056,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 7.2.3.2 Contact Role: Role of contact person or entity%>"
+                                "<%GTREE 7.2.3.2 ContactRole: Role of contact person or entity%>"
                             ],
                             "attribute_name": "contact_role",
                             "attribute_description": "Role of contact person or entity ",
@@ -2067,7 +2067,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 7.2.3.3 Contact Affiliation: Affiliation of a person or entity to contact about the metadata%>"
+                                "<%GTREE 7.2.3.3 ContactAffiliation: Affiliation of a person or entity to contact about the metadata%>"
                             ],
                             "attribute_name": "contact_affiliation",
                             "attribute_description": "Affiliation of a person or entity to contact about the metadata",
@@ -2082,7 +2082,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 7.2.3.2.1 Contact Affiliation Name: Affiliation of a person or entity to contact about the metadata%>"
+                                "<%GTREE 7.2.3.2.1 ContactAffiliationName: Affiliation of a person or entity to contact about the metadata%>"
                             ],
                             "attribute_name": "contact_affiliation_name",
                             "attribute_description": "Affiliation of a person or entity to contact about the metadata",
@@ -2093,7 +2093,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 7.2.3.2.1 Contact Affiliation Acronym: Acronym of the affiliation of a person or entity to contact about the metadata%>"
+                                "<%GTREE 7.2.3.2.1 ContactAffiliationAcronym: Acronym of the affiliation of a person or entity to contact about the metadata%>"
                             ],
                             "attribute_name": "contact_affiliation_acronym",
                             "attribute_description": "acronym of the affiliation of a person or entity to contact about the metadata",
@@ -2104,7 +2104,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 7.2.3.3 Contact Identifier: Persistent identifier of a person to contact about the metadata%>"
+                                "<%GTREE 7.2.3.3 ContactIdentifier: Persistent identifier of a person to contact about the metadata%>"
                             ],
                             "attribute_name": "contact_identifier",
                             "attribute_description": "Identifier of a person to contact about the metadata",
@@ -2119,7 +2119,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 7.2.3.3.1 Identifier Scheme: scheme to identify a person%>"
+                                "<%GTREE 7.2.3.3.1 IdentifierScheme: scheme to identify a person%>"
                             ],
                             "attribute_name": "identifier_scheme",
                             "attribute_description": "scheme to identify a person",
@@ -2147,7 +2147,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 7.2.3.4 Contact email: email address of a person or entity to contact about the metadata%>"
+                                "<%GTREE 7.2.3.4 Contactemail: email address of a person or entity to contact about the metadata%>"
                             ],
                             "attribute_name": "contact_email",
                             "attribute_description": "email address of a person or entity to contact about the metadataa",

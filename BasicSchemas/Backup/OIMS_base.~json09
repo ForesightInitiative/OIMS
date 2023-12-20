@@ -30,7 +30,7 @@
                             "schema_url": "https://raw.githubusercontent.com/ForesightInitiative/OIMS/main/BasicSchemas/OIMS_base.json",
                             "schema_pid": {
                                 "pid_scheme": "handle",
-                                "pid": "https://hdl.handle.net/10568/135663"
+                                "pid": ""
                             },
                             "OIMS_content_object": "MetadataMetadata",
                             "include_property": [
@@ -50,7 +50,7 @@
                             "schema_url": "https://raw.githubusercontent.com/ForesightInitiative/OIMS/main/BasicSchemas/OIMS_base.json",
                             "schema_pid": {
                                 "pid_scheme": "handle",
-                                "pid": "https://hdl.handle.net/10568/135663"
+                                "pid": ""
                             },
                             "OIMS_content_object": "MetadataMetadata"
                         },
@@ -62,7 +62,7 @@
                             "schema_url": "https://raw.githubusercontent.com/ForesightInitiative/OIMS/main/BasicSchemas/OIMS_base.json",
                             "schema_pid": {
                                 "pid_scheme": "handle",
-                                "pid": "https://hdl.handle.net/10568/135663"
+                                "pid": ""
                             },
                             "OIMS_content_object": "OIMS_Structure_Metadata",
                             "include_property": [
@@ -82,7 +82,7 @@
                             "schema_url": "https://raw.githubusercontent.com/ForesightInitiative/OIMS/main/BasicSchemas/OIMS_base.json",
                             "schema_pid": {
                                 "pid_scheme": "handle",
-                                "pid": "https://hdl.handle.net/10568/135663"
+                                "pid": ""
                             },
                             "OIMS_content_object": "MetadataMetadata"
                         },
@@ -94,7 +94,7 @@
                             "schema_url": "https://raw.githubusercontent.com/ForesightInitiative/OIMS/main/BasicSchemas/OIMS_base.json",
                             "schema_pid": {
                                 "pid_scheme": "handle",
-                                "pid": "https://hdl.handle.net/10568/135663"
+                                "pid": ""
                             },
                             "OIMS_content_object": "OIMS_Header_Metadata",
                             "include_property": [
@@ -117,7 +117,7 @@
                 },
                 "metadata_pid": {
                     "pid_scheme": "handle",
-                    "pid": "https://hdl.handle.net/10568/135663"
+                    "pid": ""
                 },
                 "contact": [
                     {
@@ -198,7 +198,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 2.3.1 OIMS Content object %>"
+                                "<%GTREE 2.3.1 OIMS_Content_object %>"
                             ],
                             "attribute_name": "OIMS_content_object",
                             "attribute_description": "OIMS content object where in the header it has special meaning, namely  for which the metadata schemas are valid or OIMS content object to use as metadata schema",
@@ -209,7 +209,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 2.3.2 OIMS content properties%>"
+                                "<%GTREE 2.3.2 OIMS_content_properties%>"
                             ],
                             "attribute_name": "OIMS_content_properties",
                             "attribute_description": "properties of the entity",
@@ -220,7 +220,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 2.3.2.1 persistent entity id%>"
+                                "<%GTREE 2.3.2.1 persistent_entity_id%>"
                             ],
                             "attribute_name": "persistent_entity_id",
                             "attribute_description": "an identifier for the entity being drescribed by the metadata of thius section",
@@ -236,7 +236,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 2.3.2.1.1 entity label%>"
+                                "<%GTREE 2.3.2.1.1 entity_label%>"
                             ],
                             "attribute_name": "entity_label",
                             "attribute_description": "short human intelligible description of the entity",
@@ -247,7 +247,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 2.3.2.1.2 persistent entity id schema name%>"
+                                "<%GTREE 2.3.2.1.2 persistent_entity_id_schema_name%>"
                             ],
                             "attribute_name": "persistent_entity_id_schema_name",
                             "attribute_description": "persistent identifier for the entity, typically <DOI,Handle,FMI_ID,URI>",
@@ -258,7 +258,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 2.3.2.1.3 persistent entity id identifier%>"
+                                "<%GTREE 2.3.2.1.3 persistent_entity_id_identifier%>"
                             ],
                             "attribute_name": "persistent_entity_id_identifier",
                             "attribute_description": "actual persistent identifier of the entity",
@@ -269,7 +269,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 2.3.2.1.4 persistent entity url%>"
+                                "<%GTREE 2.3.2.1.4 persistent_entity_url%>"
                             ],
                             "attribute_name": "persistent_entity_url",
                             "attribute_description": "url linking to the entity",
@@ -280,7 +280,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 2.3.2.2 entity relationship%>"
+                                "<%GTREE 2.3.2.2 entity_relationship%>"
                             ],
                             "attribute_name": "entity_relationship",
                             "attribute_description": "relationship between the current entity and other entities",
@@ -295,7 +295,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 2.3.2.2.1 entity relationship type%>"
+                                "<%GTREE 2.3.2.2.1 entity_relationship_type%>"
                             ],
                             "attribute_name": "entity_relationship_type",
                             "attribute_description": "relationship between the current entity and other entities",
@@ -320,7 +320,7 @@
                                 },
                                 {
                                     "\\": [
-                                        "<%GTREE 2.3.2.2.1.3 has siblings%>"
+                                        "<%GTREE 2.3.2.2.1.3 has_siblings%>"
                                     ],
                                     "vocabulary_element_name": "has_siblings",
                                     "vocabulary_element_description": "the current entity has siblings namely the listed entities"
@@ -329,7 +329,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 2.3.2.2.2 entity relationship subtype%>"
+                                "<%GTREE 2.3.2.2.2 entity_relationship_subtype%>"
                             ],
                             "attribute_name": "entity_relationship_subtype",
                             "attribute_description": "relationship between the current entity and other entities",
@@ -392,7 +392,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 2.3.2.2.3 entity relationship order%>"
+                                "<%GTREE 2.3.2.2.3 entity_relationship_order%>"
                             ],
                             "attribute_name": "entity_relationship_order",
                             "attribute_description": "if there is a specific order between siblings",
@@ -403,7 +403,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 2.3.2.2.4 entity relationship order position%>"
+                                "<%GTREE 2.3.2.2.4 entity_relationship_order_position%>"
                             ],
                             "attribute_name": "entity_relationship_order_position",
                             "attribute_description": "if there is a specific order between siblings what is the position of the current entity",
@@ -414,7 +414,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 2.3.2.2.5 entity list%>"
+                                "<%GTREE 2.3.2.2.5 entity_list%>"
                             ],
                             "attribute_name": "entity_list",
                             "attribute_description": "relationship between the current entity and other entities",
@@ -495,7 +495,7 @@
                                     "//": [
                                         "<%GTREE 2.3.2.4.7 Structural metadata %>"
                                     ],
-                                    "vocabulary_element_name": "structural_metadata",
+                                    "vocabulary_element_name": "structural_metadata_DataFile",
                                     "vocabulary_element_description": "information about data entities and their relationships"
                                 },
                                 {
@@ -516,7 +516,7 @@
                                     "//": [
                                         "<%GTREE 2.3.2.4.10 quality assurance metadata%>"
                                     ],
-                                    "vocabulary_element_name": "quality_assurance_metadata",
+                                    "vocabulary_element_name": "quality_assurance metadata",
                                     "vocabulary_element_description": "metadata of models tools and ETL procedures"
                                 },
                                 {
@@ -544,7 +544,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 2.3.2.5 entity class%>"
+                                "<%GTREE 2.3.2.5 entity_class%>"
                             ],
                             "attribute_name": "entity_class",
                             "attribute_description": "class of the entity",
@@ -583,7 +583,7 @@
                                 },
                                 {
                                     "//": [
-                                        "<%GTREE 2.3.2.5.5 data container%>"
+                                        "<%GTREE 2.3.2.5.5 data_container%>"
                                     ],
                                     "vocabulary_element_name": "data_container",
                                     "vocabulary_element_description": "what holds the actual data, often denoted as a variable or a column in tabular data"
@@ -613,7 +613,7 @@
                                     "//": [
                                         "<%GTREE 2.3.2.5.9 module section %>"
                                     ],
-                                    "vocabulary_element_name": "module_section",
+                                    "vocabulary_element_name": "module_sectrion",
                                     "vocabulary_element_description": "lowest level of disaggregation of model, tool or etl procedure"
                                 },
                                 {
@@ -1080,7 +1080,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 3.6 attribute Multiple %>"
+                                "<%GTREE 3.6 attribute multiple %>"
                             ],
                             "attribute_name": "multiple",
                             "attribute_description": "can the attribute have multiple values",
@@ -1102,7 +1102,7 @@
                         {
                             "\\": [
                                 "<%GTREE 4 Required if applicable attributes %>",
-                                "<%GTREE 4.1 attribute Controlled Vocabulary %>"
+                                "<%GTREE 4.1 attribute ControlledVocabulary %>"
                             ],
                             "attribute_name": "controlled_vocabulary",
                             "attribute_description": "Controlled Vocabulary definition if data type is Controlled Vocabulary also known as an enumeration in STATA or a factor in R",
@@ -1169,7 +1169,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 4.2 attribute Attribute Value Elements %>"
+                                "<%GTREE 4.2 attribute AttributeValueElements %>"
                             ],
                             "attribute_name": "attribute_value_elements",
                             "attribute_description": "details of the DataType compound used to identify the required attributes in an attribute array",
@@ -1219,7 +1219,7 @@
                         },
                         {
                             "//": [
-                                "<%GTREE 4.3.1 Ontology Term Name%>"
+                                "<%GTREE 4.3.1 OntologyTermName%>"
                             ],
                             "attribute_name": "ontology_term_name",
                             "attribute_description": "Term in an ontology that describes the relevant attribute value",
@@ -1240,7 +1240,7 @@
                         },
                         {
                             "//": [
-                                "<%GTREE 4.3.2 Ontology Term Description%>"
+                                "<%GTREE 4.3.2 OntologyTermDescription%>"
                             ],
                             "attribute_name": "ontology_term_description",
                             "attribute_description": "Description of the ontology term",
@@ -1251,7 +1251,7 @@
                         },
                         {
                             "//": [
-                                "<%GTREE 4.3.3 Ontology Name%>"
+                                "<%GTREE 4.3.3 OntologyName%>"
                             ],
                             "attribute_name": "ontology_name",
                             "attribute_description": "The name of the ontology from which we take the ontology term",
@@ -1272,7 +1272,7 @@
                         },
                         {
                             "//": [
-                                "<%GTREE 4.3.4 Ontology Term ID%>"
+                                "<%GTREE 4.3.4 OntologyTermID%>"
                             ],
                             "attribute_name": "ontology_term_id",
                             "attribute_description": "the identifier for the ontology term in the specified ontology",
@@ -1283,7 +1283,7 @@
                         },
                         {
                             "//": [
-                                "<%GTREE 4.3.5 Ontology URL%>"
+                                "<%GTREE 4.3.5 OntologyURL%>"
                             ],
                             "attribute_name": "ontology_url",
                             "attribute_description": "persistent URL where the ontology term can be found",
@@ -1294,7 +1294,7 @@
                         },
                         {
                             "//": [
-                                "<%GTREE 4.3.6 ontology term quality%>"
+                                "<%GTREE 4.3.6 ontology_term_quality%>"
                             ],
                             "attribute_name": "ontology_term_quality",
                             "attribute_description": "identifies to what degree the ontology term matches the attribute value",
@@ -1406,12 +1406,12 @@
                                     "vocabulary_element_description": "The ontology term does not match the attribute value",
                                     "ontology_term": [
                                         {
-                                            "ontology_term_name": "Does Not Conform",
-                                            "ontology_term_description": "An observation that the item of interest does not match required specifications.",
-                                            "ontology_name": "NCIT",
-                                            "ontology_term_id": "NCIT_C133998",
-                                            "ontology_url": "http://purl.obolibrary.org/obo/NCIT_C133998",
-                                            "ontology_term_quality": "Related"
+                                            "ontology_term_name": "NotExactMatch",
+                                            "ontology_term_description": "The negation of the exact match relationship, indicating that two concepts are not equivalent or interchangeable.",
+                                            "ontology_name": "SKOS",
+                                            "ontology_term_id": "skos:exactMatch",
+                                            "ontology_url": "https://www.w3.org/TR/skos-reference/#mapping",
+                                            "ontology_term_quality": "Exact"
                                         }
                                     ]
                                 },
@@ -1925,7 +1925,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 7.2.1 Metadata Name: short description or name of the metadata file%>"
+                                "<%GTREE 7.2.1 MetadataName: short description or name of the metadata file%>"
                             ],
                             "attribute_name": "metadata_name",
                             "attribute_description": "short description or name of the metadata file",
@@ -1936,7 +1936,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 7.2.2 Metadata Version: short description or name of the metadata file%>"
+                                "<%GTREE 7.2.2 MetadataVersion: short description or name of the metadata file%>"
                             ],
                             "attribute_name": "metadata_version",
                             "attribute_description": "short description or name of the metadata file",
@@ -1951,7 +1951,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 7.2.2.1 Current Version: current version of the metadata file%>"
+                                "<%GTREE 7.2.2.1 CurrentVersion: current version of the metadata file%>"
                             ],
                             "attribute_name": "current_version",
                             "attribute_description": "current version of the metadata file",
@@ -1962,7 +1962,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 7.2.2.2 Metadata Version Status: status of the metadata file%>"
+                                "<%GTREE 7.2.2.2 MetadataVersionStatus: status of the metadata file%>"
                             ],
                             "attribute_name": "metadata_version_status",
                             "attribute_description": "short description or name of the metadata file",
@@ -1995,7 +1995,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 7.2.2.3 Metadata Version Date: date of the metadata file%>"
+                                "<%GTREE 7.2.2.3 MetadataVersionDate: date of the metadata file%>"
                             ],
                             "attribute_name": "version_date",
                             "attribute_description": "Date of this version of the metadata",
@@ -2045,7 +2045,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 7.2.3.1 Contact Name: Name of a person or entity to contact about the metadata%>"
+                                "<%GTREE 7.2.3.1 ContactName: Name of a person or entity to contact about the metadata%>"
                             ],
                             "attribute_name": "contact_name",
                             "attribute_description": "Name of a person or entity to contact about the metadata",
@@ -2056,7 +2056,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 7.2.3.2 Contact Role: Role of contact person or entity%>"
+                                "<%GTREE 7.2.3.2 ContactRole: Role of contact person or entity%>"
                             ],
                             "attribute_name": "contact_role",
                             "attribute_description": "Role of contact person or entity ",
@@ -2067,7 +2067,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 7.2.3.3 Contact Affiliation: Affiliation of a person or entity to contact about the metadata%>"
+                                "<%GTREE 7.2.3.3 ContactAffiliation: Affiliation of a person or entity to contact about the metadata%>"
                             ],
                             "attribute_name": "contact_affiliation",
                             "attribute_description": "Affiliation of a person or entity to contact about the metadata",
@@ -2082,7 +2082,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 7.2.3.2.1 Contact Affiliation Name: Affiliation of a person or entity to contact about the metadata%>"
+                                "<%GTREE 7.2.3.2.1 ContactAffiliationName: Affiliation of a person or entity to contact about the metadata%>"
                             ],
                             "attribute_name": "contact_affiliation_name",
                             "attribute_description": "Affiliation of a person or entity to contact about the metadata",
@@ -2093,7 +2093,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 7.2.3.2.1 Contact Affiliation Acronym: Acronym of the affiliation of a person or entity to contact about the metadata%>"
+                                "<%GTREE 7.2.3.2.1 ContactAffiliationAcronym: Acronym of the affiliation of a person or entity to contact about the metadata%>"
                             ],
                             "attribute_name": "contact_affiliation_acronym",
                             "attribute_description": "acronym of the affiliation of a person or entity to contact about the metadata",
@@ -2104,7 +2104,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 7.2.3.3 Contact Identifier: Persistent identifier of a person to contact about the metadata%>"
+                                "<%GTREE 7.2.3.3 ContactIdentifier: Persistent identifier of a person to contact about the metadata%>"
                             ],
                             "attribute_name": "contact_identifier",
                             "attribute_description": "Identifier of a person to contact about the metadata",
@@ -2119,7 +2119,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 7.2.3.3.1 Identifier Scheme: scheme to identify a person%>"
+                                "<%GTREE 7.2.3.3.1 IdentifierScheme: scheme to identify a person%>"
                             ],
                             "attribute_name": "identifier_scheme",
                             "attribute_description": "scheme to identify a person",
@@ -2147,7 +2147,7 @@
                         },
                         {
                             "\\": [
-                                "<%GTREE 7.2.3.4 Contact email: email address of a person or entity to contact about the metadata%>"
+                                "<%GTREE 7.2.3.4 Contactemail: email address of a person or entity to contact about the metadata%>"
                             ],
                             "attribute_name": "contact_email",
                             "attribute_description": "email address of a person or entity to contact about the metadataa",

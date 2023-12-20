@@ -1,0 +1,169 @@
+{
+    "OIMS":{
+        "OIMS_header":{
+            "mapping_info": [
+                {
+                    "mapper_tool_name": "FI_convert_template_v_001.py",
+                    "mapper_tool_version":"1.0.0",
+                    "mapper_tool_url":"https://github.com/ForesightInitiative/OIMS/tools/OIMS_tool_box"
+                }
+            ],
+            "meta_data_schema": [
+                {
+                    "OIMS_content_object": "Descriptive_Metadata_DataSet",
+                    "schema_properties": [
+                        {
+                            "schema_name": "OIMS_FMI_1_5",
+                            "schema_description": "OIMS Foresight Initiative data metadata schema",
+                            "schema_type": "data metadata schema",
+                            "schema_version": "1.5.0.0",
+                            "schema_url": "https://raw.githubusercontent.com/GideonKruseman/OIMStest/main/schemas/OIMS_FMI_data.json",
+                            "OIMS_content_object": "MetadataMetadata"
+                        }
+                    ]
+
+                },
+                {
+                    "OIMS_content_object": "Descriptive_Metadata_DataFile",
+                    "schema_properties": [
+                        {
+                            "schema_name": "OIMS_FMI_",
+                            "schema_description": "OIMS Foresight Initiative data metadata schema",
+                            "schema_type": "data metadata schema",
+                            "schema_version": "1.0.0.0",
+                            "schema_url": "https://raw.githubusercontent.com/GideonKruseman/OIMStest/main/schemas/OIMS_FMI_data.json",
+                            "OIMS_content_object": "MetadataMetadata"
+                        }
+                    ]
+
+                },
+                {
+                    "OIMS_content_object": "Structural_Metadata_DataFile",
+                    "schema_properties": [
+                        {
+                            "schema_name": "OIMS_FMI_",
+                            "schema_description": "OIMS Foresight Initiative data metadata schema",
+                            "schema_type": "data metadata schema",
+                            "schema_version": "1.0.0.0",
+                            "schema_url": "https://raw.githubusercontent.com/GideonKruseman/OIMStest/main/schemas/OIMS_FMI_data.json",
+                            "OIMS_content_object": "MetadataMetadata"
+                        }
+                    ]
+
+                }
+            ],
+            "FileDescriptors":{
+              "MetadataName"                : "",
+              "MetaDataDescription"         : "basic structure of OIMS compatible metadata schema for foresight initiative datasets",
+              "MetadataVersion"  : {
+                  "CurrentVersion"          : "1.0.0.0",
+                  "MetadataVersionStatus"   : "under review"
+                 },
+              "Contact":[
+                 {
+                  "ContactName"             : "Kruseman, Gideon",
+                  "ContactRole"             : "metadata schema developer",
+                  "ContactAffiliation"      : {
+                      "ContactAffiliationName"     :"Alliance of Bioversity International and CIAT",
+                      "ContactAffiliationAcronym"  :"Alliance"
+                     },
+                  "ContactIdentifier": [
+                     {
+                      "IdentifierScheme":"ORCID",
+                      "Identifier":"0000-0002-3392-4176"
+                     }
+                    ],
+                  "ContactEmail": [
+                     "g.kruseman@cgiar.org",
+                     "gkruseman@gmail.com"
+                    ]
+                }
+               ]
+             }
+        },
+        "OIMS_content":[
+            {
+              "OIMS_Content_Object":"Descriptive_and_Technical_Metadata_DataSet",
+              "OIMS_Content_Object_Properties":
+                  {
+                      "Persistent_Entity_ID":[
+                          {
+                              "Entity_label":"",
+                              "persistent_Entity_ID_SchemeName":"<DOI,Handle,FMI_ID,URI>",
+                              "persistent_Entity_ID_Identifier":"<Actual identifier>"
+                          }
+                      ],
+                      "Entity_Relastionship":[
+                          {
+                              "Entity_Relationship_type":"Entity_Children",
+                              "Entity_List":[
+                                  {
+                                      "Persistent_Entity_ID":[
+                                          {
+                                              "Entity_label":"<short human intelligible description of the entity> [optional]",
+                                              "persistent_Entity_ID_SchemeName":"<DOI,Handle,FMI_ID,URI>",
+                                              "persistent_Entity_ID_Identifier":"<Actual identifier>"
+                                          }
+                                      ]
+                                  }
+                              ]
+                          }
+                      ],
+                      "Metadata":{
+
+                      }
+
+                  }
+
+            },
+            {
+              "OIMS_Content_Object":"Descriptive_and_Technical_Metadata_DataFile",
+              "OIMS_Content_Object_Properties":
+                  {
+                      "Persistent_Entity_ID":[
+                          {
+                              "Entity_label":"<short human intelligible description of the file> [optional]",
+                              "persistent_Entity_ID_SchemeName":"<DOI,Handle,FMI_ID,URI>",
+                              "persistent_Entity_ID_Identifier":"<Actual identifier>"
+                          }
+                      ],
+                      "Entity_Relastionship":[
+                          {
+                              "Entity_Relationship_type":"Entity_Children",
+                              "Entity_List":[
+                                  {
+                                    "Persistent_Entity_ID":[
+                                          {
+                                              "Entity_label":"<short human intelligible description of the entity> [optional]",
+                                              "persistent_Entity_ID_SchemeName":"<DOI,Handle,FMI_ID,URI>",
+                                              "persistent_Entity_ID_Identifier":"<Actual identifier>"
+                                          }
+                                      ]
+                                  }
+                              ]
+                          }
+                      ],
+                      "Metadata":{
+                      }
+
+                  }
+            },
+            {
+              "OIMS_Content_Object":"Structural_Metadata_DataFile",
+              "OIMS_Content_Object_Properties":
+                  {
+                      "Persistent_Entity_ID":[
+                          {
+                              "Entity_label":"<short human intelligible description of the data field> [optional]",
+                             "persistent_Entity_ID_SchemeName":"FMI_ID",
+                              "persistent_Entity_ID_Identifier":"<Actual identifier>"
+                          }
+                      ],
+                      "Metadata":{
+                      }
+
+                  }
+            }
+          ]
+    }
+}
