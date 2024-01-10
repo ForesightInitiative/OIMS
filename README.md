@@ -58,5 +58,5 @@ When publishing papers based on the schema we encourage the authors to provide t
 Kruseman G., LaPorte M.-A. 2023. A Flexible, Extensible, Machine-Readable, Human-Intelligible, and Ontology-Agnostic Metadata Schema (OIMS) version 2.4.0.0. https://github.com/ForesightInitiative/OIMS  
 
 ## Further reading / references
-Kruseman G. 2022.A Flexible, Extensible, Machine-Readable, Human-Intelligible, and Ontology-Agnostic Metadata Schema (OIMS). _Frontiers in Sustainable Food Systems_ vol. 6. DOI=10.3389/fsufs.2022.767863  https://www.frontiersin.org/articles/10.3389/fsufs.2022.767863/full 
+Kruseman G. 2022.A Flexible, Extensible, Machine-Readable, Human-Intelligible, and Ontology-Agnostic Metadata Schema (OIMS). _Frontiers in Sustainable Food Systems_ vol. 6. DOI=10.3389/fsufs.2022.767863  https://www.frontiersin.org/articles/10.3389/fsufs.2022.767863/full \
 Kruseman, G.; Laporte, M.A. 2023. OIMS basic documentation: Technical documentation of the OIMS Base self-describing metadata schema, the high-level OIMS structure and their validation schemas. OIMS version 2.4. 113 p. https://hdl.handle.net/10568/135656
